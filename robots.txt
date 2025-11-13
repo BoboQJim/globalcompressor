@@ -23,9 +23,6 @@ Allow: /category/video/
 Allow: /category/audio/
 Allow: /category/batch/
 
-# Crawler crawling frequency control (to avoid server pressure)
-Crawl-delay: 1
-
 # Site map address
 Sitemap: https://squoosh.online/sitemap.xml
 
