@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Squoosh.online - Free Online Compression Tools for Global Users. High-quality image, video, PDF, file & audio compression with instant results. No registration, cross-device support.">
+    <meta name="keywords" content="Squoosh.online, online compression, image compressor, video compression, PDF compressor, file compression, audio compressor, free online tools, global compression platform, cross-device compression">
+    <meta name="author" content="Squoosh.online">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="canonical" href="https://www.squoosh.online/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.squoosh.online/">
+    <meta property="og:title" content="Squoosh.online - Global Free Online Compression Tools">
+    <meta property="og:description" content="Access the best free online tools to compress Images, Videos, PDFs, and Audio files. Secure, fast, and high-quality.">
+    <meta property="og:image" content="https://www.squoosh.online/og-image.jpg"> <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Squoosh.online - Global Free Online Compression Tools">
+    <meta name="twitter:description" content="Best free online tools for reducing file size of Images, Videos, and PDFs.">
+
+    <title>Squoosh.online - Global Free Online Compression Tools (Image, Video, PDF)</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Squoosh.online Compression Tools Directory",
+      "description": "A curated list of the best free online image, video, PDF, and audio compression tools.",
+      "url": "https://www.squoosh.online",
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "item": { "@type": "SoftwareApplication", "name": "TinyPNG", "applicationCategory": "MultimediaApplication" } },
+          { "@type": "ListItem", "position": 2, "item": { "@type": "SoftwareApplication", "name": "Squoosh", "applicationCategory": "MultimediaApplication" } },
+          { "@type": "ListItem", "position": 3, "item": { "@type": "SoftwareApplication", "name": "SmallPDF", "applicationCategory": "BusinessApplication" } }
+        ]
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Are all compression tools on Squoosh.online free to use?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, all the compression tools listed on our platform are free to use." }
+      }, {
+        "@type": "Question",
+        "name": "Is my file data secure during compression?",
+        "acceptedAnswer": { "@type": "Answer", "text": "All recommended tools prioritize data security with automatic file deletion (usually within 24 hours)." }
+      }, {
+        "@type": "Question",
+        "name": "Can I compress files on mobile devices?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Absolutely! All tools featured on our platform are mobile-friendly." }
+      }, {
+        "@type": "Question",
+        "name": "What's the difference between lossless and lossy compression?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Lossless compression reduces file size without quality loss. Lossy compression achieves higher compression by removing some data." }
+      }]
+    }
+    </script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563EB',
+                        secondary: '#10B981',
+                        accent: '#8B5CF6',
+                        dark: '#1E293B',
+                        light: '#F8FAFC'
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto { content-visibility: auto; }
+            .card-hover { @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1; }
+            
+            /* Semantic List Styling */
+            .tool-item { @apply block h-full; } 
+            .tool-card { @apply block h-full bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100 flex flex-col; }
+            
+            .btn-tool { @apply bg-white hover:bg-gray-50 text-dark border border-gray-200 font-medium py-2 px-4 rounded-lg transition-all duration-300 flex items-center justify-center; }
+            .category-tag { @apply inline-block px-3 py-1 text-xs font-medium rounded-full mb-2; }
+            .section-padding { @apply py-8 md:py-12; }
+            .container-custom { @apply container mx-auto px-4 sm:px-6 lg:px-8; }
+            
+            /* Modal Styling */
+            .modal-backdrop { @apply fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center opacity-0 invisible transition-all duration-300; }
+            .modal-backdrop.active { @apply opacity-100 visible; }
+            .modal-content { @apply bg-white rounded-xl shadow-2xl w-full max-w-2xl max-h-[80vh] overflow-y-auto p-6 transform scale-95 transition-transform duration-300; }
+            .modal-backdrop.active .modal-content { @apply scale-100; }
+            .modal-close { @apply absolute top-4 right-4 text-gray-500 hover:text-gray-700 transition-colors cursor-pointer; }
+            
+            .btn-use-now { @apply text-primary font-medium flex items-center whitespace-nowrap mt-auto; }
+            
+            /* Scrollbar hiding */
+            .scrollbar-hide::-webkit-scrollbar { display: none; }
+            .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+        }
+    </style>
+
+    <script src="https://analytics.ahrefs.com/analytics.js" data-key="IppWvd+WbRZ2E6MjAYaR4A" async></script>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "u7c2rqswer");
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5612434384082476" crossorigin="anonymous"></script>
+</head>
+<body class="font-inter bg-light text-dark antialiased">
+    <header id="header" class="sticky top-0 bg-white/95 backdrop-blur-sm z-50 shadow-sm">
+        <div class="container-custom">
+            <div class="flex flex-col md:flex-row items-center justify-between h-auto py-4">
+                <a href="#" class="flex items-center space-x-2 mb-4 md:mb-0">
+                    <i class="fa fa-compress text-primary text-2xl"></i>
+                    <span class="text-xl md:text-2xl font-bold text-dark">Squoosh!GlobalCompress</span>
+                </a>
+                
+                <div class="relative w-full md:w-96 mb-4 md:mb-0">
+                    <input type="text" id="search-tools" placeholder="Search compression tools (e.g., PNG compression)..." class="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary">
+                    <i class="fa fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-6 pb-12">
+        <section class="container-custom mb-8">
+            <div class="flex overflow-x-auto pb-4 scrollbar-hide gap-3 md:gap-4">
+                <button class="category-tab whitespace-nowrap px-4 py-2 bg-primary text-white rounded-lg font-medium" data-category="all">All Tools</button>
+                <button class="category-tab whitespace-nowrap px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg font-medium transition-colors" data-category="image">Image Compression</button>
+                <button class="category-tab whitespace-nowrap px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg font-medium transition-colors" data-category="file">File Compression</button>
+                <button class="category-tab whitespace-nowrap px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg font-medium transition-colors" data-category="pdf">PDF Compression</button>
+                <button class="category-tab whitespace-nowrap px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg font-medium transition-colors" data-category="video">Video Compression</button>
+                <button class="category-tab whitespace-nowrap px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg font-medium transition-colors" data-category="audio">Audio Compression</button>
+                <button class="category-tab whitespace-nowrap px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg font-medium transition-colors" data-category="batch">Batch Compression</button>
+            </div>
+        </section>
+
+        <section class="container-custom">
+            <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+                
+                <li class="tool-item" data-categories="image">
+                    <a href="https://tinypng.com" target="_blank" rel="noopener noreferrer" class="tool-card card-hover">
+                        <div class="p-5 h-full flex flex-col">
+                            <div class="flex justify-between items-start mb-3">
+                                <div><span class="category-tag bg-green-100 text-green-600">Popular</span><span class="category-tag bg-secondary/10 text-secondary">Image</span></div>
+                                <div class="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center"><i class="fa fa-picture-o text-secondary text-lg"></i></div>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">TinyPNG</h3>
+                            <p class="text-gray-600 text-sm mb-4 flex-grow">Intelligently compresses PNG/JPEG while maintaining quality and reducing file size significantly</p>
+                            <div class="flex justify-between items-center text-sm mt-auto"><span class="text-gray-500">Supports: PNG, JPG, WebP</span><span class="btn-use-now">Use Now <i class="fa fa-external-link ml-1"></i></span></div>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="tool-item" data-categories="image">
+                    <a href="https://squoosh.app" target="_blank" rel="noopener noreferrer" class="tool-card card-hover">
+                        <div class="p-5 h-full flex flex-col">
+                            <div class="flex justify-between items-start mb-3">
+                                <div><span class="category-tag bg-blue-100 text-blue-600">Open Source</span><span class="category-tag bg-secondary/10 text-secondary">Image</span></div>
+                                <div class="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center"><i class="fa fa-picture-o text-secondary text-lg"></i></div>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">Squoosh</h3>
+                            <p class="text-gray-600 text-sm mb-4 flex-grow">Real-time preview of compression results with multiple image formats and custom settings</p>
+                            <div class="flex justify-between items-center text-sm mt-auto"><span class="text-gray-500">Supports: Multiple Formats</span><span class="btn-use-now">Use Now <i class="fa fa-external-link ml-1"></i></span></div>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="tool-item" data-categories="image">
+                    <a href="https://image.squoosh.online/" target="_blank" rel="noopener noreferrer" class="tool-card card-hover">
+                        <div class="p-5 h-full flex flex-col">
+                            <div class="flex justify-between items-start mb-3">
+                                <div><span class="category-tag bg-blue-100 text-blue-600">Specialized</span><span class="category-tag bg-secondary/10 text-secondary">Image</span></div>
+                                <div class="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center"><i class="fa fa-picture-o text-secondary text-lg"></i></div>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">Squoosh Image</h3>
+                            <p class="text-gray-600 text-sm mb-4 flex-grow">Squoosh's dedicated image compression tool with advanced format conversion and custom compression parameters</p>
+                            <div class="flex justify-between items-center text-sm mt-auto"><span class="text-gray-500">Supports: JPG, PNG, WebP, AVIF</span><span class="btn-use-now">Use Now <i class="fa fa-external-link ml-1"></i></span></div>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="tool-item" data-categories="image">
+                    <a href="https://shortpixel.com" target="_blank" rel="noopener noreferrer" class="tool-card card-hover">
+                        <div class="p-5 h-full flex flex-col">
+                            <div class="flex justify-between items-start mb-3">
+                                <div><span class="category-tag bg-purple-100 text-purple-600">AI Optimized</span><span class="category-tag bg-secondary/10 text-secondary">Image</span></div>
+                                <div class="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center"><i class="fa fa-picture-o text-secondary text-lg"></i></div>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">ShortPixel</h3>
+                            <p class="text-gray-600 text-sm mb-4 flex-grow">AI-powered image compression with automatic WebP conversion, ideal for web use</p>
+                            <div class="flex justify-between items-center text-sm mt-auto"><span class="text-gray-500">Supports: All Formats</span><span class="btn-use-now">Use Now <i class="fa fa-external-link ml-1"></i></span></div>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="tool-item" data-categories="image">
+                    <a href="https://compressor.io" target="_blank" rel="noopener noreferrer" class="tool-card card-hover">
+                        <div class="p-5 h-full flex flex-col">
+                            <div class="flex justify-between items-start mb-3">
+                                <div><span class="category-tag bg-orange-100 text-orange-600">High Quality</span><span class="category-tag bg-secondary/10 text-secondary">Image</span></div>
+                                <div class="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center"><i class="fa fa-picture-o text-secondary text-lg"></i></div>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">Compressor.io</h3>
+                            <p class="text-gray-600 text-sm mb-4 flex-grow">Lossless/lossy compression options with drag-and-drop upload, simple and easy to use</p>
+                            <div class="flex justify-between items-center text-sm mt-auto"><span class="text-gray-500">Supports: JPG, PNG, SVG</span><span class="btn-use-now">Use Now <i class="fa fa-external-link ml-1"></i></span></div>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="tool-item" data-categories="file">
+                    <a href="https://wecompress.com" target="_blank" rel="noopener noreferrer" class="tool-card card-hover">
+                        <div class="p-5 h-full flex flex-col">
+                            <div class="flex justify-between items-start mb-3">
+                                <div><span class="category-tag bg-green-100 text-green-600">Popular</span><span class="category-tag bg-primary/10 text-primary">File</span></div>
+                                <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center"><i class="fa fa-file-archive-o text-primary text-lg"></i></div>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">WeCompress</h3>
+                            <p class="text-gray-600 text-sm mb-4 flex-grow">Free online file compression supporting multiple formats, no registration required</p>
+                            <div class="flex justify-between items-center text-sm mt-auto"><span class="text-gray-500">Supports: Docs, Images</span><span class="btn-use-now">Use Now <i class="fa fa-external-link ml-1"></i></span></div>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="tool-item" data-categories="file">
+                    <a href="http://zipcompress.com" target="_blank" rel="noopener noreferrer" class="tool-card card-hover">
+                        <div class="p-5 h-full flex flex-col">
+                            <div class="flex justify-between items-start mb-3">
+                                <div><span class="category-tag bg-blue-100 text-blue-600">Fast</span><span class="category-tag bg-primary/10 text-primary">File</span></div>
+                                <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center"><i class="fa fa-file-archive-o text-primary text-lg"></i></div>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">ZIP Compress</h3>
+                            <p class="text-gray-600 text-sm mb-4 flex-grow">Create ZIP archives online with batch file upload and password protection support</p>
+                            <div class="flex justify-between items-center text-sm mt-auto"><span class="text-gray-500">Supports: All File Types</span><span class="btn-use-now">Use Now <i class="fa fa-external-link ml-1"></i></span></div>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="tool-item" data-categories="file">
+                    <a href="https://compress2go.com" target="_blank" rel="noopener noreferrer" class="tool-card card-hover">
+                        <div class="p-5 h-full flex flex-col">
+                            <div class="flex justify-between items-start mb-3">
+                                <div><span class="category-tag bg-purple-100 text-purple-600">Multi-format</span><span class="category-tag bg-primary/10 text-primary">File</span></div>
+                                <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center"><i class="fa fa-file-archive-o text-primary text-lg"></i></div>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">Compress2Go</h3>
+                            <p class="text-gray-600 text-sm mb-4 flex-grow">The best tool to reduce the file size of your files. Free online file compression.</p>
+                            <div class="flex justify-between items-center text-sm mt-auto"><span class="text-gray-500">Supports: Multi-format</span><span class="btn-use-now">Use Now <i class="fa fa-external-link ml-1"></i></span></div>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="tool-item" data-categories="pdf">
+                    <a href="https://smallpdf.com/compress-pdf" target="_blank" rel="noopener noreferrer" class="tool-card card-hover">
+                        <div class="p-5 h-full flex flex-col">
+                            <div class="flex justify-between items-start mb-3">
+                                <div><span class="category-tag bg-green-100 text-green-600">Popular</span><span class="category-tag bg-orange-100 text-orange-500">PDF</span></div>
+                                <div class="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center"><i class="fa fa-file-pdf-o text-orange-500 text-lg"></i></div>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">SmallPDF</h3>
+                            <p class="text-gray-600 text-sm mb-4 flex-grow">Most popular PDF compression tool with one-click compression and quality preservation</p>
+                            <div class="flex justify-between items-center text-sm mt-auto"><span class="text-gray-500">Supports: PDF</span><span class="btn-use-now">Use Now <i class="fa fa-external-link ml-1"></i></span></div>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="tool-item" data-categories="pdf">
+                    <a href="https://www.ilovepdf.com/compress_pdf" target="_blank" rel="noopener noreferrer" class="tool-card card-hover">
+                        <div class="p-5 h-full flex flex-col">
+                            <div class="flex justify-between items-start mb-3">
+                                <div><span class="category-tag bg-blue-100 text-blue-600">All-in-One</span><span class="category-tag bg-orange-100 text-orange-500">PDF</span></div>
+                                <div class="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center"><i class="fa fa-file-pdf-o text-orange-500 text-lg"></i></div>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">iLovePDF</h3>
+                            <p class="text-gray-600 text-sm mb-4 flex-grow">Complete PDF toolset with three compression levels: High, Medium, and Low</p>
+                            <div class="flex justify-between items-center text-sm mt-auto"><span class="text-gray-500">Supports: PDF</span><span class="btn-use-now">Use Now <i class="fa fa-external-link ml-1"></i></span></div>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="tool-item" data-categories="pdf">
+                    <a href="https://www.pdf2go.com/compress-pdf" target="_blank" rel="noopener noreferrer" class="tool-card card-hover">
+                        <div class="p-5 h-full flex flex-col">
+                            <div class="flex justify-between items-start mb-3">
+                                <div><span class="category-tag bg-purple-100 text-purple-600">Secure</span><span class="category-tag bg-orange-100 text-orange-500">PDF</span></div>
+                                <div class="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center"><i class="fa fa-file-pdf-o text-orange-500 text-lg"></i></div>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">PDF2Go</h3>
+                            <p class="text-gray-600 text-sm mb-4 flex-grow">Online PDF compression with automatic file encryption and 24-hour auto-deletion</p>
+                            <div class="flex justify-between items-center text-sm mt-auto"><span class="text-gray-500">Supports: PDF</span><span class="btn-use-now">Use Now <i class="fa fa-external-link ml-1"></i></span></div>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="tool-item" data-categories="video">
+                    <a href="https://www.kapwing.com/compress-video" target="_blank" rel="noopener noreferrer" class="tool-card card-hover">
+                        <div class="p-5 h-full flex flex-col">
+                            <div class="flex justify-between items-start mb-3">
+                                <div><span class="category-tag bg-green-100 text-green-600">Popular</span><span class="category-tag bg-accent/10 text-accent">Video</span></div>
+                                <div class="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center"><i class="fa fa-video-camera text-accent text-lg"></i></div>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">Kapwing</h3>
+                            <p class="text-gray-600 text-sm mb-4 flex-grow">Online video editor with built-in compression, perfect for social media sharing</p>
+                            <div class="flex justify-between items-center text-sm mt-auto"><span class="text-gray-500">Supports: MP4, MOV, AVI</span><span class="btn-use-now">Use Now <i class="fa fa-external-link ml-1"></i></span></div>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="tool-item" data-categories="video">
+                    <a href="https://clideo.com/compress-video" target="_blank" rel="noopener noreferrer" class="tool-card card-hover">
+                        <div class="p-5 h-full flex flex-col">
+                            <div class="flex justify-between items-start mb-3">
+                                <div><span class="category-tag bg-blue-100 text-blue-600">Simple</span><span class="category-tag bg-accent/10 text-accent">Video</span></div>
+                                <div class="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center"><i class="fa fa-video-camera text-accent text-lg"></i></div>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">Clideo</h3>
+                            <p class="text-gray-600 text-sm mb-4 flex-grow">Three-step video compression: Upload, Compress, Download. Supports multiple formats</p>
+                            <div class="flex justify-between items-center text-sm mt-auto"><span class="text-gray-500">Supports: All Video Formats</span><span class="btn-use-now">Use Now <i class="fa fa-external-link ml-1"></i></span></div>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="tool-item" data-categories="video">
+                    <a href="https://videosmaller.com" target="_blank" rel="noopener noreferrer" class="tool-card card-hover">
+                        <div class="p-5 h-full flex flex-col">
+                            <div class="flex justify-between items-start mb-3">
+                                <div><span class="category-tag bg-orange-100 text-orange-600">Fast</span><span class="category-tag bg-accent/10 text-accent">Video</span></div>
+                                <div class="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center"><i class="fa fa-video-camera text-accent text-lg"></i></div>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">VideoSmaller</h3>
+                            <p class="text-gray-600 text-sm mb-4 flex-grow">Focused on reducing video file size with resolution and bitrate adjustment options</p>
+                            <div class="flex justify-between items-center text-sm mt-auto"><span class="text-gray-500">Supports: MP4, MOV</span><span class="btn-use-now">Use Now <i class="fa fa-external-link ml-1"></i></span></div>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="tool-item" data-categories="video">
+                    <a href="https://video.squoosh.online/" target="_blank" rel="noopener noreferrer" class="tool-card card-hover">
+                        <div class="p-5 h-full flex flex-col">
+                            <div class="flex justify-between items-start mb-3">
+                                <div><span class="category-tag bg-blue-100 text-blue-600">Open Source</span><span class="category-tag bg-accent/10 text-accent">Video</span></div>
+                                <div class="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center"><i class="fa fa-video-camera text-accent text-lg"></i></div>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">Squoosh Video</h3>
+                            <p class="text-gray-600 text-sm mb-4 flex-grow">Squoosh's dedicated video compression tool with efficient encoding/decoding and format conversion</p>
+                            <div class="flex justify-between items-center text-sm mt-auto"><span class="text-gray-500">Supports: MP4, WebM, AV1</span><span class="btn-use-now">Use Now <i class="fa fa-external-link ml-1"></i></span></div>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="tool-item" data-categories="audio">
+                    <a href="http://audiocompressor.com" target="_blank" rel="noopener noreferrer" class="tool-card card-hover">
+                        <div class="p-5 h-full flex flex-col">
+                            <div class="flex justify-between items-start mb-3">
+                                <div><span class="category-tag bg-purple-100 text-purple-600">Professional</span><span class="category-tag bg-pink-100 text-pink-500">Audio</span></div>
+                                <div class="w-10 h-10 bg-pink-100 rounded-lg flex items-center justify-center"><i class="fa fa-music text-pink-500 text-lg"></i></div>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">AudioCompressor</h3>
+                            <p class="text-gray-600 text-sm mb-4 flex-grow">Adjust audio bitrate and sample rate to reduce file size while preserving sound quality</p>
+                            <div class="flex justify-between items-center text-sm mt-auto"><span class="text-gray-500">Supports: MP3, WAV, FLAC</span><span class="btn-use-now">Use Now <i class="fa fa-external-link ml-1"></i></span></div>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="tool-item" data-categories="audio">
+                    <a href="https://mp3compress.com" target="_blank" rel="noopener noreferrer" class="tool-card card-hover">
+                        <div class="p-5 h-full flex flex-col">
+                            <div class="flex justify-between items-start mb-3">
+                                <div><span class="category-tag bg-green-100 text-green-600">Popular</span><span class="category-tag bg-pink-100 text-pink-500">Audio</span></div>
+                                <div class="w-10 h-10 bg-pink-100 rounded-lg flex items-center justify-center"><i class="fa fa-music text-pink-500 text-lg"></i></div>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">MP3Compress</h3>
+                            <p class="text-gray-600 text-sm mb-4 flex-grow">MP3-focused compression tool with batch processing and quality adjustment options</p>
+                            <div class="flex justify-between items-center text-sm mt-auto"><span class="text-gray-500">Supports: MP3</span><span class="btn-use-now">Use Now <i class="fa fa-external-link ml-1"></i></span></div>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="tool-item" data-categories="batch,image">
+                    <a href="https://bulkresizephotos.com" target="_blank" rel="noopener noreferrer" class="tool-card card-hover">
+                        <div class="p-5 h-full flex flex-col">
+                            <div class="flex justify-between items-start mb-3">
+                                <div><span class="category-tag bg-blue-100 text-blue-600">Efficient</span><span class="category-tag bg-red-100 text-red-500">Batch</span></div>
+                                <div class="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center"><i class="fa fa-files-o text-red-500 text-lg"></i></div>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">BulkResizePhotos</h3>
+                            <p class="text-gray-600 text-sm mb-4 flex-grow">Batch resize and compress images, supporting simultaneous processing of multiple photos</p>
+                            <div class="flex justify-between items-center text-sm mt-auto"><span class="text-gray-500">Supports: JPG, PNG</span><span class="btn-use-now">Use Now <i class="fa fa-external-link ml-1"></i></span></div>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="tool-item" data-categories="batch,file">
+                    <a href="https://batchcompress.com" target="_blank" rel="noopener noreferrer" class="tool-card card-hover">
+                        <div class="p-5 h-full flex flex-col">
+                            <div class="flex justify-between items-start mb-3">
+                                <div><span class="category-tag bg-purple-100 text-purple-600">Multi-format</span><span class="category-tag bg-red-100 text-red-500">Batch</span></div>
+                                <div class="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center"><i class="fa fa-files-o text-red-500 text-lg"></i></div>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">BatchCompress</h3>
+                            <p class="text-gray-600 text-sm mb-4 flex-grow">Batch compress multiple file types including images, documents, and audio files</p>
+                            <div class="flex justify-between items-center text-sm mt-auto"><span class="text-gray-500">Supports: Multiple File Types</span><span class="btn-use-now">Use Now <i class="fa fa-external-link ml-1"></i></span></div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="container-custom section-padding mt-12 bg-white rounded-2xl shadow-sm p-6 md:p-8">
+            <h2 class="text-2xl md:text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="faq-item border-b border-gray-100 pb-4">
+                    <h3 class="text-lg font-semibold mb-2 flex items-center"><i class="fa fa-question-circle text-primary mr-2"></i>Are all compression tools on Squoosh.online free to use?</h3>
+                    <p class="text-gray-600">Yes, all the compression tools listed on our platform are free to use. Some tools may offer premium features, but their basic compression functionality remains free with no hidden charges.</p>
+                </div>
+                
+                <div class="faq-item border-b border-gray-100 pb-4">
+                    <h3 class="text-lg font-semibold mb-2 flex items-center"><i class="fa fa-question-circle text-primary mr-2"></i>Is my file data secure during compression?</h3>
+                    <p class="text-gray-600">All recommended tools prioritize data security with automatic file deletion (usually within 24 hours). We only feature platforms that use encryption for file transfers.</p>
+                </div>
+                
+                <div class="faq-item border-b border-gray-100 pb-4">
+                    <h3 class="text-lg font-semibold mb-2 flex items-center"><i class="fa fa-question-circle text-primary mr-2"></i>Can I compress files on mobile devices?</h3>
+                    <p class="text-gray-600">Absolutely! All tools featured on our platform are mobile-friendly and work seamlessly on smartphones, tablets, and desktop computers with cross-browser compatibility.</p>
+                </div>
+                
+                <div class="faq-item border-b border-gray-100 pb-4">
+                    <h3 class="text-lg font-semibold mb-2 flex items-center"><i class="fa fa-question-circle text-primary mr-2"></i>What's the difference between lossless and lossy compression?</h3>
+                    <p class="text-gray-600">Lossless compression reduces file size without quality loss, ideal for documents. Lossy compression achieves higher compression by removing some data, suitable for images, audio, and video where minor quality reduction is acceptable.</p>
+                </div>
+                
+                <div class="faq-item border-b border-gray-100 pb-4">
+                    <h3 class="text-lg font-semibold mb-2 flex items-center"><i class="fa fa-question-circle text-primary mr-2"></i>Is there a file size limit for compression?</h3>
+                    <p class="text-gray-600">File size limits vary by tool. Most tools support files up to 50MB for free users, with some offering higher limits. Check individual tool descriptions for specific details.</p>
+                </div>
+                
+                <div class="faq-item border-b border-gray-100 pb-4">
+                    <h3 class="text-lg font-semibold mb-2 flex items-center"><i class="fa fa-question-circle text-primary mr-2"></i>How do I choose the right compression tool?</h3>
+                    <p class="text-gray-600">Select tools based on your file type (image, video, PDF, etc.), required compression level, and any special features like batch processing or format conversion that you need.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container-custom section-padding mt-8">
+            <h2 class="text-2xl md:text-3xl font-bold mb-8 text-center">Why Choose Squoosh.online?</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm card-hover border border-gray-100">
+                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4"><i class="fa fa-globe text-primary text-xl"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Global Accessibility</h3>
+                    <p class="text-gray-600">Our platform works worldwide with optimized performance across different regions, ensuring fast access and reliable compression results regardless of your location.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm card-hover border border-gray-100">
+                    <div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4"><i class="fa fa-check-circle text-secondary text-xl"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Curated Quality Tools</h3>
+                    <p class="text-gray-600">We handpick only the most effective compression tools, testing each for performance, quality retention, and user experience to ensure optimal results.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm card-hover border border-gray-100">
+                    <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4"><i class="fa fa-mobile text-accent text-xl"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Cross-Device Support</h3>
+                    <p class="text-gray-600">All recommended tools work seamlessly on desktop, mobile, and tablet devices with responsive designs optimized for any screen size.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm card-hover border border-gray-100">
+                    <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4"><i class="fa fa-lock text-orange-500 text-xl"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Privacy Focused</h3>
+                    <p class="text-gray-600">We prioritize tools that implement strict privacy policies, with most offering automatic file deletion and secure encryption for your sensitive data.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm card-hover border border-gray-100">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4"><i class="fa fa-bolt text-purple-500 text-xl"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Instant Results</h3>
+                    <p class="text-gray-600">Our selected tools provide fast compression with real-time previews, allowing you to see results immediately without lengthy processing times.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm card-hover border border-gray-100">
+                    <div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-4"><i class="fa fa-language text-pink-500 text-xl"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Multilingual Support</h3>
+                    <p class="text-gray-600">Many tools offer interface localization in multiple languages, making compression accessible to users around the world regardless of language barriers.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-8 mt-12">
+        <div class="container-custom">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <a href="#" class="flex items-center space-x-2"><i class="fa fa-compress text-primary text-xl"></i><span class="text-lg font-bold">Squoosh!GlobalCompress</span></a>
+                    <p class="text-gray-400 text-sm mt-2">Top International Online Compression Tools · One-Click Access</p>
+                </div>
+                <div class="flex flex-wrap justify-center gap-6 text-sm">
+                    <button id="about-us-btn" class="text-gray-400 hover:text-white transition-colors cursor-pointer">About Us</button>
+                    <button id="privacy-policy-btn" class="text-gray-400 hover:text-white transition-colors cursor-pointer">Privacy Policy</button>
+                    <button id="terms-service-btn" class="text-gray-400 hover:text-white transition-colors cursor-pointer">Terms of Service</button>
+                    <button id="cookie-policy-btn" class="text-gray-400 hover:text-white transition-colors cursor-pointer">Cookie Policy</button>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-6 pt-6 text-center text-gray-500 text-sm">
+                <p>© 2025 Squoosh!GlobalCompress. Navigation services only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-primary/90">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+
+    <div id="about-us-modal" class="modal-backdrop">
+        <div class="modal-content relative">
+            <span class="modal-close" data-modal="about-us-modal"><i class="fa fa-times text-xl"></i></span>
+            <h3 class="text-2xl font-bold text-dark mb-4">About Squoosh!GlobalCompress</h3>
+            <div class="text-gray-700 space-y-4">
+                <p>Squoosh!GlobalCompress is a curated directory dedicated to connecting users with the best international online compression tools available. Our mission is to simplify the process of finding reliable, efficient, and high-quality compression solutions for various file types.</p>
+                <p>Launched in 2025, we've carefully selected and categorized compression tools to help users quickly find exactly what they need - whether it's image compression for web optimization, PDF compression for easier sharing, or video compression for faster streaming.</p>
+                <p>We continuously update our directory to include the latest and most innovative tools, ensuring our users have access to cutting-edge compression technology from around the world. All tools listed on our platform are thoroughly evaluated for performance, usability, and security.</p>
+                <p>Squoosh!GlobalCompress is not affiliated with any of the tool providers listed on our website. We simply provide a convenient way to discover and access the best compression solutions available online.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="privacy-policy-modal" class="modal-backdrop">
+        <div class="modal-content relative">
+            <span class="modal-close" data-modal="privacy-policy-modal"><i class="fa fa-times text-xl"></i></span>
+            <h3 class="text-2xl font-bold text-dark mb-4">Privacy Policy</h3>
+            <div class="text-gray-700 space-y-4">
+                <p>At Squoosh!GlobalCompress, we take your privacy seriously. This Privacy Policy outlines how we collect, use, and protect your information when you use our website.</p>
+                <h4 class="text-lg font-semibold text-dark">Information We Don't Collect</h4>
+                <p>Squoosh!GlobalCompress does not collect any personal information from our users. We do not require registration, and we do not track or store any identifying data such as names, email addresses, or IP addresses.</p>
+                <h4 class="text-lg font-semibold text-dark">Usage Data</h4>
+                <p>We may collect anonymous usage data to improve our website, such as which categories are most frequently accessed and search terms used. This data is collected in aggregate form and cannot be used to identify individual users.</p>
+                <h4 class="text-lg font-semibold text-dark">Third-Party Tools</h4>
+                <p>When you click on a tool link and are redirected to an external website, you will be subject to that website's privacy policy. We recommend reviewing the privacy policy of any third-party website you visit.</p>
+                <h4 class="text-lg font-semibold text-dark">Cookies</h4>
+                <p>Our website does not use any cookies to track user behavior or collect information.</p>
+                <h4 class="text-lg font-semibold text-dark">Data Security</h4>
+                <p>Since we do not collect personal information, there is no risk of your personal data being compromised through our website. We maintain appropriate security measures to protect our website and ensure its reliable operation.</p>
+                <p>This Privacy Policy may be updated from time to time. We will notify users of any changes by posting the updated policy on this page.</p>
+                <p class="text-gray-700">If you have any questions about this Cookie Policy, please contact us at:</p>
+                <p class="text-gray-700 mt-2">Email: support@squoosh.online<br>Website: https://www.squoosh.online</p>
+                <div class="mt-6 pt-6 border-t text-sm text-gray-500">Last Updated: November 12, 2025</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="terms-service-modal" class="modal-backdrop">
+        <div class="modal-content relative">
+            <span class="modal-close" data-modal="terms-service-modal"><i class="fa fa-times text-xl"></i></span>
+            <h3 class="text-2xl font-bold text-dark mb-4">Terms of Service</h3>
+            <div class="text-gray-700 space-y-4">
+                <p>By using Squoosh!GlobalCompress, you agree to the following Terms of Service. Please read them carefully before using our website.</p>
+                <h4 class="text-lg font-semibold text-dark">Website Purpose</h4>
+                <p>Squoosh!GlobalCompress provides a directory of links to third-party online compression tools. We do not provide compression services ourselves, but rather act as a guide to help users find appropriate tools for their needs.</p>
+                <h4 class="text-lg font-semibold text-dark">Third-Party Links</h4>
+                <p>Our website contains links to external websites operated by third parties. We have no control over the content, functionality, or policies of these websites. Accessing these links is at your own risk, and we are not responsible for any damages or issues arising from your use of third-party websites.</p>
+                <h4 class="text-lg font-semibold text-dark">Tool Availability</h4>
+                <p>We strive to maintain accurate and up-to-date links to compression tools, but we cannot guarantee that all links will be functional at all times. Tool providers may change their services, discontinue operations, or modify their URLs without notice.</p>
+                <h4 class="text-lg font-semibold text-dark">User Responsibility</h4>
+                <p>Users are responsible for reviewing the terms of service and privacy policies of any third-party tools they use. Squoosh!GlobalCompress is not liable for any content, products, or services provided by third-party websites.</p>
+                <h4 class="text-lg font-semibold text-dark">Intellectual Property</h4>
+                <p>All content on Squoosh!GlobalCompress, including logos, text, and design elements, is the intellectual property of Squoosh!GlobalCompress. You may not reproduce, distribute, or modify any content from our website without prior written permission.</p>
+                <h4 class="text-lg font-semibold text-dark">Disclaimer of Liability</h4>
+                <p>Squoosh!GlobalCompress is provided "as is" without any warranties, express or implied. We do not warrant that our website will be error-free or uninterrupted, or that the tools listed will meet your specific requirements. In no event shall Squoosh!GlobalCompress be liable for any damages arising from the use of our website or the tools listed therein.</p>
+                <h4 class="text-lg font-semibold text-dark">Changes to Terms</h4>
+                <p>We reserve the right to modify these Terms of Service at any time. Changes will be effective immediately upon posting on this page. Your continued use of Squoosh!GlobalCompress after changes are posted constitutes your acceptance of the updated Terms of Service.</p>
+                <p class="text-gray-700">If you have any questions about this Cookie Policy, please contact us at:</p>
+                <p class="text-gray-700 mt-2">Email: support@squoosh.online<br>Website: https://www.squoosh.online</p>
+                <div class="mt-6 pt-6 border-t text-sm text-gray-500">Last Updated: November 12, 2025</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="cookie-policy-modal" class="modal-backdrop">
+        <div class="modal-content relative">
+            <span class="modal-close" data-modal="cookie-policy-modal"><i class="fa fa-times text-xl"></i></span>
+            <h3 class="text-2xl font-bold text-dark mb-4">Cookie Policy</h3>
+            <div class="text-gray-700 space-y-4">
+                <h4 class="text-lg font-semibold mb-3">1. What Are Cookies</h4>
+                <p class="text-gray-700 mb-4">Cookies are small text files that are placed on your computer or mobile device when you visit a website. They are widely used to make websites work more efficiently, as well as to provide information to the website owners.</p>
+                <h4 class="text-lg font-semibold mb-3">2. Types of Cookies We Use</h4>
+                <p class="text-gray-700 mb-3">We use the following types of cookies on our Service:</p>
+                <ul class="list-disc pl-6 text-gray-700 mb-4">
+                    <li><strong>Necessary Cookies:</strong> These cookies are essential for the Service to function properly. They enable basic functions like page navigation and access to secure areas of the Service. Without these cookies, the Service cannot be used as intended.</li>
+                    <li><strong>Analytical/Performance Cookies:</strong> These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our Service. They help us to know which pages are the most and least popular and see how visitors move around the Service.</li>
+                    <li><strong>Functional Cookies:</strong> These cookies enable the Service to provide enhanced functionality and personalization. They may be set by us or by third-party providers whose services we have added to our pages.</li>
+                    <li><strong>Targeting/Advertising Cookies:</strong> These cookies may be set through our Service by our advertising partners. They may be used by those companies to build a profile of your interests and show you relevant advertisements on other websites.</li>
+                </ul>
+                <h4 class="text-lg font-semibold mb-3">3. How We Use Cookies</h4>
+                <p class="text-gray-700 mb-4">We use cookies for the following purposes:</p>
+                <ul class="list-disc pl-6 text-gray-700 mb-4">
+                    <li>To provide and maintain our Service</li>
+                    <li>To improve and personalize the Service</li>
+                    <li>To analyze how users interact with the Service</li>
+                    <li>To remember your preferences and settings</li>
+                    <li>To deliver targeted advertising (with your consent)</li>
+                </ul>
+                <h4 class="text-lg font-semibold mb-3">4. Third-Party Cookies</h4>
+                <p class="text-gray-700 mb-4">Our Service may use third-party cookies from service providers such as Google Analytics for analytical purposes. These third parties have their own cookie policies and we do not have control over their cookies. We recommend that you review the privacy policies of these third-party providers.</p>
+                <h4 class="text-lg font-semibold mb-3">5. Cookie Consent</h4>
+                <p class="text-gray-700 mb-4">By using our Service, you consent to the use of cookies in accordance with this Cookie Policy. When you first visit our website, we will display a cookie consent banner asking for your permission to use non-necessary cookies. You can withdraw or modify your consent at any time through the cookie settings.</p>
+                <h4 class="text-lg font-semibold mb-3">6. Managing Cookies</h4>
+                <p class="text-gray-700 mb-3">You can control and manage cookies in your browser settings. Most browsers allow you to:</p>
+                <ul class="list-disc pl-6 text-gray-700 mb-4">
+                    <li>See which cookies are stored on your device</li>
+                    <li>Block or delete cookies</li>
+                    <li>Prevent cookies from being stored in the future</li>
+                </ul>
+                <p class="text-gray-700 mb-4">Please note that disabling certain types of cookies may affect the functionality of our Service. For more information on how to manage cookies in your specific browser, please refer to your browser's help documentation.</p>
+                <h4 class="text-lg font-semibold mb-3">7. Cookie Retention Period</h4>
+                <p class="text-gray-700 mb-4">Most cookies we use have a limited retention period and will expire after a certain period of time. Session cookies are deleted when you close your browser, while persistent cookies remain on your device for a longer period (usually 1-2 years) or until you delete them.</p>
+                <h4 class="text-lg font-semibold mb-3">8. Changes to This Cookie Policy</h4>
+                <p class="text-gray-700 mb-4">We may update our Cookie Policy from time to time. We will notify you of any changes by posting the new Cookie Policy on this page and updating the "Last Updated" date. Your continued use of the Service after such changes constitutes your acceptance of the new Cookie Policy.</p>
+                <h4 class="text-lg font-semibold mb-3">9. Contact Us</h4>
+                <p class="text-gray-700">If you have any questions about this Cookie Policy, please contact us at:</p>
+                <p class="text-gray-700 mt-2">Email: support@squoosh.online<br>Website: https://www.squoosh.online</p>
+                <div class="mt-6 pt-6 border-t text-sm text-gray-500">Last Updated: November 12, 2025</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Back to Top
+        const backToTopButton = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        backToTopButton.addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+        // Category Filter (Logic adapted for LI wrappers)
+        const categoryTabs = document.querySelectorAll('.category-tab');
+        const toolItems = document.querySelectorAll('.tool-item'); // Selects the LI wrapper
+        
+        categoryTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                categoryTabs.forEach(t => {
+                    t.classList.remove('bg-primary', 'text-white');
+                    t.classList.add('bg-gray-100', 'hover:bg-gray-200');
+                });
+                tab.classList.remove('bg-gray-100', 'hover:bg-gray-200');
+                tab.classList.add('bg-primary', 'text-white');
+                
+                const selectedCategory = tab.getAttribute('data-category');
+                toolItems.forEach(item => {
+                    const categories = item.getAttribute('data-categories').split(',');
+                    if (selectedCategory === 'all' || categories.includes(selectedCategory)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Search Functionality (Logic adapted for LI wrappers)
+        const searchInput = document.getElementById('search-tools');
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase().trim();
+            toolItems.forEach(item => {
+                if (searchTerm === '') {
+                    item.style.display = 'block';
+                    return;
+                }
+                // We search the text content of the entire LI
+                const cardText = item.textContent.toLowerCase();
+                if (cardText.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+        document.addEventListener('keydown', (e) => {
+            if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+                e.preventDefault();
+                searchInput.focus();
+            }
+        });
+
+        // Modal Logic (Cleaned up, no messy HTML injection needed)
+        document.addEventListener('DOMContentLoaded', function() {
+            const modals = ['about-us', 'privacy-policy', 'terms-service', 'cookie-policy'];
+            
+            modals.forEach(id => {
+                const btn = document.getElementById(id + '-btn');
+                if(btn) btn.addEventListener('click', () => openModal(id + '-modal'));
+            });
+            
+            document.querySelectorAll('.modal-close').forEach(btn => {
+                btn.addEventListener('click', function() { closeModal(this.getAttribute('data-modal')); });
+            });
+            
+            document.querySelectorAll('.modal-backdrop').forEach(modal => {
+                modal.addEventListener('click', function(e) { if(e.target === this) closeModal(this.id); });
+            });
+            
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') document.querySelectorAll('.modal-backdrop.active').forEach(m => closeModal(m.id));
+            });
+            
+            function openModal(id) {
+                const el = document.getElementById(id);
+                if(el) { el.classList.add('active'); document.body.style.overflow = 'hidden'; }
+            }
+            function closeModal(id) {
+                const el = document.getElementById(id);
+                if(el) { el.classList.remove('active'); document.body.style.overflow = ''; }
+            }
+        });
+    </script>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-analytics.js";
+      const firebaseConfig = {
+        apiKey: "AIzaSyC4KOwz5YZRciu-ZAC5CKER912DqTJ2Ezs",
+        authDomain: "squoosh-online.firebaseapp.com",
+        projectId: "squoosh-online",
+        storageBucket: "squoosh-online.firebasestorage.app",
+        messagingSenderId: "6015692976",
+        appId: "1:6015692976:web:71f7bf5abaa2dacf5b4b75",
+        measurementId: "G-8NE32ENS6R"
+      };
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
+</body>
+</html>
