@@ -157,49 +157,72 @@
                 <button class="category-tab whitespace-nowrap px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg font-medium transition-colors" data-category="batch">Batch Compression</button>
             </div>
         </section>
-<div style="margin: 25px auto; text-align: center; max-width: 728px; width: 100%; padding: 0 15px; box-sizing: border-box;">
+<!-- Responsive Horizontal Ad Unit (Reusable) -->
+<div class="responsive-ad-container" style="margin: 15px auto; text-align: center; max-width: 728px; width: 100%; padding: 0 8px; box-sizing: border-box;">
   <script type="text/javascript">
-    // Detect device type and set ad parameters
-    const isMobile = window.innerWidth < 768;
-    const adConfig = isMobile ? {
-      key: 'd3bd336b9f89543e57dc66e2d0fd80dc',
+    // Device detection & ad config (PC/Mobile separation)
+    const detectDevice = () => window.innerWidth < 768;
+    const adParams = detectDevice() 
+      ? { key: 'd3bd336b9f89543e57dc66e2d0fd80dc', height: 50, width: 320 }
+      : { key: 'b00444c71c9522c89296911725cfdfce', height: 90, width: 728 };
+
+    // Set ad options globally
+    window.atOptions = {
+      key: adParams.key,
       format: 'iframe',
-      height: 50,
-      width: 320,
-      params: {}
-    } : {
-      key: 'b00444c71c9522c89296911725cfdfce',
-      format: 'iframe',
-      height: 90,
-      width: 728,
+      height: adParams.height,
+      width: adParams.width,
       params: {}
     };
 
-    // Set ad options
-    window.atOptions = adConfig;
+    // Dynamic script loading (avoid duplicate loading)
+    const loadAdScript = () => {
+      const scriptId = `ad-script-${adParams.key}`;
+      if (document.getElementById(scriptId)) return;
 
-    // Create and load ad script dynamically
-    const adScript = document.createElement('script');
-    adScript.type = 'text/javascript';
-    adScript.src = `//cuddlecoveragehiss.com/${adConfig.key}/invoke.js`;
-    document.currentScript.parentNode.appendChild(adScript);
+      const adScript = document.createElement('script');
+      adScript.id = scriptId;
+      adScript.type = 'text/javascript';
+      adScript.src = `//cuddlecoveragehiss.com/${adParams.key}/invoke.js`;
+      document.currentScript.parentNode.appendChild(adScript);
+    };
+
+    // Initial load + resize adaptation
+    loadAdScript();
+    window.addEventListener('resize', () => {
+      const newAdParams = detectDevice() 
+        ? { key: 'd3bd336b9f89543e57dc66e2d0fd80dc', height: 50, width: 320 }
+        : { key: 'b00444c71c9522c89296911725cfdfce', height: 90, width: 728 };
+      
+      if (newAdParams.key !== adParams.key) {
+        window.atOptions = { ...window.atOptions, ...newAdParams };
+        loadAdScript();
+      }
+    });
   </script>
-  
-  <!-- Responsive style for ad iframe -->
+
+  <!-- Scoped responsive styles (no global impact) -->
   <style>
+    .responsive-ad-container iframe {
+      display: block;
+      margin: 0 auto;
+      border: none;
+    }
     @media (max-width: 768px) {
-      iframe[width="320"][height="50"] {
+      .responsive-ad-container iframe {
         width: 100% !important;
         height: auto !important;
-        min-height: 50px;
+        min-height: 50px !important;
+        max-height: 60px !important;
       }
     }
     @media (min-width: 768px) {
-      iframe[width="728"][height="90"] {
+      .responsive-ad-container iframe {
         width: 100% !important;
-        max-width: 728px;
+        max-width: 728px !important;
         height: auto !important;
-        min-height: 90px;
+        min-height: 90px !important;
+        max-height: 100px !important;
       }
     }
   </style>
@@ -488,49 +511,72 @@
                 </li>
             </ul>
         </section>
-<div style="margin: 25px auto; text-align: center; max-width: 728px; width: 100%; padding: 0 15px; box-sizing: border-box;">
+<!-- Responsive Horizontal Ad Unit (Reusable) -->
+<div class="responsive-ad-container" style="margin: 15px auto; text-align: center; max-width: 728px; width: 100%; padding: 0 8px; box-sizing: border-box;">
   <script type="text/javascript">
-    // Detect device type and set ad parameters
-    const isMobile = window.innerWidth < 768;
-    const adConfig = isMobile ? {
-      key: 'd3bd336b9f89543e57dc66e2d0fd80dc',
+    // Device detection & ad config (PC/Mobile separation)
+    const detectDevice = () => window.innerWidth < 768;
+    const adParams = detectDevice() 
+      ? { key: 'd3bd336b9f89543e57dc66e2d0fd80dc', height: 50, width: 320 }
+      : { key: 'b00444c71c9522c89296911725cfdfce', height: 90, width: 728 };
+
+    // Set ad options globally
+    window.atOptions = {
+      key: adParams.key,
       format: 'iframe',
-      height: 50,
-      width: 320,
-      params: {}
-    } : {
-      key: 'b00444c71c9522c89296911725cfdfce',
-      format: 'iframe',
-      height: 90,
-      width: 728,
+      height: adParams.height,
+      width: adParams.width,
       params: {}
     };
 
-    // Set ad options
-    window.atOptions = adConfig;
+    // Dynamic script loading (avoid duplicate loading)
+    const loadAdScript = () => {
+      const scriptId = `ad-script-${adParams.key}`;
+      if (document.getElementById(scriptId)) return;
 
-    // Create and load ad script dynamically
-    const adScript = document.createElement('script');
-    adScript.type = 'text/javascript';
-    adScript.src = `//cuddlecoveragehiss.com/${adConfig.key}/invoke.js`;
-    document.currentScript.parentNode.appendChild(adScript);
+      const adScript = document.createElement('script');
+      adScript.id = scriptId;
+      adScript.type = 'text/javascript';
+      adScript.src = `//cuddlecoveragehiss.com/${adParams.key}/invoke.js`;
+      document.currentScript.parentNode.appendChild(adScript);
+    };
+
+    // Initial load + resize adaptation
+    loadAdScript();
+    window.addEventListener('resize', () => {
+      const newAdParams = detectDevice() 
+        ? { key: 'd3bd336b9f89543e57dc66e2d0fd80dc', height: 50, width: 320 }
+        : { key: 'b00444c71c9522c89296911725cfdfce', height: 90, width: 728 };
+      
+      if (newAdParams.key !== adParams.key) {
+        window.atOptions = { ...window.atOptions, ...newAdParams };
+        loadAdScript();
+      }
+    });
   </script>
-  
-  <!-- Responsive style for ad iframe -->
+
+  <!-- Scoped responsive styles (no global impact) -->
   <style>
+    .responsive-ad-container iframe {
+      display: block;
+      margin: 0 auto;
+      border: none;
+    }
     @media (max-width: 768px) {
-      iframe[width="320"][height="50"] {
+      .responsive-ad-container iframe {
         width: 100% !important;
         height: auto !important;
-        min-height: 50px;
+        min-height: 50px !important;
+        max-height: 60px !important;
       }
     }
     @media (min-width: 768px) {
-      iframe[width="728"][height="90"] {
+      .responsive-ad-container iframe {
         width: 100% !important;
-        max-width: 728px;
+        max-width: 728px !important;
         height: auto !important;
-        min-height: 90px;
+        min-height: 90px !important;
+        max-height: 100px !important;
       }
     }
   </style>
@@ -570,49 +616,72 @@
                 </div>
             </div>
         </section>
-<div style="margin: 25px auto; text-align: center; max-width: 728px; width: 100%; padding: 0 15px; box-sizing: border-box;">
+<!-- Responsive Horizontal Ad Unit (Reusable) -->
+<div class="responsive-ad-container" style="margin: 15px auto; text-align: center; max-width: 728px; width: 100%; padding: 0 8px; box-sizing: border-box;">
   <script type="text/javascript">
-    // Detect device type and set ad parameters
-    const isMobile = window.innerWidth < 768;
-    const adConfig = isMobile ? {
-      key: 'd3bd336b9f89543e57dc66e2d0fd80dc',
+    // Device detection & ad config (PC/Mobile separation)
+    const detectDevice = () => window.innerWidth < 768;
+    const adParams = detectDevice() 
+      ? { key: 'd3bd336b9f89543e57dc66e2d0fd80dc', height: 50, width: 320 }
+      : { key: 'b00444c71c9522c89296911725cfdfce', height: 90, width: 728 };
+
+    // Set ad options globally
+    window.atOptions = {
+      key: adParams.key,
       format: 'iframe',
-      height: 50,
-      width: 320,
-      params: {}
-    } : {
-      key: 'b00444c71c9522c89296911725cfdfce',
-      format: 'iframe',
-      height: 90,
-      width: 728,
+      height: adParams.height,
+      width: adParams.width,
       params: {}
     };
 
-    // Set ad options
-    window.atOptions = adConfig;
+    // Dynamic script loading (avoid duplicate loading)
+    const loadAdScript = () => {
+      const scriptId = `ad-script-${adParams.key}`;
+      if (document.getElementById(scriptId)) return;
 
-    // Create and load ad script dynamically
-    const adScript = document.createElement('script');
-    adScript.type = 'text/javascript';
-    adScript.src = `//cuddlecoveragehiss.com/${adConfig.key}/invoke.js`;
-    document.currentScript.parentNode.appendChild(adScript);
+      const adScript = document.createElement('script');
+      adScript.id = scriptId;
+      adScript.type = 'text/javascript';
+      adScript.src = `//cuddlecoveragehiss.com/${adParams.key}/invoke.js`;
+      document.currentScript.parentNode.appendChild(adScript);
+    };
+
+    // Initial load + resize adaptation
+    loadAdScript();
+    window.addEventListener('resize', () => {
+      const newAdParams = detectDevice() 
+        ? { key: 'd3bd336b9f89543e57dc66e2d0fd80dc', height: 50, width: 320 }
+        : { key: 'b00444c71c9522c89296911725cfdfce', height: 90, width: 728 };
+      
+      if (newAdParams.key !== adParams.key) {
+        window.atOptions = { ...window.atOptions, ...newAdParams };
+        loadAdScript();
+      }
+    });
   </script>
-  
-  <!-- Responsive style for ad iframe -->
+
+  <!-- Scoped responsive styles (no global impact) -->
   <style>
+    .responsive-ad-container iframe {
+      display: block;
+      margin: 0 auto;
+      border: none;
+    }
     @media (max-width: 768px) {
-      iframe[width="320"][height="50"] {
+      .responsive-ad-container iframe {
         width: 100% !important;
         height: auto !important;
-        min-height: 50px;
+        min-height: 50px !important;
+        max-height: 60px !important;
       }
     }
     @media (min-width: 768px) {
-      iframe[width="728"][height="90"] {
+      .responsive-ad-container iframe {
         width: 100% !important;
-        max-width: 728px;
+        max-width: 728px !important;
         height: auto !important;
-        min-height: 90px;
+        min-height: 90px !important;
+        max-height: 100px !important;
       }
     }
   </style>
@@ -651,55 +720,78 @@
                     <p class="text-gray-600">Many tools offer powerful, no-cost compression algorithms, making file size reduction readily available to users globally. Compress directly using the browser.</p>
                 </div>
             </div>
-        </section>
-    </main>
-<div style="margin: 25px auto; text-align: center; max-width: 728px; width: 100%; padding: 0 15px; box-sizing: border-box;">
+<!-- Responsive Horizontal Ad Unit (Reusable) -->
+<div class="responsive-ad-container" style="margin: 15px auto; text-align: center; max-width: 728px; width: 100%; padding: 0 8px; box-sizing: border-box;">
   <script type="text/javascript">
-    // Detect device type and set ad parameters
-    const isMobile = window.innerWidth < 768;
-    const adConfig = isMobile ? {
-      key: 'd3bd336b9f89543e57dc66e2d0fd80dc',
+    // Device detection & ad config (PC/Mobile separation)
+    const detectDevice = () => window.innerWidth < 768;
+    const adParams = detectDevice() 
+      ? { key: 'd3bd336b9f89543e57dc66e2d0fd80dc', height: 50, width: 320 }
+      : { key: 'b00444c71c9522c89296911725cfdfce', height: 90, width: 728 };
+
+    // Set ad options globally
+    window.atOptions = {
+      key: adParams.key,
       format: 'iframe',
-      height: 50,
-      width: 320,
-      params: {}
-    } : {
-      key: 'b00444c71c9522c89296911725cfdfce',
-      format: 'iframe',
-      height: 90,
-      width: 728,
+      height: adParams.height,
+      width: adParams.width,
       params: {}
     };
 
-    // Set ad options
-    window.atOptions = adConfig;
+    // Dynamic script loading (avoid duplicate loading)
+    const loadAdScript = () => {
+      const scriptId = `ad-script-${adParams.key}`;
+      if (document.getElementById(scriptId)) return;
 
-    // Create and load ad script dynamically
-    const adScript = document.createElement('script');
-    adScript.type = 'text/javascript';
-    adScript.src = `//cuddlecoveragehiss.com/${adConfig.key}/invoke.js`;
-    document.currentScript.parentNode.appendChild(adScript);
+      const adScript = document.createElement('script');
+      adScript.id = scriptId;
+      adScript.type = 'text/javascript';
+      adScript.src = `//cuddlecoveragehiss.com/${adParams.key}/invoke.js`;
+      document.currentScript.parentNode.appendChild(adScript);
+    };
+
+    // Initial load + resize adaptation
+    loadAdScript();
+    window.addEventListener('resize', () => {
+      const newAdParams = detectDevice() 
+        ? { key: 'd3bd336b9f89543e57dc66e2d0fd80dc', height: 50, width: 320 }
+        : { key: 'b00444c71c9522c89296911725cfdfce', height: 90, width: 728 };
+      
+      if (newAdParams.key !== adParams.key) {
+        window.atOptions = { ...window.atOptions, ...newAdParams };
+        loadAdScript();
+      }
+    });
   </script>
-  
-  <!-- Responsive style for ad iframe -->
+
+  <!-- Scoped responsive styles (no global impact) -->
   <style>
+    .responsive-ad-container iframe {
+      display: block;
+      margin: 0 auto;
+      border: none;
+    }
     @media (max-width: 768px) {
-      iframe[width="320"][height="50"] {
+      .responsive-ad-container iframe {
         width: 100% !important;
         height: auto !important;
-        min-height: 50px;
+        min-height: 50px !important;
+        max-height: 60px !important;
       }
     }
     @media (min-width: 768px) {
-      iframe[width="728"][height="90"] {
+      .responsive-ad-container iframe {
         width: 100% !important;
-        max-width: 728px;
+        max-width: 728px !important;
         height: auto !important;
-        min-height: 90px;
+        min-height: 90px !important;
+        max-height: 100px !important;
       }
     }
   </style>
 </div>
+        </section>
+    </main>
     <footer class="bg-dark text-white py-8 mt-12">
         <div class="container-custom">
             <div class="flex flex-col md:flex-row justify-between items-center">
