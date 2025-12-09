@@ -159,99 +159,26 @@
                 <button class="category-tab whitespace-nowrap px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg font-medium transition-colors" data-category="batch">Batch Compression</button>
             </div>
         </section>
-<!-- Responsive Ad Container - Centered for PC/Mobile -->
-<div style="margin: 15px auto; text-align: center; max-width: 728px; width: 100%; padding: 0 8px; box-sizing: border-box;">
-  <script type="text/javascript">
-    // Detect device type and set ad parameters
-    const isMobileDevice = window.innerWidth < 768;
-    let adConfig = {};
-
-    // Set PC/Mobile ad config respectively
-    if (isMobileDevice) {
-      adConfig = {
-        key: 'd3bd336b9f89543e57dc66e2d0fd80dc',
-        format: 'iframe',
-        height: 50,
-        width: 320,
-        params: {}
-      };
-    } else {
-      adConfig = {
-        key: 'b00444c71c9522c89296911725cfdfce',
-        format: 'iframe',
-        height: 90,
-        width: 728,
-        params: {}
-      };
-    }
-
-    // Assign ad config to global variable
-    window.atOptions = adConfig;
-
-    // Dynamically load ad script to avoid conflicts
-    const adScript = document.createElement('script');
-    adScript.type = 'text/javascript';
-    adScript.src = `//cuddlecoveragehiss.com/${adConfig.key}/invoke.js`;
-    document.currentScript.parentNode.appendChild(adScript);
-
-    // Adapt ad size on window resize (for responsive layout)
-    window.addEventListener('resize', function() {
-      const newIsMobile = window.innerWidth < 768;
-      let newAdConfig = {};
-
-      if (newIsMobile) {
-        newAdConfig = {
-          key: 'd3bd336b9f89543e57dc66e2d0fd80dc',
-          format: 'iframe',
-          height: 50,
-          width: 320,
-          params: {}
-        };
-      } else {
-        newAdConfig = {
-          key: 'b00444c71c9522c89296911725cfdfce',
-          format: 'iframe',
-          height: 90,
-          width: 728,
-          params: {}
-        };
-      }
-
-      // Reload ad only if device type changes
-      if (newAdConfig.key !== window.atOptions.key) {
-        window.atOptions = newAdConfig;
-        const newAdScript = document.createElement('script');
-        newAdScript.type = 'text/javascript';
-        newAdScript.src = `//cuddlecoveragehiss.com/${newAdConfig.key}/invoke.js`;
-        document.currentScript.parentNode.appendChild(newAdScript);
-      }
-    });
-  </script>
-
-  <!-- Style to ensure ad iframe centered and responsive -->
+<div style="margin: 25px auto; text-align: center; max-width: 728px; width: 100%; padding: 0 15px; box-sizing: border-box;">
   <style>
-    iframe[width="728"][height="90"],
-    iframe[width="320"][height="50"] {
-      display: block;
-      margin: 0 auto;
-      border: none;
-    }
     @media (max-width: 768px) {
-      iframe[width="320"][height="50"] {
-        width: 100% !important;
-        height: auto !important;
-        min-height: 50px !important;
-      }
-    }
-    @media (min-width: 768px) {
       iframe[width="728"][height="90"] {
         width: 100% !important;
-        max-width: 728px !important;
         height: auto !important;
-        min-height: 90px !important;
+        min-height: 60px;
       }
     }
   </style>
+  <script type="text/javascript">
+    atOptions = {
+      'key' : 'b00444c71c9522c89296911725cfdfce',
+      'format' : 'iframe',
+      'height' : 90,
+      'width' : 728,
+      'params' : {}
+    };
+  </script>
+  <script type="text/javascript" src="//cuddlecoveragehiss.com/b00444c71c9522c89296911725cfdfce/invoke.js"></script>
 </div>
         <section class="container-custom">
             <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
