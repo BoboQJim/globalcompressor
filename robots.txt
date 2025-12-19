@@ -1,35 +1,22 @@
-# robots.txt for GlobalCompress (https://squoosh.online)
-# Follow the crawling protocols of search engines such as Google and GEO
+# ==========================================
+# Robots.txt for Squoosh.online
+# High Compatibility Version - Optimized 2025
+# ==========================================
+
 User-agent: *
-Disallow: /admin/
-Disallow: /login/
-Disallow: /register/
-Disallow: /dashboard/
-Disallow: /api/
-Disallow: /cgi-bin/
-Disallow: /wp-admin/
-Disallow: /wp-includes/
-Disallow: /*?*sort=
-Disallow: /*?*filter=
-Disallow: /*?*page=100$
-
-# Allow crawling of core functional pages
 Allow: /
-Allow: /tools/
-Allow: /category/image/
-Allow: /category/file/
-Allow: /category/pdf/
-Allow: /category/video/
-Allow: /category/audio/
-Allow: /category/batch/
+Allow: /index.html
+Allow: /assets/
+Disallow: /temp/
+Disallow: /cgi-bin/
 
-# Site map address
-Sitemap: https://squoosh.online/sitemap.xml
+# Block aggressive AI bots that consume bandwidth without SEO benefit
+User-agent: GPTBot
+Disallow: /
+User-agent: CCBot
+Disallow: /
+User-agent: PerplexityBot
+Disallow: /
 
-# Google specific extension (specifying image capture strategy)
-User-agent: Googlebot-Image
-Allow: /*.png$
-Allow: /*.jpg$
-Allow: /*.jpeg$
-Allow: /*.webp$
-Disallow: /*.gif$
+# Direct link to the XML sitemap for efficient crawling
+Sitemap: https://www.squoosh.online/sitemap.xml
