@@ -1,13 +1,21 @@
-# Squoosh.online Robots.txt
+# Robots.txt for Squoosh.online
+# Optimized for SEO and AI Search (GEO)
+
 User-agent: *
 Allow: /
 Allow: /images-tools.html
 Allow: /video-tools.html
 Allow: /pdf-file-tools.html
+Allow: /guides/
+Disallow: /private/
+Disallow: /temp/
 
-# 禁止抓取后台或敏感资源（如有）
-Disallow: /admin/
-Disallow: /config/
+# Specific instructions for AI Crawlers to encourage GEO citation
+User-agent: GPTBot
+Allow: /guides/
 
-# 站点地图路径
+User-agent: Google-Extended
+Allow: /guides/
+
+# Path to the XML Sitemap
 Sitemap: https://www.squoosh.online/sitemap.xml
