@@ -3,50 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Compression & Editing Portal | Squoosh.online</title>
+    <title>Video Compression & Optimization Portal | Squoosh.online</title>
+    <meta name="description" content="Securely compress MP4, WebM, and MOV files. Browser-based privacy-first video optimization for social media.">
+    <link rel="canonical" href="https://www.squoosh.online/video-tools.html">
+    <link rel="icon" href="https://www.squoosh.online/favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .nav-blur { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); }
+        .modal-backdrop { display: none; position: fixed; inset: 0; background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(4px); z-index: 100; align-items: center; justify-content: center; padding: 20px; }
+        .modal-backdrop.active { display: flex; }
+    </style>
+    <script src="https://analytics.ahrefs.com/analytics.js" data-key="IppWvd+WbRZ2E6MjAYaR4A" async defer></script>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "u7c2rqswer");
+    </script>
 </head>
-<body class="bg-slate-50 text-slate-900">
-    <nav class="bg-white border-b sticky top-0 z-50">
+<body class="bg-slate-50 text-slate-900 leading-relaxed">
+    <nav class="sticky top-0 z-50 nav-blur border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
             <a href="/" class="flex items-center space-x-2">
                 <i class="fa fa-compress text-blue-600 text-2xl"></i>
                 <span class="text-xl font-extrabold tracking-tight">Squoosh<span class="text-blue-600">.online</span></span>
             </a>
-            <div class="space-x-6 text-sm font-semibold">
+            <div class="flex space-x-6 text-sm font-semibold text-slate-600">
                 <a href="/" class="hover:text-blue-600 transition">Home</a>
                 <a href="/images-tools.html" class="hover:text-blue-600 transition">Images</a>
-                <a href="/pdf-file-tools.html" class="hover:text-blue-600 transition">PDF/Zip</a>
+                <a href="/pdf-file-tools.html" class="hover:text-blue-600 transition">PDF & Files</a>
             </div>
         </div>
     </nav>
 
     <main class="max-w-7xl mx-auto px-4 py-16">
-        <div class="text-center mb-12">
-            <h1 class="text-4xl font-black mb-4">Video Optimization Hub</h1>
-            <p class="text-slate-500">Shrink MP4, WebM, and MOV files without quality loss.</p>
+        <div class="text-center mb-16">
+            <h1 class="text-4xl lg:text-5xl font-black mb-4 tracking-tight">Video Optimization Hub</h1>
+            <p class="text-xl text-slate-500">Shrink MP4 and WebM files without quality loss. 100% Privacy guaranteed.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 flex flex-col items-center text-center">
-                <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-6 text-2xl"><i class="fa fa-video-camera"></i></div>
-                <h2 class="text-2xl font-bold mb-4">Squoosh Video Optimize</h2>
-                <p class="text-slate-500 mb-6 text-sm">Our native tool uses browser-based transcoding. Your video never leaves your computer, ensuring 100% privacy.</p>
-                <a href="https://video.squoosh.online/" class="w-full bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition">Launch Private Tool</a>
+        <div class="grid md:grid-cols-2 gap-8 mb-16">
+            <div class="bg-white p-10 rounded-[2.5rem] shadow-sm border border-slate-100 flex flex-col items-center text-center relative overflow-hidden group">
+                <div class="absolute top-0 right-0 bg-blue-600 text-white text-xs font-bold px-4 py-1 rounded-bl-xl">NATIVE</div>
+                <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-6 text-3xl group-hover:scale-110 transition"><i class="fa fa-video-camera"></i></div>
+                <h2 class="text-2xl font-black mb-4">Squoosh Video Optimize</h2>
+                <p class="text-slate-500 mb-8 text-sm leading-relaxed">Our native tool uses browser-based transcoding. Your video never leaves your computer, ensuring absolute privacy.</p>
+                <a href="https://video.squoosh.online/" class="w-full bg-blue-600 text-white py-4 rounded-2xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200">Launch Private Tool</a>
             </div>
             
-            <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 flex flex-col items-center text-center">
-                <div class="w-16 h-16 bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center mb-6 text-2xl"><i class="fa fa-cloud-upload"></i></div>
-                <h2 class="text-2xl font-bold mb-4">123Apps Video Editor</h2>
-                <p class="text-slate-500 mb-6 text-sm">Powerful cloud-based editor for cutting, merging, and converting video formats online.</p>
-                <a href="https://123apps.com/" target="_blank" class="w-full bg-purple-600 text-white py-3 rounded-xl font-bold hover:bg-purple-700 transition">Visit External Site</a>
+            <div class="bg-indigo-900 text-white p-10 rounded-[2.5rem] shadow-xl flex flex-col items-center text-center">
+                <div class="w-16 h-16 bg-indigo-800 text-indigo-300 rounded-2xl flex items-center justify-center mb-6 text-3xl"><i class="fa fa-cloud-upload"></i></div>
+                <h2 class="text-2xl font-black mb-4">Cloud Editors (Clideo)</h2>
+                <p class="text-indigo-200 mb-8 text-sm leading-relaxed">Need to merge clips or add music? Use powerful cloud-based editors for complex tasks.</p>
+                <a href="https://clideo.com/" target="_blank" rel="nofollow" class="w-full bg-white text-indigo-900 py-4 rounded-2xl font-bold hover:bg-indigo-50 transition">Visit Clideo</a>
             </div>
         </div>
 
-        <div class="h-32 bg-slate-200 rounded-2xl mb-16 flex items-center justify-center text-slate-400 font-bold border-2 border-dashed border-slate-300">
-            Horizontal Content Ad Space (AdSense)
-        </div>
+        <section class="bg-white rounded-[2.5rem] p-10 border border-slate-200 text-center">
+            <h3 class="text-2xl font-black mb-4">Optimizing for TikTok or Instagram?</h3>
+            <p class="text-slate-500 mb-8 max-w-2xl mx-auto">Don't let social algorithms ruin your video quality. Learn the correct bitrates and export settings.</p>
+            <a href="/guides/video-optimization-guide.html" class="inline-block text-blue-600 font-black uppercase tracking-widest border-b-2 border-blue-600 pb-1 hover:text-blue-800 transition">Read Optimization Guide &rarr;</a>
+        </section>
     </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-12 text-center text-sm border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p>&copy; 2025 Squoosh.online. All Rights Reserved.</p>
+            <div class="flex space-x-6">
+                <button onclick="showModal('privacy-modal')" class="hover:text-white">Privacy</button>
+                <button onclick="showModal('terms-modal')" class="hover:text-white">Terms</button>
+            </div>
+        </div>
+    </footer>
+
+    <div id="privacy-modal" class="modal-backdrop"><div class="bg-white max-w-2xl w-full m-4 rounded-[2.5rem] p-8 relative"><button onclick="hideModal('privacy-modal')" class="absolute top-6 right-8 text-xl"><i class="fa fa-times"></i></button><h3 class="text-2xl font-black mb-4">Privacy Policy</h3><p class="text-sm text-slate-600">Video processing happens locally in your browser via WebAssembly.</p></div></div>
+    <div id="terms-modal" class="modal-backdrop"><div class="bg-white max-w-2xl w-full m-4 rounded-[2.5rem] p-8 relative"><button onclick="hideModal('terms-modal')" class="absolute top-6 right-8 text-xl"><i class="fa fa-times"></i></button><h3 class="text-2xl font-black mb-4">Terms of Service</h3><p class="text-sm text-slate-600">Service provided as-is. We are not liable for data loss.</p></div></div>
+
+    <script>
+        function showModal(id) { document.getElementById(id).classList.add('active'); document.body.style.overflow = 'hidden'; }
+        function hideModal(id) { document.getElementById(id).classList.remove('active'); document.body.style.overflow = ''; }
+        window.onclick = function(e) { if(e.target.classList.contains('modal-backdrop')) hideModal(e.target.id); }
+    </script>
+    <script type="module">import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js"; import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-analytics.js"; const firebaseConfig = { apiKey: "AIzaSyC4KOwz5YZRciu-ZAC5CKER912DqTJ2Ezs", authDomain: "squoosh-online.firebaseapp.com", projectId: "squoosh-online", storageBucket: "squoosh-online.firebasestorage.app", messagingSenderId: "6015692976", appId: "1:6015692976:web:71f7bf5abaa2dacf5b4b75", measurementId: "G-8NE32ENS6R" }; const app = initializeApp(firebaseConfig); const analytics = getAnalytics(app);</script>
 </body>
 </html>
