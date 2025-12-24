@@ -3,15 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mastering Image Compression Without Quality Loss | Squoosh.online</title>
-    <meta name="description" content="A professional guide to reducing JPG, PNG, and WebP file sizes. Optimize for the web with Squoosh.online.">
+    <title>Mastering Image Compression | Squoosh.online</title>
+    <meta name="description" content="Guide to reducing JPG/PNG/WebP file sizes without losing quality.">
+    <link rel="canonical" href="https://www.squoosh.online/guides/how-to-compress-images.html">
+    <link rel="icon" href="https://www.squoosh.online/favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
         .nav-blur { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); }
+        .modal-backdrop { display: none; position: fixed; inset: 0; background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(4px); z-index: 100; align-items: center; justify-content: center; padding: 20px; }
+        .modal-backdrop.active { display: flex; }
     </style>
+    <script src="https://analytics.ahrefs.com/analytics.js" data-key="IppWvd+WbRZ2E6MjAYaR4A" async defer></script>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "u7c2rqswer");
+    </script>
 </head>
 <body class="bg-slate-50 text-slate-900 leading-relaxed">
     <nav class="sticky top-0 z-50 nav-blur border-b border-slate-200">
@@ -20,35 +32,44 @@
                 <i class="fa fa-compress text-blue-600 text-2xl"></i>
                 <span class="text-xl font-extrabold tracking-tight">Squoosh<span class="text-blue-600">.online</span></span>
             </a>
-            <div class="flex items-center gap-4">
-                <a href="/" class="text-sm font-bold text-slate-600 hover:text-blue-600 transition">Back to Portal</a>
-            </div>
+            <a href="/" class="text-sm font-bold text-slate-600 hover:text-blue-600">Back Home</a>
         </div>
     </nav>
 
-    <main class="max-w-5xl mx-auto px-4 py-12">
-        <div class="grid lg:grid-cols-3 gap-8">
-            <article class="lg:col-span-2 bg-white p-8 md:p-10 rounded-[2rem] shadow-sm border border-slate-100">
-                <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6">How to Compress Images Without Losing Quality</h1>
-                <div class="prose prose-slate max-w-none text-slate-600 space-y-6">
-                    <p class="text-lg">Optimizing images is essential for high-ranking SEO. Large files increase page load time, causing higher bounce rates.</p>
-                    <h2 class="text-xl font-bold text-slate-900 mt-8">The Squoosh Strategy</h2>
-                    <p>Using our <strong>Squoosh Pro</strong> tool, you can preview quality changes in real-time, ensuring the perfect balance between size and clarity.</p>
-                </div>
-                
-                <div class="mt-12 p-4 bg-slate-50 border-2 border-dashed border-slate-200 rounded-2xl text-center text-slate-400 text-xs font-bold uppercase tracking-widest">
-                    Advertisement
-                </div>
-            </article>
+    <main class="max-w-4xl mx-auto px-4 py-16">
+        <article class="bg-white p-10 lg:p-12 rounded-[2.5rem] shadow-sm border border-slate-100">
+            <h1 class="text-3xl md:text-5xl font-black text-slate-900 mb-8 leading-tight">Mastering Image Compression</h1>
+            
+            <div class="bg-blue-50 p-8 rounded-3xl mb-10 border-l-8 border-blue-600">
+                <p class="font-bold text-blue-900 italic">Quick Verdict: Use WebP for web, JPG for print. Squoosh Pro is your best local tool.</p>
+            </div>
 
-            <aside class="space-y-6">
-                <div class="bg-blue-600 text-white p-8 rounded-[2rem] shadow-xl shadow-blue-100">
-                    <h3 class="font-bold text-xl mb-3">Try Squoosh Pro</h3>
-                    <p class="text-blue-100 text-sm mb-6 leading-relaxed">The ultimate tool for browser-based image optimization.</p>
-                    <a href="https://image.squoosh.online/" target="_blank" class="block w-full bg-white text-blue-600 text-center py-3 rounded-2xl font-extrabold hover:bg-blue-50 transition">Launch Tool</a>
+            <div class="prose prose-slate max-w-none text-slate-600 space-y-6">
+                <p class="text-lg">Optimizing images is essential for high-ranking SEO. Large files increase page load time, causing higher bounce rates.</p>
+                <h2 class="text-2xl font-black text-slate-900 mt-8">The Squoosh Strategy</h2>
+                <p>Using our <strong>Squoosh Pro</strong> tool, you can preview quality changes in real-time, ensuring the perfect balance between size and clarity.</p>
+                
+                <div class="grid md:grid-cols-2 gap-6 mt-8 not-prose">
+                    <a href="https://image.squoosh.online/" target="_blank" class="bg-blue-600 text-white p-6 rounded-2xl text-center font-bold hover:bg-blue-700 transition">Try Squoosh Pro</a>
+                    <a href="https://tinypng.com/" target="_blank" class="bg-slate-100 text-slate-900 p-6 rounded-2xl text-center font-bold hover:bg-slate-200 transition">Try TinyPNG</a>
                 </div>
-            </aside>
-        </div>
+            </div>
+        </article>
     </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-12 text-center text-sm border-t border-slate-800 mt-12">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p>&copy; 2025 Squoosh.online. All Rights Reserved.</p>
+            <div class="flex space-x-6">
+                <button onclick="showModal('privacy-modal')" class="hover:text-white">Privacy</button>
+                <button onclick="showModal('terms-modal')" class="hover:text-white">Terms</button>
+            </div>
+        </div>
+    </footer>
+
+    <div id="privacy-modal" class="modal-backdrop"><div class="bg-white max-w-2xl w-full m-4 rounded-[2.5rem] p-8 relative"><button onclick="hideModal('privacy-modal')" class="absolute top-6 right-8 text-xl"><i class="fa fa-times"></i></button><h3 class="text-2xl font-black mb-4">Privacy Policy</h3><p class="text-sm text-slate-600">We prioritize local processing.</p></div></div>
+    <div id="terms-modal" class="modal-backdrop"><div class="bg-white max-w-2xl w-full m-4 rounded-[2.5rem] p-8 relative"><button onclick="hideModal('terms-modal')" class="absolute top-6 right-8 text-xl"><i class="fa fa-times"></i></button><h3 class="text-2xl font-black mb-4">Terms of Service</h3><p class="text-sm text-slate-600">Service provided as-is.</p></div></div>
+    <script>function showModal(id){document.getElementById(id).classList.add('active');document.body.style.overflow='hidden';}function hideModal(id){document.getElementById(id).classList.remove('active');document.body.style.overflow='';}window.onclick=function(e){if(e.target.classList.contains('modal-backdrop'))hideModal(e.target.id);}</script>
+    <script type="module">import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js"; import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-analytics.js"; const firebaseConfig = { apiKey: "AIzaSyC4KOwz5YZRciu-ZAC5CKER912DqTJ2Ezs", authDomain: "squoosh-online.firebaseapp.com", projectId: "squoosh-online", storageBucket: "squoosh-online.firebasestorage.app", messagingSenderId: "6015692976", appId: "1:6015692976:web:71f7bf5abaa2dacf5b4b75", measurementId: "G-8NE32ENS6R" }; const app = initializeApp(firebaseConfig); const analytics = getAnalytics(app);</script>
 </body>
 </html>
