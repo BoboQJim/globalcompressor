@@ -1,21 +1,30 @@
-# Robots.txt for Squoosh.online
-# Optimized for SEO and AI Search (GEO)
+# Robots.txt for https://www.squoosh.online/
+# Optimized for Google, Bing, and Generative AI Agents
 
+# 1. General Rules for all standard crawlers
 User-agent: *
 Allow: /
 Allow: /images-tools.html
 Allow: /video-tools.html
 Allow: /pdf-file-tools.html
 Allow: /guides/
+Disallow: /cdn-cgi/
 Disallow: /private/
-Disallow: /temp/
+Disallow: /tmp/
 
-# Specific instructions for AI Crawlers to encourage GEO citation
+# 2. Specific Permissions for AI & GEO Bots
+# Essential for appearing in AI search results (ChatGPT, Perplexity, Gemini)
+
 User-agent: GPTBot
+Allow: /
 Allow: /guides/
 
 User-agent: Google-Extended
+Allow: /
 Allow: /guides/
 
-# Path to the XML Sitemap
+User-agent: CCBot
+Allow: /
+
+# 3. Sitemap Declaration
 Sitemap: https://www.squoosh.online/sitemap.xml
