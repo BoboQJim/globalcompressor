@@ -26,20 +26,62 @@
     </script>
 </head>
 <body class="bg-slate-50 text-slate-900 leading-relaxed">
-    <nav class="sticky top-0 z-50 nav-blur border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-            <a href="/" class="flex items-center space-x-2">
-                <i class="fa fa-compress text-blue-600 text-2xl"></i>
-                <span class="text-xl font-extrabold tracking-tight">Squoosh<span class="text-blue-600">.online</span></span>
-            </a>
-            <div class="flex space-x-6 text-sm font-semibold text-slate-600">
-                <a href="/" class="hover:text-blue-600 transition">Home</a>
-                <a href="/images-tools.html" class="hover:text-blue-600 transition">Images</a>
-                <a href="/video-tools.html" class="hover:text-blue-600 transition">Video</a>
+<nav class="sticky top-0 z-50 nav-blur border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+        <a href="/" class="flex items-center space-x-2">
+            <i class="fa fa-compress text-blue-600 text-2xl"></i>
+            <span class="text-xl font-extrabold tracking-tight">Squoosh<span class="text-blue-600">.online</span></span>
+        </a>
+
+        <div class="hidden md:flex space-x-6 text-sm font-semibold text-slate-600">
+            <a href="/" class="hover:text-blue-600 transition">Home</a>
+            <a href="/images-tools.html" class="hover:text-blue-600 transition">Images Tools</a>
+            <a href="/video-tools.html" class="hover:text-blue-600 transition">Video Tools</a>
+        </div>
+
+        <div class="md:hidden relative">
+            <div class="cursor-pointer" id="mobileNavToggle">
+                <i class="fa fa-bars text-xl"></i>
+            </div>
+
+            <div class="hidden absolute top-full right-0 bg-white shadow-lg rounded-lg p-4 w-48 z-60" id="mobileNavMenu">
+                <div class="flex flex-col space-y-4 text-sm font-semibold text-slate-600">
+                    <a href="/" class="hover:text-blue-600 transition py-2 px-1">Home</a>
+                    <a href="/images-tools.html" class="hover:text-blue-600 transition py-2 px-1">Images Tools</a>
+                    <a href="/video-tools.html" class="hover:text-blue-600 transition py-2 px-1">Video Tools</a>
+                </div>
             </div>
         </div>
-    </nav>
+    </div>
+</nav>
 
+<script type="text/javascript">
+    const mobileNavToggle = document.getElementById('mobileNavToggle');
+    const mobileNavMenu = document.getElementById('mobileNavMenu');
+
+    mobileNavToggle.addEventListener('click', function() {
+        mobileNavMenu.classList.toggle('hidden');
+        
+        const icon = this.querySelector('i');
+        if (mobileNavMenu.classList.contains('hidden')) {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        } else {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+        }
+    });
+
+    const mobileNavLinks = mobileNavMenu.querySelectorAll('a');
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            mobileNavMenu.classList.add('hidden');
+            const icon = mobileNavToggle.querySelector('i');
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        });
+    });
+</script>
     <main class="max-w-5xl mx-auto px-4 py-16">
         <h1 class="text-4xl font-black mb-12 text-center border-b pb-8">PDF & Secure Archiving</h1>
         
