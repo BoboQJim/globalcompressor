@@ -13,7 +13,6 @@ Disallow: /.well-known/
 # Google Search and AdSense
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 0
 
 User-agent: Googlebot-Image
 Allow: /
@@ -34,17 +33,14 @@ Allow: /
 # Bing
 User-agent: Bingbot
 Allow: /
-Crawl-delay: 1
 
 # Baidu
 User-agent: Baiduspider
 Allow: /
-Crawl-delay: 2
 
 # Yandex
 User-agent: YandexBot
 Allow: /
-Crawl-delay: 2
 
 # Block AI training scrapers
 User-agent: GPTBot
