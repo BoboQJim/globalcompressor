@@ -1,155 +1,349 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Secure PDF & Archive Management | Squoosh.online</title>
-    <meta name="description" content="Compress PDF documents and create secure Zip archives. High security optimization for professional use.">
-    <link rel="canonical" href="https://www.squoosh.online/pdf-file-tools.html">
-    <link rel="icon" href="https://www.squoosh.online/favicon.ico">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .nav-blur { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); }
-        .modal-backdrop { display: none; position: fixed; inset: 0; background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(4px); z-index: 100; align-items: center; justify-content: center; padding: 20px; }
-        .modal-backdrop.active { display: flex; }
-    </style>
-    <script src="https://analytics.ahrefs.com/analytics.js" data-key="IppWvd+WbRZ2E6MjAYaR4A" async defer></script>
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "u7c2rqswer");
-    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="https://squoosh.online/favicon.ico">
+<title>Secure PDF &amp; Archive Management Tools | Squoosh.online</title>
+<meta name="description" content="Compress PDFs, manage archives, and secure documents. Learn about PDF compression, archive formats, encryption, and document security best practices.">
+<link rel="canonical" href="https://www.squoosh.online/pdf-file-tools.html">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>body{font-family:'Plus Jakarta Sans',sans-serif}</style>
+<!-- Ahrefs -->
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="IppWvd+WbRZ2E6MjAYaR4A" async></script>
+<!-- Clarity -->
+<script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","u7c2rqswer");</script>
+<!-- Firebase -->
+<script type="module">
+import{initializeApp}from"https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
+import{getAnalytics}from"https://www.gstatic.com/firebasejs/11.6.0/firebase-analytics.js";
+const firebaseConfig={apiKey:"AIzaSyC4KOwz5YZRciu-ZAC5CKER912DqTJ2Ezs",authDomain:"squoosh-online.firebaseapp.com",projectId:"squoosh-online",storageBucket:"squoosh-online.firebasestorage.app",messagingSenderId:"6015692976",appId:"1:6015692976:web:71f7bf5abaa2dacf5b4b75",measurementId:"G-8NE32ENS6R"};
+const app=initializeApp(firebaseConfig);const analytics=getAnalytics(app);
+</script>
+<!-- JSON-LD Breadcrumb -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.squoosh.online/"},{"@type":"ListItem","position":2,"name":"PDF & File Tools","item":"https://www.squoosh.online/pdf-file-tools.html"}]}
+</script>
 </head>
-<body class="bg-slate-50 text-slate-900 leading-relaxed">
-<nav class="sticky top-0 z-50 nav-blur border-b border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-        <a href="/" class="flex items-center space-x-2">
-            <i class="fa fa-compress text-blue-600 text-2xl"></i>
-            <span class="text-xl font-extrabold tracking-tight">Squoosh<span class="text-blue-600">.online</span></span>
-        </a>
-
-        <div class="hidden md:flex space-x-6 text-sm font-semibold text-slate-600">
-            <a href="/" class="hover:text-blue-600 transition">Home</a>
-            <a href="/images-tools.html" class="hover:text-blue-600 transition">Images Tools</a>
-            <a href="/video-tools.html" class="hover:text-blue-600 transition">Video Tools</a>
-        </div>
-
-        <div class="md:hidden relative">
-            <div class="cursor-pointer" id="mobileNavToggle">
-                <i class="fa fa-bars text-xl"></i>
-            </div>
-
-            <div class="hidden absolute top-full right-0 bg-white shadow-lg rounded-lg p-4 w-48 z-60" id="mobileNavMenu">
-                <div class="flex flex-col space-y-4 text-sm font-semibold text-slate-600">
-                    <a href="/" class="hover:text-blue-600 transition py-2 px-1">Home</a>
-                    <a href="/images-tools.html" class="hover:text-blue-600 transition py-2 px-1">Images Tools</a>
-                    <a href="/video-tools.html" class="hover:text-blue-600 transition py-2 px-1">Video Tools</a>
-                </div>
-            </div>
-        </div>
+<body class="bg-slate-50 text-slate-700 antialiased">
+<!-- Navigation -->
+<nav class="bg-white/80 backdrop-blur-lg border-b border-slate-200 sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <a href="/" class="text-xl font-800 text-blue-600 tracking-tight">Squoosh<span class="text-slate-400">.online</span></a>
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="/" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">Home</a>
+        <a href="/images-tools.html" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">Image Tools</a>
+        <a href="/video-tools.html" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">Video Tools</a>
+        <a href="/pdf-file-tools.html" class="text-sm font-semibold text-blue-600">PDF &amp; Files</a>
+        <a href="/about.html" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">About</a>
+        <a href="/contact.html" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">Contact</a>
+      </div>
+      <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100">
+        <i class="fa fa-bars text-xl"></i>
+      </button>
     </div>
+    <div id="mobile-menu" class="hidden md:hidden pb-4 space-y-2">
+      <a href="/" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100">Home</a>
+      <a href="/images-tools.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100">Image Tools</a>
+      <a href="/video-tools.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100">Video Tools</a>
+      <a href="/pdf-file-tools.html" class="block px-3 py-2 rounded-lg text-sm font-semibold text-blue-600 bg-blue-50">PDF &amp; Files</a>
+      <a href="/about.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100">About</a>
+      <a href="/contact.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100">Contact</a>
+    </div>
+  </div>
 </nav>
 
-<script type="text/javascript">
-    const mobileNavToggle = document.getElementById('mobileNavToggle');
-    const mobileNavMenu = document.getElementById('mobileNavMenu');
-
-    mobileNavToggle.addEventListener('click', function() {
-        mobileNavMenu.classList.toggle('hidden');
-        
-        const icon = this.querySelector('i');
-        if (mobileNavMenu.classList.contains('hidden')) {
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
-        } else {
-            icon.classList.remove('fa-bars');
-            icon.classList.add('fa-times');
-        }
-    });
-
-    const mobileNavLinks = mobileNavMenu.querySelectorAll('a');
-    mobileNavLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            mobileNavMenu.classList.add('hidden');
-            const icon = mobileNavToggle.querySelector('i');
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
-        });
-    });
-</script>
-    <main class="max-w-5xl mx-auto px-4 py-16">
-        <h1 class="text-4xl font-black mb-12 text-center border-b pb-8">PDF & Secure Archiving</h1>
-        
-        <div class="space-y-8">
-            <div class="bg-white p-8 rounded-[2.5rem] shadow-sm border border-slate-200 flex flex-col md:flex-row items-center justify-between gap-6">
-                <div class="flex items-center gap-6">
-                    <div class="w-16 h-16 bg-slate-100 rounded-2xl flex items-center justify-center text-slate-700 text-3xl"><i class="fa fa-file-archive-o"></i></div>
-                    <div>
-                        <h3 class="text-2xl font-bold mb-1">Smart Zip Compressor</h3>
-                        <p class="text-slate-500 italic text-sm">Fast browser-based file bundling. No uploads.</p>
-                    </div>
-                </div>
-                <a href="https://zipcompress.squoosh.online/" class="bg-slate-900 text-white px-8 py-3 rounded-2xl font-bold hover:scale-105 transition">Launch Zip</a>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-6">
-                <a href="https://smallpdf.com/" target="_blank" rel="nofollow" class="bg-white p-8 rounded-[2.5rem] border border-slate-200 hover:border-red-200 transition group">
-                    <div class="flex items-center justify-between mb-4">
-                        <i class="fa fa-file-pdf-o text-3xl text-red-500"></i>
-                        <i class="fa fa-external-link text-slate-300 group-hover:text-red-500"></i>
-                    </div>
-                    <h4 class="font-bold text-lg mb-2 text-slate-900">SmallPDF</h4>
-                    <p class="text-sm text-slate-500">Top-tier cloud PDF editor for large legal documents.</p>
-                </a>
-                <a href="https://www.pdf2go.com/" target="_blank" rel="nofollow" class="bg-white p-8 rounded-[2.5rem] border border-slate-200 hover:border-green-200 transition group">
-                    <div class="flex items-center justify-between mb-4">
-                        <i class="fa fa-lock text-3xl text-green-500"></i>
-                        <i class="fa fa-external-link text-slate-300 group-hover:text-green-500"></i>
-                    </div>
-                    <h4 class="font-bold text-lg mb-2 text-slate-900">PDF2Go</h4>
-                    <p class="text-sm text-slate-500">Secure European-standard PDF management.</p>
-                </a>
-            </div>
-
-            <div class="bg-blue-600 text-white p-8 rounded-[2.5rem] text-center shadow-xl shadow-blue-100">
-                <h4 class="text-2xl font-black mb-4">Is it safe to upload PDFs?</h4>
-                <p class="text-blue-100 mb-6 max-w-lg mx-auto">Learn how we protect your data and why local zip compression is the safest choice.</p>
-                <a href="/guides/secure-pdf-guide.html" class="bg-white text-blue-600 px-8 py-3 rounded-2xl font-bold text-sm uppercase tracking-widest">Read Security Guide</a>
-            </div>
-        </div>
-    </main>
-<!-- Centered Ad Container -->
-<div style="text-align: center; margin: 15px auto; width: 100%; box-sizing: border-box;">
-  <script
-    async="async"
-    data-cfasync="false"
-    src="https://historianoutstandingoverwhelm.com/1b58a47b16c4db5f2c6ad28756917574/invoke.js"
-  ></script>
-  <div id="container-1b58a47b16c4db5f2c6ad28756917574"></div>
+<!-- Breadcrumbs -->
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+  <nav aria-label="Breadcrumb" class="text-sm text-slate-500">
+    <ol class="flex items-center space-x-2">
+      <li><a href="/" class="hover:text-blue-600 transition">Home</a></li>
+      <li><span class="mx-1">/</span></li>
+      <li class="text-slate-800 font-semibold">PDF &amp; Files</li>
+    </ol>
+  </nav>
 </div>
-    <footer class="bg-slate-900 text-slate-400 py-12 text-center text-sm border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
-            <p>&copy; 2025 Squoosh.online. All Rights Reserved.</p>
-            <div class="flex space-x-6">
-                <button onclick="showModal('privacy-modal')" class="hover:text-white">Privacy</button>
-                <button onclick="showModal('terms-modal')" class="hover:text-white">Terms</button>
-            </div>
+
+<!-- Hero -->
+<header class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-12">
+  <div class="bg-gradient-to-br from-amber-600 to-orange-700 rounded-[2.5rem] p-8 md:p-14 text-white">
+    <h1 class="text-3xl md:text-5xl font-800 tracking-tight mb-4">PDF &amp; Secure Archiving Hub</h1>
+    <p class="text-lg md:text-xl text-amber-100 max-w-3xl leading-relaxed">PDFs are the backbone of professional document exchange, but they can quickly balloon in size when packed with high-resolution images, embedded fonts, and complex vector graphics. Meanwhile, archive formats like ZIP and 7z are essential for bundling and delivering multiple files efficiently. This hub brings together compression tools, security best practices, and format guides so you can manage documents and archives confidently, whether you are preparing a contract, distributing a report, or archiving a project.</p>
+  </div>
+</header>
+<!-- Native Tool -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+  <h2 class="text-2xl md:text-3xl font-700 text-slate-800 mb-2">Our Archiving Tool</h2>
+  <p class="text-slate-500 mb-8 max-w-2xl">Built by Squoosh.online for fast, private file compression.</p>
+  <a href="https://zipcompress.squoosh.online/" class="group block bg-white rounded-[2rem] p-8 shadow-sm border border-slate-100 hover:shadow-lg hover:border-amber-200 transition-all duration-300 max-w-2xl">
+    <div class="flex items-center gap-4 mb-4">
+      <div class="w-12 h-12 rounded-2xl bg-amber-50 flex items-center justify-center text-amber-600"><i class="fa fa-file-archive-o text-xl"></i></div>
+      <h3 class="text-xl font-700 text-slate-800 group-hover:text-amber-600 transition">Smart Zip</h3>
+    </div>
+    <p class="text-slate-600 leading-relaxed">Smart Zip lets you create compressed ZIP archives directly in your browser without uploading files to any external server. Drag and drop folders or individual files, adjust compression level from fastest to maximum, and download a single ZIP file ready to share via email or cloud storage. The tool handles large batches efficiently using WebAssembly-based DEFLATE compression, and because everything runs locally on your device, sensitive documents such as contracts, financial records, and personal files remain completely private throughout the process.</p>
+  </a>
+</section>
+<!-- Cloud Tools -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+  <h2 class="text-2xl md:text-3xl font-700 text-slate-800 mb-2">Cloud PDF Tools</h2>
+  <p class="text-slate-500 mb-8 max-w-2xl">Trusted third-party platforms for advanced PDF manipulation and conversion.</p>
+  <div class="grid md:grid-cols-2 gap-6">
+    <a href="https://smallpdf.com/" rel="nofollow" target="_blank" class="group bg-white rounded-[2rem] p-8 shadow-sm border border-slate-100 hover:shadow-lg hover:border-red-200 transition-all duration-300">
+      <div class="flex items-center gap-4 mb-4">
+        <div class="w-12 h-12 rounded-2xl bg-red-50 flex items-center justify-center text-red-600"><i class="fa fa-file-pdf-o text-xl"></i></div>
+        <h3 class="text-xl font-700 text-slate-800 group-hover:text-red-600 transition">SmallPDF <i class="fa fa-external-link text-xs text-slate-400"></i></h3>
+      </div>
+      <p class="text-slate-600 leading-relaxed">SmallPDF is a comprehensive PDF platform offering over 20 tools including compression, merging, splitting, conversion to and from Word, Excel, and PowerPoint, e-signing, and password protection. The interface is polished and beginner-friendly, making it a top choice for non-technical users who need to handle PDFs regularly. SmallPDF processes files through encrypted cloud servers with automatic deletion after one hour, providing a reasonable balance between convenience and privacy for most business documents.</p>
+    </a>
+    <a href="https://www.pdf2go.com/" rel="nofollow" target="_blank" class="group bg-white rounded-[2rem] p-8 shadow-sm border border-slate-100 hover:shadow-lg hover:border-teal-200 transition-all duration-300">
+      <div class="flex items-center gap-4 mb-4">
+        <div class="w-12 h-12 rounded-2xl bg-teal-50 flex items-center justify-center text-teal-600"><i class="fa fa-exchange text-xl"></i></div>
+        <h3 class="text-xl font-700 text-slate-800 group-hover:text-teal-600 transition">PDF2Go <i class="fa fa-external-link text-xs text-slate-400"></i></h3>
+      </div>
+      <p class="text-slate-600 leading-relaxed">PDF2Go specializes in PDF editing and conversion with support for an unusually wide range of input formats. It can convert PDFs to images, merge documents, repair corrupted files, rotate pages, add watermarks, and perform OCR on scanned documents. The tool also supports editing PDF content directly in the browser, letting you add text, shapes, highlights, and annotations without downloading desktop software. PDF2Go is particularly strong for one-off document tasks where you need a quick, no-install solution.</p>
+    </a>
+  </div>
+</section>
+<!-- Understanding PDF Compression -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+  <div class="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-sm border border-slate-100">
+    <h2 class="text-2xl md:text-3xl font-700 text-slate-800 mb-3">Understanding PDF Compression</h2>
+    <p class="text-slate-500 mb-8 max-w-3xl">PDF files can vary from a few kilobytes to hundreds of megabytes. Understanding what drives file size lets you make targeted reductions without sacrificing the content that matters.</p>
+
+    <h3 class="text-xl font-700 text-slate-800 mb-3">What Makes PDFs Large?</h3>
+    <div class="grid md:grid-cols-2 gap-6 mb-8">
+      <div class="bg-slate-50 rounded-[2rem] p-6">
+        <h4 class="font-700 text-slate-800 mb-2"><i class="fa fa-picture-o text-amber-500 mr-2"></i>Embedded Images</h4>
+        <p class="text-slate-600 text-sm leading-relaxed">Images are the single biggest contributor to PDF file size. A single uncompressed 300 DPI photograph can add 5-20 MB to a document. Many PDF generators embed images at their original resolution even when the document layout displays them at a fraction of that size. Downsampling images to the resolution actually needed for display (typically 150 DPI for screen viewing, 300 DPI for print) can cut file size by 60-80%.</p>
+      </div>
+      <div class="bg-slate-50 rounded-[2rem] p-6">
+        <h4 class="font-700 text-slate-800 mb-2"><i class="fa fa-font text-amber-500 mr-2"></i>Embedded Fonts</h4>
+        <p class="text-slate-600 text-sm leading-relaxed">PDFs embed the full font files needed to render text consistently across devices. A single font family with regular, bold, italic, and bold-italic weights can add 400 KB to 2 MB. Using fewer font families, subsetting fonts to include only the characters actually used in the document, and avoiding decorative fonts with large glyph sets all help reduce this overhead significantly.</p>
+      </div>
+      <div class="bg-slate-50 rounded-[2rem] p-6">
+        <h4 class="font-700 text-slate-800 mb-2"><i class="fa fa-code text-amber-500 mr-2"></i>Vector Graphics &amp; Layers</h4>
+        <p class="text-slate-600 text-sm leading-relaxed">Complex vector illustrations, CAD drawings, and layered designs can contain thousands of path objects and control points. Each layer and object adds to the internal structure. Flattening layers, simplifying paths, and rasterizing overly complex vectors at an appropriate resolution can dramatically reduce file size for design-heavy documents.</p>
+      </div>
+      <div class="bg-slate-50 rounded-[2rem] p-6">
+        <h4 class="font-700 text-slate-800 mb-2"><i class="fa fa-tags text-amber-500 mr-2"></i>Metadata &amp; Redundancy</h4>
+        <p class="text-slate-600 text-sm leading-relaxed">PDFs accumulate metadata through editing: revision history, form field definitions, JavaScript actions, XML metadata streams, and duplicate resources from copy-paste operations. A document that has been edited multiple times may carry megabytes of hidden data that serves no purpose for the final reader. Cleaning metadata and removing unused objects is a simple step that often yields a 10-25% reduction.</p>
+      </div>
+    </div>
+
+    <h3 class="text-xl font-700 text-slate-800 mb-3">Compression Methods</h3>
+    <p class="text-slate-600 leading-relaxed mb-4">PDF compression tools typically combine several techniques: <strong>image recompression</strong> (converting embedded images to JPEG or JPEG2000 at optimized quality), <strong>font subsetting</strong> (stripping unused glyphs), <strong>stream compression</strong> (applying Flate/zlib compression to internal data streams), and <strong>object deduplication</strong> (merging identical resources referenced by multiple pages). The best results come from applying all of these together, which is what professional tools like SmallPDF and Ghostscript do under the hood.</p>
+  </div>
+</section>
+<!-- Archive Format Comparison -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+  <div class="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-sm border border-slate-100">
+    <h2 class="text-2xl md:text-3xl font-700 text-slate-800 mb-3">Archive Format Comparison</h2>
+    <p class="text-slate-500 mb-8 max-w-3xl">Choosing the right archive format depends on your audience, the type of files being compressed, and whether you need encryption or cross-platform compatibility.</p>
+
+    <div class="space-y-6 mb-10">
+      <div class="border-l-4 border-blue-400 pl-6">
+        <h3 class="text-lg font-700 text-slate-800 mb-1">ZIP (.zip)</h3>
+        <p class="text-slate-600 leading-relaxed">ZIP is the most universally supported archive format, with native extraction built into Windows, macOS, Linux, iOS, and Android. It uses DEFLATE compression by default and supports AES-256 encryption for password-protected archives. ZIP's compression ratio is moderate compared to newer formats, but its ubiquity makes it the best default when you are distributing files to a broad audience who may not have specialized extraction tools installed.</p>
+      </div>
+      <div class="border-l-4 border-purple-400 pl-6">
+        <h3 class="text-lg font-700 text-slate-800 mb-1">7z (.7z)</h3>
+        <p class="text-slate-600 leading-relaxed">The 7z format uses LZMA and LZMA2 compression algorithms, which typically achieve 10-30% better compression ratios than ZIP on the same content. It supports solid compression (analyzing multiple files together for better patterns), AES-256 encryption, and Unicode filenames. The trade-off is that recipients need 7-Zip or a compatible extractor, as the format is not natively supported by most operating systems. Best suited for large archives where file size savings justify the extra step.</p>
+      </div>
+      <div class="border-l-4 border-orange-400 pl-6">
+        <h3 class="text-lg font-700 text-slate-800 mb-1">RAR (.rar)</h3>
+        <p class="text-slate-600 leading-relaxed">RAR offers strong compression (between ZIP and 7z in most benchmarks) with a recovery record feature that can repair damaged archives. It supports solid compression, splitting into multiple volumes for size-limited transfers, and AES-128 encryption. RAR creation requires the proprietary WinRAR software, though extraction is supported by many free tools. RAR is commonly encountered on download sites and legacy systems but is generally being replaced by 7z for new projects.</p>
+      </div>
+      <div class="border-l-4 border-green-400 pl-6">
+        <h3 class="text-lg font-700 text-slate-800 mb-1">TAR.GZ / .tgz</h3>
+        <p class="text-slate-600 leading-relaxed">TAR bundles files into a single uncompressed archive, and GZIP then compresses that bundle. This two-step approach is the standard in Linux and Unix environments, commonly used for distributing source code, server backups, and Docker images. TAR preserves Unix file permissions and symbolic links, which ZIP does not always handle correctly. Compression ratios are similar to ZIP, but the format is essential for developer workflows and server administration tasks.</p>
+      </div>
+    </div>
+
+    <h3 class="text-xl font-700 text-slate-800 mb-4">Quick Comparison</h3>
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm text-left border-collapse">
+        <thead>
+          <tr class="bg-slate-50">
+            <th class="px-4 py-3 font-600 text-slate-700 rounded-tl-xl">Format</th>
+            <th class="px-4 py-3 font-600 text-slate-700">Compression Ratio</th>
+            <th class="px-4 py-3 font-600 text-slate-700">Encryption</th>
+            <th class="px-4 py-3 font-600 text-slate-700">Native OS Support</th>
+            <th class="px-4 py-3 font-600 text-slate-700 rounded-tr-xl">Best For</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr><td class="px-4 py-3 font-600">ZIP</td><td class="px-4 py-3">Good</td><td class="px-4 py-3">AES-256</td><td class="px-4 py-3">All platforms</td><td class="px-4 py-3">Universal sharing</td></tr>
+          <tr class="bg-slate-50/50"><td class="px-4 py-3 font-600">7z</td><td class="px-4 py-3">Excellent</td><td class="px-4 py-3">AES-256</td><td class="px-4 py-3">Requires extractor</td><td class="px-4 py-3">Maximum compression</td></tr>
+          <tr><td class="px-4 py-3 font-600">RAR</td><td class="px-4 py-3">Very good</td><td class="px-4 py-3">AES-128</td><td class="px-4 py-3">Requires extractor</td><td class="px-4 py-3">Recovery, volumes</td></tr>
+          <tr class="bg-slate-50/50"><td class="px-4 py-3 font-600">TAR.GZ</td><td class="px-4 py-3">Good</td><td class="px-4 py-3">None (use GPG)</td><td class="px-4 py-3">Linux/macOS native</td><td class="px-4 py-3">Developer workflows</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+<!-- PDF Security Best Practices -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+  <div class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-[2.5rem] p-8 md:p-12 text-white">
+    <h2 class="text-2xl md:text-3xl font-700 mb-3">PDF Security Best Practices</h2>
+    <p class="text-slate-300 mb-8 max-w-3xl">Protecting sensitive documents requires more than just a password. Understand the layers of security available in the PDF format to match your protection strategy to your actual risk level.</p>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div>
+        <div class="flex items-start gap-3 mb-6">
+          <span class="flex-shrink-0 w-8 h-8 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center text-sm font-700">1</span>
+          <div>
+            <h3 class="font-700 text-white mb-1">Password Encryption (AES-256)</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">PDF 2.0 supports AES-256 encryption, which renders the document content unreadable without the correct password. This is the strongest protection natively available and is suitable for confidential contracts, medical records, and financial statements. Always use a strong, unique password with at least 12 characters including mixed case, numbers, and symbols. Share passwords through a separate secure channel, never in the same email as the document.</p>
+          </div>
         </div>
-    </footer>
+        <div class="flex items-start gap-3 mb-6">
+          <span class="flex-shrink-0 w-8 h-8 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center text-sm font-700">2</span>
+          <div>
+            <h3 class="font-700 text-white mb-1">Permission Restrictions</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">PDF supports a separate "owner password" that controls permissions: preventing printing, copying text, editing, or extracting pages. This is useful for distributing read-only reports or published documents where you want to discourage casual copying. However, permission restrictions are enforced by the viewer software and can be circumvented by determined users with specialized tools, so they should be considered a deterrent rather than absolute security.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3 mb-6">
+          <span class="flex-shrink-0 w-8 h-8 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center text-sm font-700">3</span>
+          <div>
+            <h3 class="font-700 text-white mb-1">Proper Redaction</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">Simply placing a black rectangle over sensitive text in a PDF does not remove the underlying data. The text remains in the file and can be extracted by selecting, searching, or using basic PDF parsing tools. True redaction requires a tool that permanently removes the text content from the document structure. Adobe Acrobat Pro, PDF-XChange Editor, and some online tools offer genuine redaction that strips the data irreversibly. Always verify redacted documents by searching for the removed terms after saving.</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="flex items-start gap-3 mb-6">
+          <span class="flex-shrink-0 w-8 h-8 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center text-sm font-700">4</span>
+          <div>
+            <h3 class="font-700 text-white mb-1">Digital Signatures</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">A digital signature uses public-key cryptography to prove the document was signed by a specific person and has not been altered since signing. This provides non-repudiation and tamper evidence, which are legally recognized in most jurisdictions under laws like eIDAS (EU), ESIGN Act (US), and similar frameworks. Digital signatures require a certificate from a trusted Certificate Authority. For internal use, self-signed certificates may be sufficient, but for legal and regulatory compliance, use certificates from established providers like DocuSign, GlobalSign, or DigiCert.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3 mb-6">
+          <span class="flex-shrink-0 w-8 h-8 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center text-sm font-700">5</span>
+          <div>
+            <h3 class="font-700 text-white mb-1">Metadata Sanitization</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">PDFs can contain hidden metadata including author names, software used, creation and modification timestamps, comments, tracked changes, and even embedded file attachments. Before publishing or sharing sensitive documents externally, run them through a metadata removal tool. Adobe Acrobat's "Remove Hidden Information" feature, ExifTool, and online sanitizers can strip this data. This is especially important for legal documents, whistleblower submissions, and any file where author anonymity matters.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3 mb-6">
+          <span class="flex-shrink-0 w-8 h-8 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center text-sm font-700">6</span>
+          <div>
+            <h3 class="font-700 text-white mb-1">Watermarking for Traceability</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">Adding a visible or invisible watermark (such as the recipient's name or a unique document ID) to each distributed copy creates a traceability chain. If a document leaks, the watermark identifies which copy was shared. Visible watermarks deter casual redistribution, while invisible watermarks (embedded in image noise or font micro-adjustments) provide covert tracking. Combine watermarking with access logging for a comprehensive document control strategy.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Common PDF Tasks Guide -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+  <div class="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-sm border border-slate-100">
+    <h2 class="text-2xl md:text-3xl font-700 text-slate-800 mb-3">Common PDF Tasks Guide</h2>
+    <p class="text-slate-500 mb-8 max-w-3xl">A practical overview of the most frequent PDF operations, what each involves, and the recommended approach for the best results.</p>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-slate-50 rounded-[2rem] p-6">
+        <div class="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center text-blue-600 mb-3"><i class="fa fa-files-o"></i></div>
+        <h3 class="font-700 text-slate-800 mb-2">Merging PDFs</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">Combining multiple PDF files into a single document is essential for assembling reports from separate sections, compiling invoices, or creating portfolio packages. Online tools like SmallPDF and PDF2Go handle simple merges well. For programmatic merging in automated workflows, libraries like PyPDF2 (Python) or pdf-lib (JavaScript) give you full control over page ordering, bookmarks, and metadata in the combined output.</p>
+      </div>
+      <div class="bg-slate-50 rounded-[2rem] p-6">
+        <div class="w-10 h-10 rounded-xl bg-green-100 flex items-center justify-center text-green-600 mb-3"><i class="fa fa-scissors"></i></div>
+        <h3 class="font-700 text-slate-800 mb-2">Splitting PDFs</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">Extracting specific pages or splitting a large document into smaller files is useful for isolating chapters, sharing only relevant sections with clients, or breaking up scanned documents. Most online tools let you select page ranges visually. When splitting, consider whether you need to preserve cross-references, bookmarks, and hyperlinks, as some tools strip these during extraction while others maintain them correctly.</p>
+      </div>
+      <div class="bg-slate-50 rounded-[2rem] p-6">
+        <div class="w-10 h-10 rounded-xl bg-purple-100 flex items-center justify-center text-purple-600 mb-3"><i class="fa fa-refresh"></i></div>
+        <h3 class="font-700 text-slate-800 mb-2">Converting Formats</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">Converting PDFs to Word, Excel, PowerPoint, or images (and vice versa) is one of the most requested document tasks. The quality of conversion depends heavily on the PDF's internal structure. PDFs created from digital sources (Word, InDesign) convert back cleanly, while scanned image-based PDFs require OCR first. For best results, use tools that preserve formatting, tables, and styles rather than simple text extraction.</p>
+      </div>
+      <div class="bg-slate-50 rounded-[2rem] p-6">
+        <div class="w-10 h-10 rounded-xl bg-orange-100 flex items-center justify-center text-orange-600 mb-3"><i class="fa fa-eye"></i></div>
+        <h3 class="font-700 text-slate-800 mb-2">OCR (Optical Character Recognition)</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">OCR converts scanned images of text into searchable, selectable, and editable text. This is critical for digitizing paper documents, making scanned contracts searchable, and meeting accessibility requirements. Modern OCR engines like Tesseract and ABBYY achieve over 99% accuracy on clean scans. For best results, scan at 300 DPI or higher, ensure good contrast, and straighten skewed pages before running OCR.</p>
+      </div>
+      <div class="bg-slate-50 rounded-[2rem] p-6">
+        <div class="w-10 h-10 rounded-xl bg-teal-100 flex items-center justify-center text-teal-600 mb-3"><i class="fa fa-tint"></i></div>
+        <h3 class="font-700 text-slate-800 mb-2">Watermarking</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">Adding watermarks to PDF pages serves both branding and security purposes. Draft watermarks prevent premature distribution of unfinished documents. Confidential stamps signal handling requirements to recipients. Custom watermarks with recipient identifiers create an audit trail. Most PDF tools offer text and image watermarks with control over position, opacity, rotation, and whether the watermark appears above or below the page content.</p>
+      </div>
+      <div class="bg-slate-50 rounded-[2rem] p-6">
+        <div class="w-10 h-10 rounded-xl bg-red-100 flex items-center justify-center text-red-600 mb-3"><i class="fa fa-compress"></i></div>
+        <h3 class="font-700 text-slate-800 mb-2">Compression</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">PDF compression reduces file size for faster email delivery, lower storage costs, and quicker page loads when embedding PDFs on websites. Most tools offer preset levels (low, medium, high compression) that trade image quality for smaller files. For documents destined for screen-only viewing, aggressive compression at 72-150 DPI is usually acceptable. For print-ready files, limit downsampling to 300 DPI and use higher quality JPEG settings to preserve detail.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Guide CTA & Cross-links -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+  <div class="grid md:grid-cols-3 gap-6">
+    <div class="md:col-span-2">
+      <div class="bg-amber-50 rounded-[2rem] p-8 border border-amber-100">
+        <h2 class="text-xl font-700 text-slate-800 mb-3"><i class="fa fa-shield text-amber-600 mr-2"></i>Secure PDF Guide</h2>
+        <p class="text-slate-600 mb-4">Our comprehensive guide walks through real-world scenarios for encrypting, redacting, signing, and distributing sensitive PDF documents. Includes step-by-step instructions for Adobe Acrobat, free alternatives, and command-line tools like QPDF and Ghostscript.</p>
+        <a href="/guides/secure-pdf-guide.html" class="inline-flex items-center gap-2 bg-amber-600 text-white px-6 py-3 rounded-xl font-600 hover:bg-amber-700 transition">Read the Full Guide <i class="fa fa-arrow-right"></i></a>
+      </div>
+    </div>
+    <div class="space-y-6">
+      <a href="/images-tools.html" class="block bg-white rounded-[2rem] p-6 shadow-sm border border-slate-100 hover:shadow-lg hover:border-blue-200 transition-all duration-300">
+        <div class="flex items-center gap-3 mb-2">
+          <div class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600"><i class="fa fa-picture-o"></i></div>
+          <h3 class="font-700 text-slate-800">Image Tools</h3>
+        </div>
+        <p class="text-slate-500 text-sm">Compress and convert images to modern formats.</p>
+      </a>
+      <a href="/video-tools.html" class="block bg-white rounded-[2rem] p-6 shadow-sm border border-slate-100 hover:shadow-lg hover:border-blue-200 transition-all duration-300">
+        <div class="flex items-center gap-3 mb-2">
+          <div class="w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center text-red-500"><i class="fa fa-film"></i></div>
+          <h3 class="font-700 text-slate-800">Video Tools</h3>
+        </div>
+        <p class="text-slate-500 text-sm">Compress and optimize video for web and social media.</p>
+      </a>
+    </div>
+  </div>
+</section>
 
-    <div id="privacy-modal" class="modal-backdrop"><div class="bg-white max-w-2xl w-full m-4 rounded-[2.5rem] p-8 relative"><button onclick="hideModal('privacy-modal')" class="absolute top-6 right-8 text-xl"><i class="fa fa-times"></i></button><h3 class="text-2xl font-black mb-4">Privacy Policy</h3><p class="text-sm text-slate-600">We do not store your files. Zip compression happens locally.</p></div></div>
-    <div id="terms-modal" class="modal-backdrop"><div class="bg-white max-w-2xl w-full m-4 rounded-[2.5rem] p-8 relative"><button onclick="hideModal('terms-modal')" class="absolute top-6 right-8 text-xl"><i class="fa fa-times"></i></button><h3 class="text-2xl font-black mb-4">Terms of Service</h3><p class="text-sm text-slate-600">Use at your own risk. We ensure security but not liability.</p></div></div>
+<!-- Ad Container -->
 
-    <script>
-        function showModal(id) { document.getElementById(id).classList.add('active'); document.body.style.overflow = 'hidden'; }
-        function hideModal(id) { document.getElementById(id).classList.remove('active'); document.body.style.overflow = ''; }
-        window.onclick = function(e) { if(e.target.classList.contains('modal-backdrop')) hideModal(e.target.id); }
-    </script>
-    <script type="module">import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js"; import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-analytics.js"; const firebaseConfig = { apiKey: "AIzaSyC4KOwz5YZRciu-ZAC5CKER912DqTJ2Ezs", authDomain: "squoosh-online.firebaseapp.com", projectId: "squoosh-online", storageBucket: "squoosh-online.firebasestorage.app", messagingSenderId: "6015692976", appId: "1:6015692976:web:71f7bf5abaa2dacf5b4b75", measurementId: "G-8NE32ENS6R" }; const app = initializeApp(firebaseConfig); const analytics = getAnalytics(app);</script>
+<!-- Footer -->
+<footer class="bg-slate-900 text-slate-400 mt-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+      <div>
+        <h4 class="text-white font-700 mb-4">Tools</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/images-tools.html" class="hover:text-white transition">Image Tools</a></li>
+          <li><a href="/video-tools.html" class="hover:text-white transition">Video Tools</a></li>
+          <li><a href="/pdf-file-tools.html" class="hover:text-white transition">PDF &amp; Files</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-700 mb-4">Company</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/about.html" class="hover:text-white transition">About Us</a></li>
+          <li><a href="/contact.html" class="hover:text-white transition">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-700 mb-4">Legal</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/privacy-policy.html" class="hover:text-white transition">Privacy Policy</a></li>
+          <li><a href="/terms-of-service.html" class="hover:text-white transition">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-700 mb-4">Squoosh.online</h4>
+        <p class="text-sm leading-relaxed">Free browser-based tools for image, video, and document optimization. No uploads required.</p>
+      </div>
+    </div>
+    <div class="border-t border-slate-800 pt-6 text-center text-sm">&copy; 2025 Squoosh.online. All rights reserved.</div>
+  </div>
+</footer>
 </body>
 </html>

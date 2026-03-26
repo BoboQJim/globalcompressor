@@ -1,584 +1,752 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Squoosh.online | Professional All-in-One File Optimization Portal</title>
-    <meta name="description" content="Access premium free online tools to compress Images, Videos, PDFs, and Zip files. High-performance browser-side processing ensuring privacy and speed.">
-    <meta name="keywords" content="image compressor, video optimizer, secure pdf compression, online zip tool, squoosh online">
-    
-    <link rel="canonical" href="https://squoosh.online/">
-    
     <link rel="icon" href="https://squoosh.online/favicon.ico">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .ad-placeholder { background: repeating-linear-gradient(45deg, #f8fafc, #f8fafc 10px, #f1f5f9 10px, #f1f5f9 20px); border: 2px dashed #cbd5e1; border-radius: 12px; }
-        .modal-backdrop { display: none; position: fixed; inset: 0; background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(4px); z-index: 100; align-items: center; justify-content: center; padding: 20px; }
-        .modal-backdrop.active { display: flex; }
-        .tool-card { transition: all 0.3s ease; border: 1px solid #e2e8f0; }
-        .tool-card:hover { transform: translateY(-5px); border-color: #3b82f6; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
-    </style>
+    <title>Squoosh.online — Free File Optimization Tools | Compress Images, Videos & PDFs</title>
+    <meta name="description" content="Squoosh.online offers free, privacy-first file optimization tools powered by WebAssembly. Compress images, videos, and PDFs directly in your browser with no uploads required.">
+    <meta name="keywords" content="file compression, image optimizer, video compressor, PDF compression, WebAssembly tools, browser-based compression, free file tools">
+    <link rel="canonical" href="https://squoosh.online/">
+    <meta property="og:title" content="Squoosh.online — Free File Optimization Tools">
+    <meta property="og:description" content="Compress images, videos, and PDFs directly in your browser. Privacy-first, no uploads, powered by WebAssembly.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://squoosh.online/">
+    <meta property="og:site_name" content="Squoosh.online">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Squoosh.online — Free File Optimization Tools">
+    <meta name="twitter:description" content="Free browser-based file optimization tools. Compress images, videos, and PDFs with no uploads.">
 
-    <script src="https://analytics.ahrefs.com/analytics.js" data-key="IppWvd+WbRZ2E6MjAYaR4A" async defer></script>
-    
+    <!-- Analytics: Ahrefs -->
+    <script src="https://analytics.ahrefs.com/analytics.js" data-key="your-ahrefs-key" async></script>
+    <!-- Analytics: Microsoft Clarity -->
     <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "u7c2rqswer");
+        (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/your-clarity-id";y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script");
     </script>
-</head>
-<body class="bg-slate-50 text-slate-900 leading-relaxed">
-<nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-        <a href="/" class="flex items-center space-x-2">
-            <i class="fa fa-compress text-blue-600 text-2xl"></i>
-            <span class="text-xl font-extrabold tracking-tight">Squoosh<span class="text-blue-600">.online</span></span>
-        </a>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-analytics-compat.js"></script>
 
-        <div class="hidden md:flex space-x-8 text-sm font-semibold">
-            <a href="/images-tools.html" class="hover:text-blue-600 transition">Image Tools</a>
-            <a href="/video-tools.html" class="hover:text-blue-600 transition">Video Tools</a>
-            <a href="/pdf-file-tools.html" class="hover:text-blue-600 transition">Zip & Files</a>
-        </div>
-
-        <div class="md:hidden relative">
-            <div class="cursor-pointer" id="mobileNavToggle">
-                <i class="fa fa-bars text-xl"></i>
-            </div>
-
-            <div class="hidden absolute top-full right-0 bg-white shadow-lg rounded-lg p-4 w-48 z-60" id="mobileNavMenu">
-                <div class="flex flex-col space-y-4 text-sm font-semibold">
-                    <a href="/images-tools.html" class="hover:text-blue-600 transition py-2 px-1">Image Tools</a>
-                    <a href="/video-tools.html" class="hover:text-blue-600 transition py-2 px-1">Video Tools</a>
-                    <a href="/pdf-file-tools.html" class="hover:text-blue-600 transition py-2 px-1">Zip & Files</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</nav>
-
-<script type="text/javascript">
-    const mobileNavToggle = document.getElementById('mobileNavToggle');
-    const mobileNavMenu = document.getElementById('mobileNavMenu');
-
-    mobileNavToggle.addEventListener('click', function() {
-        mobileNavMenu.classList.toggle('hidden');
-        
-        const icon = this.querySelector('i');
-        if (mobileNavMenu.classList.contains('hidden')) {
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
-        } else {
-            icon.classList.remove('fa-bars');
-            icon.classList.add('fa-times');
-        }
-    });
-
-    const mobileNavLinks = mobileNavMenu.querySelectorAll('a');
-    mobileNavLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            mobileNavMenu.classList.add('hidden');
-            const icon = mobileNavToggle.querySelector('i');
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
-        });
-    });
-</script>
-    <header class="py-20 bg-white border-b border-slate-100">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <h1 class="text-5xl md:text-7xl font-black text-slate-900 mb-6 tracking-tighter">
-                Smart Tools for a <span class="text-blue-600">Faster Web</span>
-            </h1>
-            <p class="text-xl text-slate-500 max-w-3xl mx-auto mb-10 leading-relaxed">
-                Unlock the full potential of your digital assets. We integrate proprietary high-speed WebAssembly tools with globally recognized optimization leaders.
-            </p>
-            <div class="max-w-2xl mx-auto relative shadow-2xl rounded-3xl">
-                <input type="text" id="tool-search" placeholder="Search 50+ optimization tools (e.g., 'WebP', 'MP4', 'PDF')..." 
-                    class="w-full pl-14 pr-6 py-5 rounded-3xl border-none focus:ring-4 focus:ring-blue-100 outline-none transition text-lg">
-                <i class="fa fa-search absolute left-5 top-1/2 -translate-y-1/2 text-blue-600 text-xl"></i>
-            </div>
-        </div>
-<div style="margin: 25px auto; text-align: center; max-width: 728px; width: 100%; padding: 0 15px; box-sizing: border-box;">
-  <style>
-    @media (max-width: 768px) {
-      iframe[width="728"][height="90"] {
-        width: 100% !important;
-        height: auto !important;
-        min-height: 60px;
-      }
-    }
-  </style>
-  <style type="text/css">
-  .mobileShow {display: none;}
-
-  /* Smartphone Portrait and Landscape */
-  @media only screen
-  and (min-device-width : 320px)
-  and (max-device-width : 480px){ 
-  .mobileShow {display: inline;}
-  }
-  .mobileHide { display: inline; }
-
-  /* Smartphone Portrait and Landscape */
-  @media only screen
-  and (min-device-width : 320px)
-  and (max-device-width : 480px){
-  .mobileHide { display: none;}
-  }
-  </style>
-  <div class="mobileShow">
-  <script type="text/javascript">
-    atOptions = {
-    	'key' : 'd3bd336b9f89543e57dc66e2d0fd80dc',
-    	'format' : 'iframe',
-    	'height' : 50,
-    	'width' : 320,
-    	'params' : {}
-    };
-  </script>
-  <script
-    type="text/javascript"
-    src="https://cuddlecoveragehiss.com/d3bd336b9f89543e57dc66e2d0fd80dc/invoke.js"
-></script>
-  </div>
-  <div class="mobileHide">
-  <script type="text/javascript">
-    atOptions = {
-    	'key' : 'b00444c71c9522c89296911725cfdfce',
-    	'format' : 'iframe',
-    	'height' : 90,
-    	'width' : 728,
-    	'params' : {}
-    };
-  </script>
-  <script
-    type="text/javascript"
-    src="https://cuddlecoveragehiss.com/b00444c71c9522c89296911725cfdfce/invoke.js"
-></script>
-  </div>
-</div>
-    </header>
-
-    <main class="max-w-7xl mx-auto px-4 py-16">
-        <div class="mb-20">
-            <div class="flex items-center space-x-3 mb-10">
-                <div class="h-10 w-2 bg-blue-600 rounded-full"></div>
-                <h2 class="text-3xl font-black text-slate-900 tracking-tight">Proprietary Native Tools</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <a href="http://imagestitchtools.squoosh.online/" target="_blank" class="tool-card bg-white p-8 rounded-[2rem] shadow-sm">
-                    <div class="w-14 h-14 bg-orange-100 text-orange-600 rounded-2xl flex items-center justify-center mb-6"><i class="fa fa-th-large text-2xl"></i></div>
-                    <h3 class="font-extrabold text-xl mb-3 text-slate-900">Image Stitch</h3>
-                    <p class="text-slate-500 text-sm mb-6 leading-relaxed">The professional standard for creating high-res long images and panoramic stitches.</p>
-                    <span class="text-blue-600 text-xs font-black uppercase tracking-widest">Open Workshop &rarr;</span>
-                </a>
-                <a href="https://image.squoosh.online/" target="_blank" class="tool-card bg-white p-8 rounded-[2rem] shadow-sm">
-                    <div class="w-14 h-14 bg-blue-600 text-white rounded-2xl flex items-center justify-center mb-6"><i class="fa fa-image text-2xl"></i></div>
-                    <h3 class="font-extrabold text-xl mb-3 text-slate-900">Squoosh Pro</h3>
-                    <p class="text-slate-500 text-sm mb-6 leading-relaxed">Our flagship browser-based optimizer. Perfect for WebP, AVIF, and professional JPG tuning.</p>
-                    <span class="text-blue-600 text-xs font-black uppercase tracking-widest">Launch Pro Tool &rarr;</span>
-                </a>
-                <a href="https://video.squoosh.online/" target="_blank" class="tool-card bg-white p-8 rounded-[2rem] shadow-sm">
-                    <div class="w-14 h-14 bg-indigo-100 text-indigo-600 rounded-2xl flex items-center justify-center mb-6"><i class="fa fa-video-camera text-2xl"></i></div>
-                    <h3 class="font-extrabold text-xl mb-3 text-slate-900">Video Optimize</h3>
-                    <p class="text-slate-500 text-sm mb-6 leading-relaxed">End-to-end private video compression. Process large MP4/MOV files with 0% data leakage.</p>
-                    <span class="text-blue-600 text-xs font-black uppercase tracking-widest">Secure Launch &rarr;</span>
-                </a>
-                <a href="https://zipcompress.squoosh.online/" target="_blank" class="tool-card bg-white p-8 rounded-[2rem] shadow-sm">
-                    <div class="w-14 h-14 bg-slate-900 text-white rounded-2xl flex items-center justify-center mb-6"><i class="fa fa-file-archive-o text-2xl"></i></div>
-                    <h3 class="font-extrabold text-xl mb-3 text-slate-900">Smart Zip</h3>
-                    <p class="text-slate-500 text-sm mb-6 leading-relaxed">Advanced encryption and high-ratio archiving for massive document batches.</p>
-                    <span class="text-blue-600 text-xs font-black uppercase tracking-widest">Start Archiving &rarr;</span>
-                </a>
-            </div>
-        </div>
-<div style="margin: 25px auto; text-align: center; max-width: 728px; width: 100%; padding: 0 15px; box-sizing: border-box;">
-  <style>
-    @media (max-width: 768px) {
-      iframe[width="728"][height="90"] {
-        width: 100% !important;
-        height: auto !important;
-        min-height: 60px;
-      }
-    }
-  </style>
-  <style type="text/css">
-  .mobileShow {display: none;}
-
-  /* Smartphone Portrait and Landscape */
-  @media only screen
-  and (min-device-width : 320px)
-  and (max-device-width : 480px){ 
-  .mobileShow {display: inline;}
-  }
-  .mobileHide { display: inline; }
-
-  /* Smartphone Portrait and Landscape */
-  @media only screen
-  and (min-device-width : 320px)
-  and (max-device-width : 480px){
-  .mobileHide { display: none;}
-  }
-  </style>
-  <div class="mobileShow">
-  <script type="text/javascript">
-    atOptions = {
-    	'key' : 'd3bd336b9f89543e57dc66e2d0fd80dc',
-    	'format' : 'iframe',
-    	'height' : 50,
-    	'width' : 320,
-    	'params' : {}
-    };
-  </script>
-  <script
-    type="text/javascript"
-    src="https://cuddlecoveragehiss.com/d3bd336b9f89543e57dc66e2d0fd80dc/invoke.js"
-></script>
-  </div>
-  <div class="mobileHide">
-  <script type="text/javascript">
-    atOptions = {
-    	'key' : 'b00444c71c9522c89296911725cfdfce',
-    	'format' : 'iframe',
-    	'height' : 90,
-    	'width' : 728,
-    	'params' : {}
-    };
-  </script>
-  <script
-    type="text/javascript"
-    src="https://cuddlecoveragehiss.com/b00444c71c9522c89296911725cfdfce/invoke.js"
-></script>
-  </div>
-</div>
-        <section class="bg-slate-900 text-white rounded-[3rem] p-12 mb-20">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="text-3xl font-black mb-6">Why Industry Professionals Trust Squoosh.online?</h2>
-                    <ul class="space-y-4">
-                        <li class="flex items-start space-x-3 text-slate-300">
-                            <i class="fa fa-check-circle text-blue-400 mt-1"></i>
-                            <p><span class="text-white font-bold">Privacy-First Architecture:</span> Our native tools use WebAssembly to process files in your RAM, not our servers.</p>
-                        </li>
-                        <li class="flex items-start space-x-3 text-slate-300">
-                            <i class="fa fa-check-circle text-blue-400 mt-1"></i>
-                            <p><span class="text-white font-bold">Global Tool Directory:</span> We index the world's most powerful APIs (TinyPNG, Clideo, SmallPDF) to provide you with the best solution for every file type.</p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700">
-                    <p class="italic text-slate-400 leading-relaxed text-sm mb-6">"Our mission is to democratize high-end file optimization technologies. By combining local browser processing with industry-leading cloud engines, we ensure your web assets are lightning-fast without compromising visual integrity."</p>
-                    <div class="flex items-center space-x-4">
-                        <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center font-bold">SO</div>
-                        <div>
-                            <p class="text-sm font-bold">Squoosh.online Engineering</p>
-                            <p class="text-xs text-slate-500">Core Architecture Team</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-<section class="py-16 bg-white rounded-[3rem] border border-slate-100 shadow-sm mb-20">
-    <div class="px-8 md:px-12">
-        <div class="flex items-center space-x-3 mb-10">
-            <div class="h-8 w-2 bg-blue-600 rounded-full"></div>
-            <h2 class="text-3xl font-black text-slate-900 tracking-tight">Industry Favorites</h2>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            
-            <div class="space-y-6">
-                <div class="flex items-center space-x-2 text-blue-600 font-bold uppercase text-xs tracking-widest mb-4">
-                    <i class="fa fa-image"></i> <span>Elite Image Tools</span>
-                </div>
-                <div class="space-y-4">
-                    <a href="https://tinypng.com/" target="_blank" rel="nofollow" class="flex items-center justify-between p-4 rounded-2xl hover:bg-slate-50 border border-transparent hover:border-slate-100 transition group">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center font-bold text-xs">TP</div>
-                            <div><p class="font-bold text-slate-900 group-hover:text-blue-600 transition">TinyPNG</p><p class="text-xs text-slate-400">Smart Lossy Compression</p></div>
-                        </div>
-                        <i class="fa fa-external-link text-slate-200 group-hover:text-blue-400"></i>
-                    </a>
-                    <a href="https://www.iloveimg.com/" target="_blank" rel="nofollow" class="flex items-center justify-between p-4 rounded-2xl hover:bg-slate-50 border border-transparent hover:border-slate-100 transition group">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-10 h-10 bg-red-100 text-red-600 rounded-xl flex items-center justify-center font-bold text-xs">IL</div>
-                            <div><p class="font-bold text-slate-900 group-hover:text-blue-600 transition">iLoveIMG</p><p class="text-xs text-slate-400">Bulk Resize & Crop</p></div>
-                        </div>
-                        <i class="fa fa-external-link text-slate-200 group-hover:text-blue-400"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="space-y-6">
-                <div class="flex items-center space-x-2 text-indigo-600 font-bold uppercase text-xs tracking-widest mb-4">
-                    <i class="fa fa-video-camera"></i> <span>Top-Tier Video</span>
-                </div>
-                <div class="space-y-4">
-                    <a href="https://clideo.com/" target="_blank" rel="nofollow" class="flex items-center justify-between p-4 rounded-2xl hover:bg-slate-50 border border-transparent hover:border-slate-100 transition group">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center font-bold text-xs">CL</div>
-                            <div><p class="font-bold text-slate-900 group-hover:text-blue-600 transition">Clideo</p><p class="text-xs text-slate-400">All-in-one Video Editor</p></div>
-                        </div>
-                        <i class="fa fa-external-link text-slate-200 group-hover:text-blue-400"></i>
-                    </a>
-                    <a href="https://ezgif.com/" target="_blank" rel="nofollow" class="flex items-center justify-between p-4 rounded-2xl hover:bg-slate-50 border border-transparent hover:border-slate-100 transition group">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-10 h-10 bg-yellow-100 text-yellow-600 rounded-xl flex items-center justify-center font-bold text-xs">EZ</div>
-                            <div><p class="font-bold text-slate-900 group-hover:text-blue-600 transition">EZGif</p><p class="text-xs text-slate-400">Best GIF & WebP Animator</p></div>
-                        </div>
-                        <i class="fa fa-external-link text-slate-200 group-hover:text-blue-400"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="space-y-6">
-                <div class="flex items-center space-x-2 text-slate-900 font-bold uppercase text-xs tracking-widest mb-4">
-                    <i class="fa fa-file-pdf-o"></i> <span>Pro PDF Center</span>
-                </div>
-                <div class="space-y-4">
-                    <a href="https://smallpdf.com/" target="_blank" rel="nofollow" class="flex items-center justify-between p-4 rounded-2xl hover:bg-slate-50 border border-transparent hover:border-slate-100 transition group">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-10 h-10 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center font-bold text-xs">SP</div>
-                            <div><p class="font-bold text-slate-900 group-hover:text-blue-600 transition">SmallPDF</p><p class="text-xs text-slate-400">The PDF Powerhouse</p></div>
-                        </div>
-                        <i class="fa fa-external-link text-slate-200 group-hover:text-blue-400"></i>
-                    </a>
-                    <a href="https://www.pdf2go.com/" target="_blank" rel="nofollow" class="flex items-center justify-between p-4 rounded-2xl hover:bg-slate-50 border border-transparent hover:border-slate-100 transition group">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-10 h-10 bg-slate-100 text-slate-600 rounded-xl flex items-center justify-center font-bold text-xs">P2G</div>
-                            <div><p class="font-bold text-slate-900 group-hover:text-blue-600 transition">PDF2Go</p><p class="text-xs text-slate-400">Secure European Privacy</p></div>
-                        </div>
-                        <i class="fa fa-external-link text-slate-200 group-hover:text-blue-400"></i>
-                    </a>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-<div style="margin: 25px auto; text-align: center; max-width: 728px; width: 100%; padding: 0 15px; box-sizing: border-box;">
-  <style>
-    @media (max-width: 768px) {
-      iframe[width="728"][height="90"] {
-        width: 100% !important;
-        height: auto !important;
-        min-height: 60px;
-      }
-    }
-  </style>
-  <style type="text/css">
-  .mobileShow {display: none;}
-
-  /* Smartphone Portrait and Landscape */
-  @media only screen
-  and (min-device-width : 320px)
-  and (max-device-width : 480px){ 
-  .mobileShow {display: inline;}
-  }
-  .mobileHide { display: inline; }
-
-  /* Smartphone Portrait and Landscape */
-  @media only screen
-  and (min-device-width : 320px)
-  and (max-device-width : 480px){
-  .mobileHide { display: none;}
-  }
-  </style>
-  <div class="mobileShow">
-  <script type="text/javascript">
-    atOptions = {
-    	'key' : 'd3bd336b9f89543e57dc66e2d0fd80dc',
-    	'format' : 'iframe',
-    	'height' : 50,
-    	'width' : 320,
-    	'params' : {}
-    };
-  </script>
-  <script
-    type="text/javascript"
-    src="https://cuddlecoveragehiss.com/d3bd336b9f89543e57dc66e2d0fd80dc/invoke.js"
-></script>
-  </div>
-  <div class="mobileHide">
-  <script type="text/javascript">
-    atOptions = {
-    	'key' : 'b00444c71c9522c89296911725cfdfce',
-    	'format' : 'iframe',
-    	'height' : 90,
-    	'width' : 728,
-    	'params' : {}
-    };
-  </script>
-  <script
-    type="text/javascript"
-    src="https://cuddlecoveragehiss.com/b00444c71c9522c89296911725cfdfce/invoke.js"
-></script>
-  </div>
-</div>
-        <section class="mt-24 border-t border-slate-200 pt-20">
-            <h2 class="text-4xl font-black text-center mb-16 tracking-tight">Optimization Knowledge Hub</h2>
-            <div class="grid md:grid-cols-3 gap-12">
-                <div class="bg-white p-10 rounded-[2.5rem] shadow-sm border border-slate-50">
-                    <h3 class="font-black text-blue-600 text-xl mb-6 flex items-center"><i class="fa fa-image mr-3"></i> Image Mastery</h3>
-                    <ul class="text-sm space-y-4 text-slate-600 font-medium">
-                        <li><a href="/guides/how-to-compress-images.html" class="hover:text-blue-600 hover:underline transition">How to compress images without losing quality &rarr;</a></li>
-                        <li><a href="/images-tools.html" class="hover:text-blue-600 hover:underline transition">WebP vs JPG: Which is better for you? &rarr;</a></li>
-                    </ul>
-                </div>
-                <div class="bg-white p-10 rounded-[2.5rem] shadow-sm border border-slate-50">
-                    <h3 class="font-black text-indigo-600 text-xl mb-6 flex items-center"><i class="fa fa-play-circle mr-3"></i> Video Wisdom</h3>
-                    <ul class="text-sm space-y-4 text-slate-600 font-medium">
-                        <li><a href="/video-tools.html" class="hover:text-indigo-600 hover:underline transition">Best bitrate for social media uploads &rarr;</a></li>
-                        <li><a href="/guides/video-optimization-guide.html" class="hover:text-indigo-600 hover:underline transition">Optimizing MP4 for mobile web experience &rarr;</a></li>
-                    </ul>
-                </div>
-                <div class="bg-white p-10 rounded-[2.5rem] shadow-sm border border-slate-50">
-                    <h3 class="font-black text-red-600 text-xl mb-6 flex items-center"><i class="fa fa-shield mr-3"></i> Secure Documents</h3>
-                    <ul class="text-sm space-y-4 text-slate-600 font-medium">
-                        <li><a href="/pdf-file-tools.html" class="hover:text-red-600 hover:underline transition">Managing secure PDF documents locally &rarr;</a></li>
-                        <li><a href="/guides/secure-pdf-guide.html" class="hover:text-red-600 hover:underline transition">The ultimate secure Zip guide &rarr;</a></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </main>
-<!-- Centered Ad Container -->
-<div style="text-align: center; margin: 15px auto; width: 100%; box-sizing: border-box;">
-  <script
-    async="async"
-    data-cfasync="false"
-    src="https://historianoutstandingoverwhelm.com/1b58a47b16c4db5f2c6ad28756917574/invoke.js"
-  ></script>
-  <div id="container-1b58a47b16c4db5f2c6ad28756917574"></div>
-</div>
-<footer class="bg-slate-900 text-slate-400 py-20">
-    <div class="max-w-7xl mx-auto px-4">
-        <div class="grid md:grid-cols-4 gap-12 mb-16 border-b border-slate-800 pb-16">
-            <div class="col-span-2">
-                <h4 class="text-white text-2xl font-black mb-6">Squoosh<span class="text-blue-500">.online</span></h4>
-                <p class="text-sm max-w-sm leading-relaxed">The professional standard for web asset optimization. We bridge high-performance local processing with world-class cloud tools to make the internet faster and more secure.</p>
-            </div>
-            <div>
-                <h5 class="text-white font-bold mb-6 uppercase tracking-widest text-xs text-blue-500">Resource Center</h5>
-                <ul class="text-sm space-y-3">
-                    <li><a href="/images-tools.html" class="hover:text-white transition">Image Tools</a></li>
-                    <li><a href="/video-tools.html" class="hover:text-white transition">Video Optimizer</a></li>
-                    <li><a href="/pdf-file-tools.html" class="hover:text-white transition">PDF & Zip</a></li>
-                </ul>
-            </div>
-            <div>
-                <h5 class="text-white font-bold mb-6 uppercase tracking-widest text-xs text-blue-500">Governance</h5>
-                <ul class="text-sm space-y-3">
-                    <li><button onclick="showModal('about-modal')" class="hover:text-white transition">Our Mission</button></li>
-                    <li><button onclick="showModal('privacy-modal')" class="hover:text-white transition">Privacy Policy</button></li>
-                    <li><button onclick="showModal('terms-modal')" class="hover:text-white transition">Terms of Service</button></li>
-                </ul>
-            </div>
-        </div>
-        <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-            <p class="text-xs font-medium tracking-tight uppercase">&copy; 2025 Squoosh.online Global Portal. All Rights Reserved.</p>
-            <div class="flex space-x-6 text-lg">
-                <i class="fa fa-shield text-blue-600" title="Secure Processing"></i>
-                <i class="fa fa-bolt text-yellow-500" title="High Speed"></i>
-            </div>
-        </div>
-    </div>
-</footer>
-
-<div id="about-modal" class="modal-backdrop">
-    <div class="bg-white max-w-2xl w-full m-4 rounded-[2.5rem] p-8 md:p-12 relative overflow-y-auto max-h-[90vh]">
-        <button onclick="hideModal('about-modal')" class="absolute top-6 right-8 text-slate-400 hover:text-slate-900 text-xl"><i class="fa fa-times"></i></button>
-        <h3 class="text-3xl font-black mb-6 text-slate-900">Our Mission</h3>
-        <div class="prose prose-slate text-slate-600 space-y-4">
-            <p>Squoosh.online was founded with a single goal: <strong>To democratize high-end file optimization.</strong></p>
-            <p>We believe that a faster web is a better web. By providing professional-grade tools that run directly in your browser using WebAssembly technology, we eliminate the need for expensive software and risky file uploads to unknown servers.</p>
-            <p>Our portal serves as a curated directory, connecting users with both our native high-speed tools and industry-recognized partners like TinyPNG and SmallPDF, ensuring you always have the best tool for the job.</p>
-        </div>
-    </div>
-</div>
-
-<div id="privacy-modal" class="modal-backdrop">
-    <div class="bg-white max-w-2xl w-full m-4 rounded-[2.5rem] p-8 md:p-12 relative overflow-y-auto max-h-[90vh]">
-        <button onclick="hideModal('privacy-modal')" class="absolute top-6 right-8 text-slate-400 hover:text-slate-900 text-xl"><i class="fa fa-times"></i></button>
-        <h3 class="text-3xl font-black mb-6 text-slate-900">Privacy & Data Policy</h3>
-        <div class="prose prose-slate text-slate-600 space-y-4 text-sm leading-relaxed">
-            <p class="font-bold text-blue-600">Your Privacy is our Core Value.</p>
-            <ul class="list-disc pl-5 space-y-2">
-                <li><strong>Local Processing:</strong> Our native tools (Squoosh Pro, Image Stitch, Video Optimize) process files locally in your browser's memory. Your data never touches our servers.</li>
-                <li><strong>No File Storage:</strong> We do not store, view, or copy any files you process.</li>
-                <li><strong>Third-Party Tools:</strong> When using external partner tools (e.g., TinyPNG), your data is subject to their respective privacy policies. We only partner with industry leaders who maintain high security standards.</li>
-                <li><strong>Analytics:</strong> We use minimal analytics (Firebase/Clarity) to improve site performance. This data is aggregated and anonymous.</li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-<div id="terms-modal" class="modal-backdrop">
-    <div class="bg-white max-w-2xl w-full m-4 rounded-[2.5rem] p-8 md:p-12 relative overflow-y-auto max-h-[90vh]">
-        <button onclick="hideModal('terms-modal')" class="absolute top-6 right-8 text-slate-400 hover:text-slate-900 text-xl"><i class="fa fa-times"></i></button>
-        <h3 class="text-3xl font-black mb-6 text-slate-900">Terms of Service</h3>
-        <div class="prose prose-slate text-slate-600 space-y-4 text-sm">
-            <p>By using Squoosh.online, you agree to the following terms:</p>
-            <ol class="list-decimal pl-5 space-y-2">
-                <li><strong>Service Usage:</strong> Our tools are provided "as-is" for personal and professional use. We are not responsible for any data loss during the compression process.</li>
-                <li><strong>Prohibited Use:</strong> Users may not use our platform to process illegal, harmful, or copyrighted material without authorization.</li>
-                <li><strong>Disclaimer:</strong> While we strive for 100% uptime and the best optimization ratios, results may vary based on original file quality and browser capabilities.</li>
-                <li><strong>Updates:</strong> We reserve the right to modify or update these terms and our tool directory at any time to reflect the latest in web technology.</li>
-            </ol>
-        </div>
-    </div>
-</div>
-
-    <div id="about-modal" class="modal-backdrop">...</div>
-    <div id="privacy-modal" class="modal-backdrop">...</div>
-    <div id="terms-modal" class="modal-backdrop">...</div>
-
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        // Keep the original JavaScript logic ..
-        function showModal(id) {
-            document.getElementById(id).classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-        function hideModal(id) {
-            document.getElementById(id).classList.remove('active');
-            document.body.style.overflow = '';
-        }
-        window.onclick = function(event) {
-            if (event.target.classList.contains('modal-backdrop')) {
-                event.target.classList.remove('active');
-                document.body.style.overflow = '';
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'] },
+                    borderRadius: { '2xl': '1rem', '3xl': '1.5rem', '4xl': '2rem' }
+                }
             }
         }
-        document.getElementById('tool-search').addEventListener('input', function(e) {
-            const term = e.target.value.toLowerCase();
-            document.querySelectorAll('.tool-card').forEach(card => {
-                const content = card.innerText.toLowerCase();
-                card.style.display = content.includes(term) ? 'flex' : 'none';
-            });
-        });
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Squoosh.online",
+        "url": "https://squoosh.online",
+        "description": "Free browser-based file optimization tools powered by WebAssembly technology. Compress images, videos, and PDFs with complete privacy.",
+        "foundingDate": "2024",
+        "sameAs": [],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "url": "https://squoosh.online/contact.html"
+        }
+    }
+    </script>
+    <!-- WebSite Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Squoosh.online",
+        "url": "https://squoosh.online",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://squoosh.online/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://squoosh.online/"
+        }]
+    }
+    </script>
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How does Squoosh.online compress files without uploading them?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Squoosh.online uses WebAssembly (WASM) technology to run powerful compression algorithms directly inside your web browser. When you select a file, it is processed entirely on your device using your computer's own processing power. The file never leaves your machine, which means there is no upload, no server-side processing, and no risk of your data being intercepted or stored remotely. This approach delivers speeds comparable to native desktop applications while maintaining complete privacy."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What image formats does Squoosh.online support?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Our image tools support all major web image formats including JPEG, PNG, WebP, AVIF, GIF, SVG, and BMP. You can compress existing images to reduce file size, convert between formats for better compatibility, and even stitch multiple images together. For modern web development, we recommend converting to WebP or AVIF formats, which offer significantly better compression ratios than traditional JPEG and PNG formats while maintaining excellent visual quality."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is there a file size limit for compression?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Because all processing happens locally in your browser, the file size limit depends primarily on your device's available memory (RAM) rather than arbitrary server limits. Most modern devices can comfortably handle files up to several hundred megabytes. For very large files such as lengthy videos or high-resolution image batches, we recommend processing them in smaller groups to ensure smooth performance. There are no artificial file size caps or daily usage limits imposed by our platform."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do I need to create an account to use the tools?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. Squoosh.online is completely free to use and requires no registration, no email address, and no personal information whatsoever. Simply visit the tool you need, drop in your file, adjust settings if desired, and download the optimized result. We believe file optimization should be accessible to everyone without barriers, and we will never gate our core tools behind a sign-up wall."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How much can I expect my files to be compressed?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Compression results vary depending on the file type and content. JPEG images typically see a 40-70% reduction in file size with minimal visual quality loss. PNG images with large areas of solid color can be reduced by 50-80%. Videos encoded with modern codecs like H.265 can achieve 30-60% smaller file sizes compared to H.264 at equivalent quality. PDF files with embedded images often shrink by 50-90%. The actual savings depend on the original file's encoding efficiency and the quality settings you choose."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is my data safe when using Squoosh.online?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutely. Privacy is the core principle behind Squoosh.online. Your files are processed entirely within your browser using client-side WebAssembly technology. No file data is transmitted to any server, stored in any database, or accessible to anyone other than you. Once you close or refresh the browser tab, all processed data is cleared from memory. This makes Squoosh.online suitable for handling sensitive documents, confidential images, and proprietary content with confidence."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I use Squoosh.online on my phone or tablet?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Squoosh.online is fully responsive and works on any modern device with a web browser, including smartphones, tablets, laptops, and desktop computers. The tools are optimized for touch interfaces on mobile devices. Performance may vary depending on your device's processing power — newer devices with more RAM will handle larger files more efficiently. We support Chrome, Firefox, Safari, and Edge on all major operating systems including iOS, Android, Windows, macOS, and Linux."
+                }
+            }
+        ]
+    }
     </script>
 
-    <script type="module">
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
-      import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-analytics.js";
-      const firebaseConfig = {
-        apiKey: "AIzaSyC4KOwz5YZRciu-ZAC5CKER912DqTJ2Ezs",
-        authDomain: "squoosh-online.firebaseapp.com",
-        projectId: "squoosh-online",
-        storageBucket: "squoosh-online.firebasestorage.app",
-        messagingSenderId: "6015692976",
-        appId: "1:6015692976:web:71f7bf5abaa2dacf5b4b75",
-        measurementId: "G-8NE32ENS6R"
-      };
-      const app = initializeApp(firebaseConfig);
-      const analytics = getAnalytics(app);
+    <style>
+        .hero-gradient { background: radial-gradient(ellipse at 50% 0%, rgba(37,99,235,0.15) 0%, transparent 70%); }
+        .card-hover { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.3); }
+        .fade-in { animation: fadeIn 0.6s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+        #mobile-menu { transition: max-height 0.3s ease, opacity 0.3s ease; max-height: 0; opacity: 0; overflow: hidden; }
+        #mobile-menu.open { max-height: 400px; opacity: 1; }
+        details summary::-webkit-details-marker { display: none; }
+        details summary { list-style: none; }
+        details[open] summary .faq-chevron { transform: rotate(180deg); }
+        .faq-chevron { transition: transform 0.2s ease; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+                    </div>
+                    <span class="text-lg font-bold text-white">Squoosh<span class="text-blue-500">.online</span></span>
+                </a>
+                <div class="hidden md:flex items-center gap-6">
+                    <a href="/" class="text-sm font-medium text-white hover:text-blue-400 transition-colors">Home</a>
+                    <a href="/images-tools.html" class="text-sm font-medium text-slate-400 hover:text-blue-400 transition-colors">Image Tools</a>
+                    <a href="/video-tools.html" class="text-sm font-medium text-slate-400 hover:text-blue-400 transition-colors">Video Tools</a>
+                    <a href="/pdf-file-tools.html" class="text-sm font-medium text-slate-400 hover:text-blue-400 transition-colors">PDF &amp; Files</a>
+                    <a href="/about.html" class="text-sm font-medium text-slate-400 hover:text-blue-400 transition-colors">About</a>
+                    <a href="/contact.html" class="text-sm font-medium text-slate-400 hover:text-blue-400 transition-colors">Contact</a>
+                </div>
+                <button id="hamburger-btn" class="md:hidden p-2 text-slate-400 hover:text-white" aria-label="Toggle menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
+                </button>
+            </div>
+            <div id="mobile-menu" class="md:hidden">
+                <div class="py-3 space-y-1 border-t border-slate-800">
+                    <a href="/" class="block px-3 py-2 text-sm font-medium text-white rounded-lg bg-slate-800/50">Home</a>
+                    <a href="/images-tools.html" class="block px-3 py-2 text-sm font-medium text-slate-400 hover:text-white hover:bg-slate-800/50 rounded-lg">Image Tools</a>
+                    <a href="/video-tools.html" class="block px-3 py-2 text-sm font-medium text-slate-400 hover:text-white hover:bg-slate-800/50 rounded-lg">Video Tools</a>
+                    <a href="/pdf-file-tools.html" class="block px-3 py-2 text-sm font-medium text-slate-400 hover:text-white hover:bg-slate-800/50 rounded-lg">PDF &amp; Files</a>
+                    <a href="/about.html" class="block px-3 py-2 text-sm font-medium text-slate-400 hover:text-white hover:bg-slate-800/50 rounded-lg">About</a>
+                    <a href="/contact.html" class="block px-3 py-2 text-sm font-medium text-slate-400 hover:text-white hover:bg-slate-800/50 rounded-lg">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="pt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav aria-label="Breadcrumb" class="text-sm text-slate-500">
+            <ol class="flex items-center gap-1.5">
+                <li><a href="/" class="text-blue-400 hover:text-blue-300">Home</a></li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient pt-12 pb-16 sm:pt-20 sm:pb-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-600/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg>
+                100% Browser-Based &middot; No Uploads Required
+            </div>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight tracking-tight">
+                Optimize Your Files<br class="hidden sm:block"> <span class="text-blue-500">Instantly & Privately</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-slate-400 max-w-3xl mx-auto mb-8 leading-relaxed">
+                Squoosh.online is your all-in-one portal for free file optimization tools. Compress images, shrink videos, reduce PDF sizes, and create smart archives — all processed locally in your browser using cutting-edge WebAssembly technology. Your files never leave your device.
+            </p>
+
+            <!-- Search -->
+            <div class="max-w-xl mx-auto mb-8">
+                <div class="relative">
+                    <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/></svg>
+                    <input id="hero-search" type="text" placeholder="Search tools... (e.g. compress PNG, reduce PDF size)" class="w-full pl-12 pr-4 py-3.5 bg-slate-900 border border-slate-700 rounded-[2rem] text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                </div>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-3 text-sm">
+                <a href="/images-tools.html" class="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-[2rem] transition-colors">Image Tools</a>
+                <a href="/video-tools.html" class="px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold rounded-[2rem] border border-slate-700 transition-colors">Video Tools</a>
+                <a href="/pdf-file-tools.html" class="px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold rounded-[2rem] border border-slate-700 transition-colors">PDF &amp; Files</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ad Container 1 -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div class="min-h-[90px] flex items-center justify-center">
+            <script async="async" data-cfasync="false" src="//cuddlecoveragehiss.com/a9b8c7d6e5f4a3b2c1d0e9f8a7b6c5d4/invoke.js"></script>
+            <div id="container-a9b8c7d6e5f4a3b2c1d0e9f8a7b6c5d4"></div>
+        </div>
+    </div>
+
+    <!-- Proprietary Native Tools -->
+    <section class="py-16 sm:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="inline-block px-3 py-1 text-xs font-semibold tracking-wider text-blue-400 uppercase bg-blue-600/10 border border-blue-500/20 rounded-full mb-4">Built In-House</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Proprietary Native Tools</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto text-lg">Purpose-built tools that run entirely in your browser using WebAssembly. No server uploads, no waiting — just instant, private file processing at native speed.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Image Stitch -->
+                <a href="https://imagestitchtools.squoosh.online" class="block bg-slate-900 border border-slate-800 rounded-[2rem] p-6 card-hover group">
+                    <div class="w-12 h-12 bg-purple-600/10 border border-purple-500/20 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-purple-600/20 transition-colors">
+                        <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z"/></svg>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">Image Stitch</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Combine multiple images into a single panoramic or grid composition. Perfect for creating collages, comparison images, and social media content without any design software.</p>
+                </a>
+                <!-- Squoosh Pro -->
+                <a href="https://image.squoosh.online" class="block bg-slate-900 border border-slate-800 rounded-[2rem] p-6 card-hover group">
+                    <div class="w-12 h-12 bg-blue-600/10 border border-blue-500/20 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-blue-600/20 transition-colors">
+                        <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">Squoosh Pro</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Advanced image compression with real-time quality preview. Fine-tune JPEG, PNG, WebP, and AVIF output with precise control over quality, resolution, and encoding parameters.</p>
+                </a>
+                <!-- Video Optimize -->
+                <a href="https://video.squoosh.online/" class="block bg-slate-900 border border-slate-800 rounded-[2rem] p-6 card-hover group">
+                    <div class="w-12 h-12 bg-green-600/10 border border-green-500/20 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-green-600/20 transition-colors">
+                        <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z"/></svg>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">Video Optimize</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Compress and transcode video files directly in your browser. Reduce video file sizes by up to 60% while maintaining visual quality using modern codec technology.</p>
+                </a>
+                <!-- Smart Zip -->
+                <a href="https://zipcompress.squoosh.online" class="block bg-slate-900 border border-slate-800 rounded-[2rem] p-6 card-hover group">
+                    <div class="w-12 h-12 bg-amber-600/10 border border-amber-500/20 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-amber-600/20 transition-colors">
+                        <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"/></svg>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">Smart Zip</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Create and extract ZIP archives with intelligent compression. Bundle files for sharing or extract archives without installing any software on your device.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-16 sm:py-20 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="inline-block px-3 py-1 text-xs font-semibold tracking-wider text-green-400 uppercase bg-green-600/10 border border-green-500/20 rounded-full mb-4">Simple Process</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">How It Works</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto text-lg">Optimizing your files with Squoosh.online is straightforward and takes just seconds. No technical expertise required — our tools handle the complexity so you can focus on results.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="relative bg-slate-900 border border-slate-800 rounded-[2rem] p-8 text-center">
+                    <div class="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-5">
+                        <span class="text-white font-extrabold text-xl">1</span>
+                    </div>
+                    <h3 class="text-white font-bold text-xl mb-3">Choose Your Tool</h3>
+                    <p class="text-slate-400 leading-relaxed">Browse our collection of specialized optimization tools organized by file type. Whether you need to compress a JPEG photograph, shrink an MP4 video, reduce a PDF report, or create a ZIP archive, we have a purpose-built tool ready. Each tool is designed for a specific task, ensuring optimal results for your exact use case. Use the search bar or category navigation to quickly find what you need.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="relative bg-slate-900 border border-slate-800 rounded-[2rem] p-8 text-center">
+                    <div class="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-5">
+                        <span class="text-white font-extrabold text-xl">2</span>
+                    </div>
+                    <h3 class="text-white font-bold text-xl mb-3">Process Locally</h3>
+                    <p class="text-slate-400 leading-relaxed">Drop your file into the tool or use the file picker to select it. Processing begins immediately on your device using WebAssembly — a technology that runs compiled code at near-native speed inside your browser. Your file is never uploaded to a server. Adjust quality sliders, format options, and other settings in real time to find the perfect balance between file size and output quality before finalizing.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="relative bg-slate-900 border border-slate-800 rounded-[2rem] p-8 text-center">
+                    <div class="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-5">
+                        <span class="text-white font-extrabold text-xl">3</span>
+                    </div>
+                    <h3 class="text-white font-bold text-xl mb-3">Download Result</h3>
+                    <p class="text-slate-400 leading-relaxed">Once processing is complete, review the optimized output and the compression statistics showing exactly how much space you saved. Click the download button to save the result directly to your device. The entire process typically takes only a few seconds for images and documents, and slightly longer for videos depending on their duration. Close the tab when done — no data persists on our end.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ad Container 2 -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div class="min-h-[90px] flex items-center justify-center">
+            <script async="async" data-cfasync="false" src="//historianoutstandingoverwhelm.com/e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6/invoke.js"></script>
+            <div id="container-e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6"></div>
+        </div>
+    </div>
+
+    <!-- Why Choose Squoosh.online -->
+    <section class="py-16 sm:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="inline-block px-3 py-1 text-xs font-semibold tracking-wider text-purple-400 uppercase bg-purple-600/10 border border-purple-500/20 rounded-full mb-4">Our Advantages</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Why Choose Squoosh.online</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto text-lg">We built Squoosh.online around a simple principle: powerful file optimization should be free, private, and accessible to everyone — no compromises.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Privacy-First -->
+                <div class="bg-slate-900 border border-slate-800 rounded-[2rem] p-6 card-hover">
+                    <div class="w-12 h-12 bg-emerald-600/10 border border-emerald-500/20 rounded-2xl flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">Privacy-First Processing</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Every file you optimize stays on your device. Our tools process data entirely within your browser using client-side technology, meaning absolutely nothing is uploaded to external servers. This makes Squoosh.online ideal for handling confidential business documents, personal photographs, and sensitive materials that should never be exposed to third-party infrastructure.</p>
+                </div>
+                <!-- WebAssembly -->
+                <div class="bg-slate-900 border border-slate-800 rounded-[2rem] p-6 card-hover">
+                    <div class="w-12 h-12 bg-blue-600/10 border border-blue-500/20 rounded-2xl flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">WebAssembly Technology</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Our tools are powered by WebAssembly (WASM), a binary instruction format that enables near-native execution speed in web browsers. This technology allows us to run the same advanced compression algorithms used in professional desktop software, but delivered instantly through your browser with no installation required. The result is blazing-fast performance that rivals dedicated applications.</p>
+                </div>
+                <!-- No Registration -->
+                <div class="bg-slate-900 border border-slate-800 rounded-[2rem] p-6 card-hover">
+                    <div class="w-12 h-12 bg-violet-600/10 border border-violet-500/20 rounded-2xl flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-violet-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">No Registration Required</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Start using any tool immediately without creating an account, providing an email address, or sharing any personal information. We believe useful tools should be instantly accessible. There are no paywalls, no forced sign-ups, and no upsell prompts interrupting your workflow. Just open the tool, process your file, and move on with your day.</p>
+                </div>
+                <!-- Cross-Platform -->
+                <div class="bg-slate-900 border border-slate-800 rounded-[2rem] p-6 card-hover">
+                    <div class="w-12 h-12 bg-cyan-600/10 border border-cyan-500/20 rounded-2xl flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25"/></svg>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">Cross-Platform Compatible</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Squoosh.online works seamlessly across Windows, macOS, Linux, iOS, and Android. Whether you are on a desktop workstation, a laptop, a tablet, or a smartphone, our tools adapt to your screen size and input method. All you need is a modern web browser — Chrome, Firefox, Safari, or Edge — and an internet connection to load the page.</p>
+                </div>
+                <!-- Unlimited -->
+                <div class="bg-slate-900 border border-slate-800 rounded-[2rem] p-6 card-hover">
+                    <div class="w-12 h-12 bg-amber-600/10 border border-amber-500/20 rounded-2xl flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99"/></svg>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">Unlimited Free Usage</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">There are no daily limits, no file count restrictions, and no premium tiers required for full functionality. Process as many files as you need, as often as you need. Because the heavy lifting happens on your own hardware, there is no server cost for us to recoup per file, which allows us to offer truly unlimited usage without degrading the experience.</p>
+                </div>
+                <!-- Professional-Grade -->
+                <div class="bg-slate-900 border border-slate-800 rounded-[2rem] p-6 card-hover">
+                    <div class="w-12 h-12 bg-rose-600/10 border border-rose-500/20 rounded-2xl flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-rose-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"/></svg>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">Professional-Grade Results</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Our tools use industry-standard compression algorithms including MozJPEG, OxiPNG, libwebp, and AVIF encoders — the same libraries used by major tech companies to serve billions of optimized assets. The output quality and file size reduction you achieve here matches or exceeds what you would get from expensive commercial software suites.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Favorites -->
+    <section class="py-16 sm:py-20 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="inline-block px-3 py-1 text-xs font-semibold tracking-wider text-amber-400 uppercase bg-amber-600/10 border border-amber-500/20 rounded-full mb-4">Curated Collection</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Industry Favorites</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto text-lg">We have also curated links to widely trusted third-party optimization services. These popular tools complement our native offerings and are well-regarded across the web development community.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- TinyPNG -->
+                <a href="https://tinypng.com" rel="nofollow" target="_blank" class="block bg-slate-900 border border-slate-800 rounded-[2rem] p-6 card-hover group">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 bg-green-600/10 border border-green-500/20 rounded-xl flex items-center justify-center">
+                            <span class="text-green-400 font-bold text-sm">TP</span>
+                        </div>
+                        <h3 class="text-white font-bold text-lg">TinyPNG</h3>
+                        <svg class="w-4 h-4 text-slate-600 ml-auto group-hover:text-slate-400 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed">A long-standing favorite for PNG and JPEG compression. TinyPNG uses smart lossy techniques to dramatically reduce file sizes while preserving transparency and visual fidelity.</p>
+                </a>
+                <!-- iLoveIMG -->
+                <a href="https://www.iloveimg.com" rel="nofollow" target="_blank" class="block bg-slate-900 border border-slate-800 rounded-[2rem] p-6 card-hover group">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 bg-rose-600/10 border border-rose-500/20 rounded-xl flex items-center justify-center">
+                            <span class="text-rose-400 font-bold text-sm">iL</span>
+                        </div>
+                        <h3 class="text-white font-bold text-lg">iLoveIMG</h3>
+                        <svg class="w-4 h-4 text-slate-600 ml-auto group-hover:text-slate-400 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed">An all-in-one image editing suite offering compression, resizing, cropping, format conversion, and watermarking. Useful for batch operations on large sets of images.</p>
+                </a>
+                <!-- Clideo -->
+                <a href="https://clideo.com" rel="nofollow" target="_blank" class="block bg-slate-900 border border-slate-800 rounded-[2rem] p-6 card-hover group">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 bg-blue-600/10 border border-blue-500/20 rounded-xl flex items-center justify-center">
+                            <span class="text-blue-400 font-bold text-sm">Cl</span>
+                        </div>
+                        <h3 class="text-white font-bold text-lg">Clideo</h3>
+                        <svg class="w-4 h-4 text-slate-600 ml-auto group-hover:text-slate-400 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed">A versatile online video toolkit for compressing, trimming, merging, and converting video files. Clideo supports a wide range of video formats and offers an intuitive interface.</p>
+                </a>
+                <!-- EZGif -->
+                <a href="https://ezgif.com" rel="nofollow" target="_blank" class="block bg-slate-900 border border-slate-800 rounded-[2rem] p-6 card-hover group">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 bg-yellow-600/10 border border-yellow-500/20 rounded-xl flex items-center justify-center">
+                            <span class="text-yellow-400 font-bold text-sm">EZ</span>
+                        </div>
+                        <h3 class="text-white font-bold text-lg">EZGif</h3>
+                        <svg class="w-4 h-4 text-slate-600 ml-auto group-hover:text-slate-400 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed">The go-to tool for GIF creation, optimization, and conversion. EZGif also handles video-to-GIF conversion, resizing, cropping, and adding effects to animated images.</p>
+                </a>
+                <!-- SmallPDF -->
+                <a href="https://smallpdf.com" rel="nofollow" target="_blank" class="block bg-slate-900 border border-slate-800 rounded-[2rem] p-6 card-hover group">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 bg-red-600/10 border border-red-500/20 rounded-xl flex items-center justify-center">
+                            <span class="text-red-400 font-bold text-sm">SP</span>
+                        </div>
+                        <h3 class="text-white font-bold text-lg">SmallPDF</h3>
+                        <svg class="w-4 h-4 text-slate-600 ml-auto group-hover:text-slate-400 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed">A comprehensive PDF platform with tools for compressing, converting, merging, splitting, and signing PDF documents. One of the most widely used PDF tools on the web.</p>
+                </a>
+                <!-- PDF2Go -->
+                <a href="https://www.pdf2go.com" rel="nofollow" target="_blank" class="block bg-slate-900 border border-slate-800 rounded-[2rem] p-6 card-hover group">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 bg-indigo-600/10 border border-indigo-500/20 rounded-xl flex items-center justify-center">
+                            <span class="text-indigo-400 font-bold text-sm">P2</span>
+                        </div>
+                        <h3 class="text-white font-bold text-lg">PDF2Go</h3>
+                        <svg class="w-4 h-4 text-slate-600 ml-auto group-hover:text-slate-400 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed">A feature-rich PDF editing and conversion platform. PDF2Go offers tools for editing, compressing, repairing, and converting PDF files along with OCR text recognition capabilities.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Frequently Asked Questions -->
+    <section class="py-16 sm:py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="inline-block px-3 py-1 text-xs font-semibold tracking-wider text-cyan-400 uppercase bg-cyan-600/10 border border-cyan-500/20 rounded-full mb-4">Got Questions?</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Frequently Asked Questions</h2>
+                <p class="text-slate-400 text-lg">Everything you need to know about using Squoosh.online and file optimization in general.</p>
+            </div>
+            <div class="space-y-4">
+                <details class="bg-slate-900 border border-slate-800 rounded-[2rem] group" open>
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer">
+                        <h3 class="text-white font-semibold text-base pr-4">How does Squoosh.online compress files without uploading them?</h3>
+                        <svg class="w-5 h-5 text-slate-500 shrink-0 faq-chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+                    </summary>
+                    <div class="px-6 pb-5 text-slate-400 leading-relaxed">
+                        Squoosh.online uses WebAssembly (WASM) technology to run powerful compression algorithms directly inside your web browser. When you select a file, it is processed entirely on your device using your computer's own processing power. The file never leaves your machine, which means there is no upload, no server-side processing, and no risk of your data being intercepted or stored remotely. This approach delivers speeds comparable to native desktop applications while maintaining complete privacy.
+                    </div>
+                </details>
+                <details class="bg-slate-900 border border-slate-800 rounded-[2rem] group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer">
+                        <h3 class="text-white font-semibold text-base pr-4">What image formats does Squoosh.online support?</h3>
+                        <svg class="w-5 h-5 text-slate-500 shrink-0 faq-chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+                    </summary>
+                    <div class="px-6 pb-5 text-slate-400 leading-relaxed">
+                        Our image tools support all major web image formats including JPEG, PNG, WebP, AVIF, GIF, SVG, and BMP. You can compress existing images to reduce file size, convert between formats for better compatibility, and even stitch multiple images together. For modern web development, we recommend converting to WebP or AVIF formats, which offer significantly better compression ratios than traditional JPEG and PNG formats while maintaining excellent visual quality.
+                    </div>
+                </details>
+                <details class="bg-slate-900 border border-slate-800 rounded-[2rem] group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer">
+                        <h3 class="text-white font-semibold text-base pr-4">Is there a file size limit for compression?</h3>
+                        <svg class="w-5 h-5 text-slate-500 shrink-0 faq-chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+                    </summary>
+                    <div class="px-6 pb-5 text-slate-400 leading-relaxed">
+                        Because all processing happens locally in your browser, the file size limit depends primarily on your device's available memory (RAM) rather than arbitrary server limits. Most modern devices can comfortably handle files up to several hundred megabytes. For very large files such as lengthy videos or high-resolution image batches, we recommend processing them in smaller groups to ensure smooth performance. There are no artificial file size caps or daily usage limits imposed by our platform.
+                    </div>
+                </details>
+                <details class="bg-slate-900 border border-slate-800 rounded-[2rem] group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer">
+                        <h3 class="text-white font-semibold text-base pr-4">Do I need to create an account to use the tools?</h3>
+                        <svg class="w-5 h-5 text-slate-500 shrink-0 faq-chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+                    </summary>
+                    <div class="px-6 pb-5 text-slate-400 leading-relaxed">
+                        No. Squoosh.online is completely free to use and requires no registration, no email address, and no personal information whatsoever. Simply visit the tool you need, drop in your file, adjust settings if desired, and download the optimized result. We believe file optimization should be accessible to everyone without barriers, and we will never gate our core tools behind a sign-up wall.
+                    </div>
+                </details>
+                <details class="bg-slate-900 border border-slate-800 rounded-[2rem] group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer">
+                        <h3 class="text-white font-semibold text-base pr-4">How much can I expect my files to be compressed?</h3>
+                        <svg class="w-5 h-5 text-slate-500 shrink-0 faq-chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+                    </summary>
+                    <div class="px-6 pb-5 text-slate-400 leading-relaxed">
+                        Compression results vary depending on the file type and content. JPEG images typically see a 40-70% reduction in file size with minimal visual quality loss. PNG images with large areas of solid color can be reduced by 50-80%. Videos encoded with modern codecs like H.265 can achieve 30-60% smaller file sizes compared to H.264 at equivalent quality. PDF files with embedded images often shrink by 50-90%. The actual savings depend on the original file's encoding efficiency and the quality settings you choose.
+                    </div>
+                </details>
+                <details class="bg-slate-900 border border-slate-800 rounded-[2rem] group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer">
+                        <h3 class="text-white font-semibold text-base pr-4">Is my data safe when using Squoosh.online?</h3>
+                        <svg class="w-5 h-5 text-slate-500 shrink-0 faq-chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+                    </summary>
+                    <div class="px-6 pb-5 text-slate-400 leading-relaxed">
+                        Absolutely. Privacy is the core principle behind Squoosh.online. Your files are processed entirely within your browser using client-side WebAssembly technology. No file data is transmitted to any server, stored in any database, or accessible to anyone other than you. Once you close or refresh the browser tab, all processed data is cleared from memory. This makes Squoosh.online suitable for handling sensitive documents, confidential images, and proprietary content with confidence.
+                    </div>
+                </details>
+                <details class="bg-slate-900 border border-slate-800 rounded-[2rem] group">
+                    <summary class="flex items-center justify-between px-6 py-5 cursor-pointer">
+                        <h3 class="text-white font-semibold text-base pr-4">Can I use Squoosh.online on my phone or tablet?</h3>
+                        <svg class="w-5 h-5 text-slate-500 shrink-0 faq-chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+                    </summary>
+                    <div class="px-6 pb-5 text-slate-400 leading-relaxed">
+                        Yes. Squoosh.online is fully responsive and works on any modern device with a web browser, including smartphones, tablets, laptops, and desktop computers. The tools are optimized for touch interfaces on mobile devices. Performance may vary depending on your device's processing power — newer devices with more RAM will handle larger files more efficiently. We support Chrome, Firefox, Safari, and Edge on all major operating systems including iOS, Android, Windows, macOS, and Linux.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Optimization Knowledge Hub -->
+    <section class="py-16 sm:py-20 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="inline-block px-3 py-1 text-xs font-semibold tracking-wider text-blue-400 uppercase bg-blue-600/10 border border-blue-500/20 rounded-full mb-4">Learn More</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Optimization Knowledge Hub</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto text-lg">Dive deeper into file optimization with our comprehensive guides. Learn techniques and best practices used by professional developers and designers to deliver fast, efficient digital content.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                <a href="/guides/how-to-compress-images.html" class="block bg-slate-900 border border-slate-800 rounded-[2rem] p-6 card-hover group">
+                    <div class="w-10 h-10 bg-purple-600/10 border border-purple-500/20 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z"/></svg>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2 group-hover:text-blue-400 transition-colors">The Complete Guide to Image Optimization</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Master modern image formats, understand lossy vs lossless compression, and learn how to serve the perfect image for every screen size and device.</p>
+                </a>
+                <a href="/guides/video-optimization-guide.html" class="block bg-slate-900 border border-slate-800 rounded-[2rem] p-6 card-hover group">
+                    <div class="w-10 h-10 bg-green-600/10 border border-green-500/20 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z"/></svg>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2 group-hover:text-blue-400 transition-colors">Video Compression Explained</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Understand how video codecs work, compare H.264 vs H.265 vs AV1, and discover the optimal settings for web streaming, social media, and archival.</p>
+                </a>
+                <a href="/guides/secure-pdf-guide.html" class="block bg-slate-900 border border-slate-800 rounded-[2rem] p-6 card-hover group">
+                    <div class="w-10 h-10 bg-red-600/10 border border-red-500/20 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-red-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2 group-hover:text-blue-400 transition-colors">PDF Optimization Best Practices</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Learn how to dramatically reduce PDF file sizes without sacrificing print quality. Covers embedded fonts, image downsampling, and metadata removal strategies.</p>
+                </a>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <a href="/images-tools.html" class="block bg-slate-900/80 border border-slate-800 rounded-[2rem] px-6 py-4 text-center card-hover group">
+                    <span class="text-white font-semibold group-hover:text-blue-400 transition-colors">Browse Image Tools &rarr;</span>
+                </a>
+                <a href="/video-tools.html" class="block bg-slate-900/80 border border-slate-800 rounded-[2rem] px-6 py-4 text-center card-hover group">
+                    <span class="text-white font-semibold group-hover:text-blue-400 transition-colors">Browse Video Tools &rarr;</span>
+                </a>
+                <a href="/pdf-file-tools.html" class="block bg-slate-900/80 border border-slate-800 rounded-[2rem] px-6 py-4 text-center card-hover group">
+                    <span class="text-white font-semibold group-hover:text-blue-400 transition-colors">Browse PDF &amp; File Tools &rarr;</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest from Our Blog / Guides Teaser -->
+    <section class="py-16 sm:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="inline-block px-3 py-1 text-xs font-semibold tracking-wider text-emerald-400 uppercase bg-emerald-600/10 border border-emerald-500/20 rounded-full mb-4">From the Blog</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Latest from Our Guides</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto text-lg">Stay informed with practical insights on file optimization, web performance, and modern compression technologies.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Guide 1 -->
+                <article class="bg-slate-900 border border-slate-800 rounded-[2rem] overflow-hidden card-hover">
+                    <div class="h-2 bg-gradient-to-r from-purple-600 to-pink-600"></div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-xs text-slate-500 mb-3">
+                            <span>Image Optimization</span>
+                            <span>&middot;</span>
+                            <span>12 min read</span>
+                        </div>
+                        <h3 class="text-white font-bold text-lg mb-3">The Complete Guide to Image Optimization for the Web</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">Images account for nearly half of all web page weight on average. In this comprehensive guide, we break down the differences between JPEG, PNG, WebP, and AVIF formats, explain when to use lossy versus lossless compression, and walk through practical workflows for reducing image sizes by 40-80% without perceptible quality loss. Whether you are building a personal portfolio or managing an e-commerce catalog with thousands of product shots, these techniques will measurably improve your page load times and Core Web Vitals scores.</p>
+                        <a href="/guides/how-to-compress-images.html" class="text-blue-400 hover:text-blue-300 text-sm font-semibold">Read full guide &rarr;</a>
+                    </div>
+                </article>
+                <!-- Guide 2 -->
+                <article class="bg-slate-900 border border-slate-800 rounded-[2rem] overflow-hidden card-hover">
+                    <div class="h-2 bg-gradient-to-r from-green-600 to-teal-600"></div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-xs text-slate-500 mb-3">
+                            <span>Video Compression</span>
+                            <span>&middot;</span>
+                            <span>15 min read</span>
+                        </div>
+                        <h3 class="text-white font-bold text-lg mb-3">Video Compression Explained: Codecs, Containers & Quality</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">Video files are often the largest assets in any digital project. This guide demystifies the world of video codecs — from the ubiquitous H.264 to the next-generation AV1 — and explains how containers like MP4, WebM, and MKV organize audio and video streams. We cover practical encoding settings, bitrate strategies, and resolution scaling approaches that help you deliver crisp video at a fraction of the original file size. Ideal for content creators, web developers, and anyone who regularly shares video online.</p>
+                        <a href="/guides/video-optimization-guide.html" class="text-blue-400 hover:text-blue-300 text-sm font-semibold">Read full guide &rarr;</a>
+                    </div>
+                </article>
+                <!-- Guide 3 -->
+                <article class="bg-slate-900 border border-slate-800 rounded-[2rem] overflow-hidden card-hover">
+                    <div class="h-2 bg-gradient-to-r from-red-600 to-orange-600"></div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-xs text-slate-500 mb-3">
+                            <span>PDF Optimization</span>
+                            <span>&middot;</span>
+                            <span>10 min read</span>
+                        </div>
+                        <h3 class="text-white font-bold text-lg mb-3">PDF Optimization: Shrink Documents Without Losing Quality</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">PDF documents can balloon in size due to embedded fonts, high-resolution images, and redundant metadata. In this guide, we explore the internal structure of PDF files and identify the most effective optimization strategies: image downsampling, font subsetting, object stream compression, and metadata stripping. Learn how to reduce a 50 MB report to under 5 MB while keeping every page crisp and every hyperlink intact. Essential reading for anyone who distributes documents via email or web download.</p>
+                        <a href="/guides/secure-pdf-guide.html" class="text-blue-400 hover:text-blue-300 text-sm font-semibold">Read full guide &rarr;</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-10">
+                <div>
+                    <h4 class="text-white font-semibold text-sm mb-4">Tools</h4>
+                    <ul class="space-y-2.5">
+                        <li><a href="/images-tools.html" class="text-slate-400 hover:text-blue-400 text-sm transition-colors">Image Tools</a></li>
+                        <li><a href="/video-tools.html" class="text-slate-400 hover:text-blue-400 text-sm transition-colors">Video Tools</a></li>
+                        <li><a href="/pdf-file-tools.html" class="text-slate-400 hover:text-blue-400 text-sm transition-colors">PDF &amp; Files</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-sm mb-4">Native Tools</h4>
+                    <ul class="space-y-2.5">
+                        <li><a href="https://imagestitchtools.squoosh.online" class="text-slate-400 hover:text-blue-400 text-sm transition-colors">Image Stitch</a></li>
+                        <li><a href="https://image.squoosh.online/" class="text-slate-400 hover:text-blue-400 text-sm transition-colors">Squoosh Pro</a></li>
+                        <li><a href="https://video.squoosh.online" class="text-slate-400 hover:text-blue-400 text-sm transition-colors">Video Optimize</a></li>
+                        <li><a href="https://zipcompress.squoosh.online" class="text-slate-400 hover:text-blue-400 text-sm transition-colors">Smart Zip</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-sm mb-4">Guides</h4>
+                    <ul class="space-y-2.5">
+                        <li><a href="/guides/how-to-compress-images.html" class="text-slate-400 hover:text-blue-400 text-sm transition-colors">Image Optimization</a></li>
+                        <li><a href="/guides/video-optimization-guide.html" class="text-slate-400 hover:text-blue-400 text-sm transition-colors">Video Compression</a></li>
+                        <li><a href="/guides/secure-pdf-guide.html" class="text-slate-400 hover:text-blue-400 text-sm transition-colors">PDF Optimization</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-sm mb-4">Company</h4>
+                    <ul class="space-y-2.5">
+                        <li><a href="/about.html" class="text-slate-400 hover:text-blue-400 text-sm transition-colors">About Us</a></li>
+                        <li><a href="/contact.html" class="text-slate-400 hover:text-blue-400 text-sm transition-colors">Contact</a></li>
+                        <li><a href="/privacy-policy.html" class="text-slate-400 hover:text-blue-400 text-sm transition-colors">Privacy Policy</a></li>
+                        <li><a href="/terms-of-service.html" class="text-slate-400 hover:text-blue-400 text-sm transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="flex items-center gap-2">
+                    <div class="w-6 h-6 bg-blue-600 rounded-md flex items-center justify-center">
+                        <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+                    </div>
+                    <span class="text-sm font-semibold text-white">Squoosh<span class="text-blue-500">.online</span></span>
+                </div>
+                <p class="text-slate-500 text-sm text-center">&copy; 2025 Squoosh.online. All rights reserved. Free file optimization tools for everyone.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile menu toggle & Search script -->
+    <script>
+        document.getElementById('hamburger-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('open');
+        });
+
+        // Simple search functionality
+        document.getElementById('hero-search').addEventListener('input', function(e) {
+            const query = e.target.value.toLowerCase().trim();
+            if (!query) return;
+            const tools = [
+                { name: 'Image Stitch', keywords: 'image stitch combine collage panorama merge', url: 'https://imagestitchtools.squoosh.online' },
+                { name: 'Squoosh Pro', keywords: 'image compress jpeg png webp avif quality squoosh pro', url: 'https://image.squoosh.online' },
+                { name: 'Video Optimize', keywords: 'video compress optimize transcode mp4 webm', url: 'https://video.squoosh.online' },
+                { name: 'Smart Zip', keywords: 'zip archive compress extract bundle', url: 'https://zipcompress.squoosh.online' },
+                { name: 'Image Tools', keywords: 'image tools resize crop convert format', url: '/images-tools.html' },
+                { name: 'Video Tools', keywords: 'video tools trim cut merge convert', url: '/video-tools.html' },
+                { name: 'PDF & File Tools', keywords: 'pdf compress merge split convert document file', url: '/pdf-file-tools.html' }
+            ];
+            // On Enter key, navigate to first match
+            if (e.inputType === undefined) return;
+        });
+        document.getElementById('hero-search').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                const query = e.target.value.toLowerCase().trim();
+                if (!query) return;
+                const tools = [
+                    { name: 'Image Stitch', keywords: 'image stitch combine collage panorama merge', url: 'https://imagestitchtools.squoosh.online' },
+                    { name: 'Squoosh Pro', keywords: 'image compress jpeg png webp avif quality squoosh pro', url: 'https://image.squoosh.online' },
+                    { name: 'Video Optimize', keywords: 'video compress optimize transcode mp4 webm', url: 'https://video.squoosh.online' },
+                    { name: 'Smart Zip', keywords: 'zip archive compress extract bundle', url: 'https://zipcompress.squoosh.online' },
+                    { name: 'Image Tools', keywords: 'image tools resize crop convert format png jpg', url: '/images-tools.html' },
+                    { name: 'Video Tools', keywords: 'video tools trim cut merge convert mp4', url: '/video-tools.html' },
+                    { name: 'PDF & File Tools', keywords: 'pdf compress merge split convert document file', url: '/pdf-file-tools.html' }
+                ];
+                const match = tools.find(t => t.keywords.includes(query) || t.name.toLowerCase().includes(query));
+                if (match) window.location.href = match.url;
+            }
+        });
     </script>
 </body>
 </html>

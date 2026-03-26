@@ -1,30 +1,72 @@
-# Robots.txt for https://www.squoosh.online/
-# Optimized for Google, Bing, and Generative AI Agents
+# robots.txt for squoosh.online
+# Last updated: 2026-03-26
 
-# 1. General Rules for all standard crawlers
+# Default rules for all crawlers
 User-agent: *
 Allow: /
-Allow: /images-tools.html
-Allow: /video-tools.html
-Allow: /pdf-file-tools.html
-Allow: /guides/
 Disallow: /cdn-cgi/
-Disallow: /private/
+Disallow: /api/
+Disallow: /_next/
 Disallow: /tmp/
+Disallow: /.well-known/
 
-# 2. Specific Permissions for AI & GEO Bots
-# Essential for appearing in AI search results (ChatGPT, Perplexity, Gemini)
+# Google Search and AdSense
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
 
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Video
+Allow: /
+
+# Google AdSense
+User-agent: Mediapartners-Google
+Allow: /
+
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: AdsBot-Google-Mobile
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Baidu
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+# Yandex
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 2
+
+# Block AI training scrapers
 User-agent: GPTBot
-Allow: /
-Allow: /guides/
-
-User-agent: Google-Extended
-Allow: /
-Allow: /guides/
+Disallow: /
 
 User-agent: CCBot
-Allow: /
+Disallow: /
 
-# 3. Sitemap Declaration
-Sitemap: https://www.squoosh.online/sitemap.xml
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+# Sitemap location
+Sitemap: https://squoosh.online/sitemap.xml
