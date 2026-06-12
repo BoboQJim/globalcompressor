@@ -2,79 +2,125 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
+  <!-- ════════════════════════════════════════════
+       squoosh.online  — Multilingual Image / Video / PDF Tools
+       Last updated: 2026-06-12
+       Supported languages (14): en es fr de pt ar id vi th hi ja ko ru it
+       ════════════════════════════════════════════ -->
+
+  <!-- ── Home ── -->
   <url>
     <loc>https://squoosh.online/</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
+  <!-- ── 3 Category Hubs ── -->
   <url>
     <loc>https://squoosh.online/images-tools</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://squoosh.online/video-tools</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://squoosh.online/pdf-file-tools</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
+  <!-- ── 5 Tool Detail Pages ── -->
+  <url>
+    <loc>https://squoosh.online/tools/image</loc>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://squoosh.online/tools/video</loc>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://squoosh.online/tools/gif</loc>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://squoosh.online/tools/zip-compress</loc>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://squoosh.online/tools/image-stitch</loc>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- ── 3 Guide Pages ── -->
   <url>
     <loc>https://squoosh.online/guides/how-to-compress-images</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://squoosh.online/guides/secure-pdf-guide</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://squoosh.online/guides/video-optimization-guide</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
+  <!-- ── Static Pages ── -->
   <url>
     <loc>https://squoosh.online/about</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://squoosh.online/contact</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://squoosh.online/privacy-policy</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
     <loc>https://squoosh.online/terms-of-service</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>

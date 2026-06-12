@@ -3,230 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" href="https://squoosh.online/favicon.ico">
-    <title>Contact Us | Squoosh.online</title>
-    <meta name="description" content="Get in touch with the Squoosh.online team. Send us your questions, feedback, or partnership inquiries.">
+    <link rel="icon" href="https://squoosh.online/favicon.ico">
+    <title data-i18n="contact_title">Contact Us | Squoosh.online</title>
+    <meta name="description" data-i18n="contact_desc" content="Get in touch with the Squoosh.online team. Send us your questions, feedback, or partnership inquiries.">
     <link rel="canonical" href="https://squoosh.online/contact">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config={theme:{extend:{fontFamily:{sans:['"Plus Jakarta Sans"','system-ui','sans-serif']},borderRadius:{'2xl':'1rem','3xl':'1.5rem','4xl':'2rem'}}}}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script>
-        tailwind.config = { theme: { extend: { fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] } } } }
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="/assets/i18n.js"></script>
     <script src="https://analytics.ahrefs.com/analytics.js" data-key="IppWvd+WbRZ2E6MjAYaR4A" async></script>
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","u7c2rqswer");
-    </script>
+    <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","u7c2rqswer");</script>
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.0/firebase-app.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.3.0/firebase-analytics.js";
         const app = initializeApp({ apiKey: "AIzaSyC4KOwz5YZRciu-ZAC5CKER912DqTJ2Ezs", authDomain: "squoosh-online.firebaseapp.com", projectId: "squoosh-online", storageBucket: "squoosh-online.firebasestorage.app", messagingSenderId: "6015692976", appId: "1:6015692976:web:71f7bf5abaa2dacf5b4b75", measurementId: "G-8NE32ENS6R" });
-        const analytics = getAnalytics(app);
+        getAnalytics(app);
     </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://squoosh.online/" },
-            { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://squoosh.online/contact" }
-        ]
-    }
-    </script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://squoosh.online/"},{"@type":"ListItem","position":2,"name":"Contact","item":"https://squoosh.online/contact"}]}</script>
+    <style>
+        #mobile-menu { transition: max-height 0.3s ease, opacity 0.3s ease; max-height: 0; opacity: 0; overflow: hidden; }
+        #mobile-menu.open { max-height: 500px; opacity: 1; }
+    </style>
 </head>
 <body class="bg-slate-50 font-sans text-slate-700 antialiased">
-    <!-- NAVIGATION -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg border-b border-slate-200/60">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <a href="/" class="text-xl font-bold text-blue-600 tracking-tight">Squoosh<span class="text-slate-800">.online</span></a>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="/" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">Home</a>
-                    <a href="/images-tools.html" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">Image Tools</a>
-                    <a href="/video-tools.html" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">Video Tools</a>
-                    <a href="/pdf-file-tools.html" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">PDF &amp; Files</a>
-                    <a href="/about.html" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">About</a>
-                    <a href="/contact.html" class="text-sm font-medium text-blue-600 transition">Contact</a>
-                </div>
-                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100 transition" aria-label="Toggle menu">
-                    <i class="fa fa-bars text-xl"></i>
-                </button>
-            </div>
-        </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200">
-            <div class="px-4 py-3 space-y-2">
-                <a href="/" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100 transition">Home</a>
-                <a href="/images-tools.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100 transition">Image Tools</a>
-                <a href="/video-tools.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100 transition">Video Tools</a>
-                <a href="/pdf-file-tools.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100 transition">PDF &amp; Files</a>
-                <a href="/about.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100 transition">About</a>
-                <a href="/contact.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-blue-600 bg-blue-50 transition">Contact</a>
-            </div>
-        </div>
-    </nav>
-    <script>
-        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        });
-    </script>
 
-    <!-- BREADCRUMBS -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-2">
-        <nav aria-label="Breadcrumb" class="text-sm text-slate-500">
-            <ol class="flex items-center space-x-2">
-                <li><a href="/" class="hover:text-blue-600 transition">Home</a></li>
-                <li><span class="mx-1">/</span></li>
-                <li class="text-slate-800 font-medium">Contact</li>
-            </ol>
-        </nav>
+<!-- Navigation -->
+<nav class="sticky top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg border-b border-slate-200/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <a href="/" class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+                </div>
+                <span class="text-lg font-bold text-slate-900">Squoosh<span class="text-blue-600">.online</span></span>
+            </a>
+            <div class="hidden md:flex items-center gap-1">
+                <a href="/" class="px-3 py-1.5 text-sm font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-100 rounded-lg transition-colors" data-i18n="nav_home">Home</a>
+                <a href="/images-tools.html" class="px-3 py-1.5 text-sm font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-100 rounded-lg transition-colors" data-i18n="nav_images">Image Tools</a>
+                <a href="/video-tools.html" class="px-3 py-1.5 text-sm font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-100 rounded-lg transition-colors" data-i18n="nav_videos">Video Tools</a>
+                <a href="/pdf-file-tools.html" class="px-3 py-1.5 text-sm font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-100 rounded-lg transition-colors" data-i18n="nav_pdf">PDF & Files</a>
+                <a href="/about.html" class="px-3 py-1.5 text-sm font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-100 rounded-lg transition-colors" data-i18n="nav_about">About</a>
+                <a href="/contact.html" class="px-3 py-1.5 text-sm font-semibold text-blue-600 bg-blue-50 rounded-lg" data-i18n="nav_contact">Contact</a>
+                <div id="lang-switcher" class="ml-2"></div>
+            </div>
+            <button id="hamburger-btn" class="md:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100" aria-label="Toggle menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="md:hidden">
+            <div class="py-3 space-y-1 border-t border-slate-200">
+                <a href="/" class="block px-3 py-2 text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg" data-i18n="nav_home">Home</a>
+                <a href="/images-tools.html" class="block px-3 py-2 text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg" data-i18n="nav_images">Image Tools</a>
+                <a href="/video-tools.html" class="block px-3 py-2 text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg" data-i18n="nav_videos">Video Tools</a>
+                <a href="/pdf-file-tools.html" class="block px-3 py-2 text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg" data-i18n="nav_pdf">PDF & Files</a>
+                <a href="/about.html" class="block px-3 py-2 text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg" data-i18n="nav_about">About</a>
+                <a href="/contact.html" class="block px-3 py-2 text-sm font-semibold text-blue-600 bg-blue-50 rounded-lg" data-i18n="nav_contact">Contact</a>
+                <div id="lang-switcher-mobile" class="px-3 py-2"></div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Breadcrumbs -->
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-2 pb-1">
+    <nav aria-label="Breadcrumb" class="text-sm text-slate-400">
+        <ol class="flex items-center gap-1.5">
+            <li><a href="/" class="hover:text-blue-600 transition" data-i18n="bc_home">Home</a></li>
+            <li><svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg></li>
+            <li class="text-slate-600 font-medium" data-i18n="bc_contact">Contact</li>
+        </ol>
+    </nav>
+</div>
+
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <!-- Hero -->
+    <section class="text-center mb-12">
+        <div class="inline-flex items-center gap-2 bg-blue-100 text-blue-700 text-sm font-semibold px-4 py-1.5 rounded-full mb-6">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+            <span data-i18n="contact_badge">Get in Touch</span>
+        </div>
+        <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 leading-tight mb-6" data-i18n="contact_hero_title">Contact Us</h1>
+        <p class="text-lg sm:text-xl text-slate-500 max-w-3xl mx-auto leading-relaxed" data-i18n="contact_hero_subtitle">Have a question, suggestion, or partnership inquiry? We would love to hear from you. Fill out the form below and our team will get back to you as soon as possible.</p>
+    </section>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+        <!-- Contact Form -->
+        <div class="lg:col-span-2 bg-white rounded-[2.5rem] p-8 sm:p-10 shadow-sm">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6" data-i18n="contact_form_title">Send Us a Message</h2>
+            <form action="https://formspree.io/f/xojpqnyd" method="POST" class="space-y-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label for="name" class="block text-sm font-semibold text-slate-700 mb-2"><span data-i18n="contact_name_label">Full Name</span> <span class="text-red-500">*</span></label>
+                        <input type="text" id="name" name="name" required data-i18n-placeholder="contact_name_placeholder" placeholder="Your full name" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition text-sm">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-semibold text-slate-700 mb-2"><span data-i18n="contact_email_label">Email Address</span> <span class="text-red-500">*</span></label>
+                        <input type="email" id="email" name="email" required data-i18n-placeholder="contact_email_placeholder" placeholder="you@example.com" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition text-sm">
+                    </div>
+                </div>
+                <div>
+                    <label for="subject" class="block text-sm font-semibold text-slate-700 mb-2"><span data-i18n="contact_subject_label">Subject</span> <span class="text-red-500">*</span></label>
+                    <select id="subject" name="subject" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition text-sm bg-white">
+                        <option value="" disabled selected data-i18n="contact_subject_default">Select a subject</option>
+                        <option value="general" data-i18n="contact_subject_general">General Inquiry</option>
+                        <option value="feedback" data-i18n="contact_subject_feedback">Feedback & Suggestions</option>
+                        <option value="bug" data-i18n="contact_subject_bug">Bug Report</option>
+                        <option value="partnership" data-i18n="contact_subject_partnership">Partnership & Business</option>
+                        <option value="advertising" data-i18n="contact_subject_advertising">Advertising</option>
+                        <option value="privacy" data-i18n="contact_subject_privacy">Privacy Concern</option>
+                        <option value="other" data-i18n="contact_subject_other">Other</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-semibold text-slate-700 mb-2"><span data-i18n="contact_message_label">Message</span> <span class="text-red-500">*</span></label>
+                    <textarea id="message" name="message" required rows="6" data-i18n-placeholder="contact_message_placeholder" placeholder="Tell us how we can help..." class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition text-sm resize-vertical"></textarea>
+                </div>
+                <button type="submit" class="inline-flex items-center gap-2 bg-blue-600 text-white font-semibold px-8 py-3.5 rounded-xl hover:bg-blue-700 transition shadow-sm">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"/></svg>
+                    <span data-i18n="contact_submit">Send Message</span>
+                </button>
+            </form>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="space-y-6">
+            <div class="bg-white rounded-[2rem] p-8 shadow-sm">
+                <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                    <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+                    <span data-i18n="contact_sidebar_title">Other Ways to Reach Us</span>
+                </h3>
+                <div class="space-y-4">
+                    <div>
+                        <p class="text-sm font-semibold text-slate-800 mb-1" data-i18n="contact_email_sidebar">Email</p>
+                        <a class="text-blue-600 hover:text-blue-700 transition text-sm"><span class="__cf_email__" data-cfemail="ccafa3a2b8adafb88cbfbdb9a3a3bfa4e2a3a2a0a5a2a9">[support@squoosh.online]</span></a>
+                    </div>
+                    <div>
+                        <p class="text-sm font-semibold text-slate-800 mb-1" data-i18n="contact_response_title">Response Time</p>
+                        <p class="text-sm text-slate-600" data-i18n="contact_response_text">We aim to respond within 48 business hours. Complex inquiries may take slightly longer.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gradient-to-br from-blue-600 to-blue-700 rounded-[2rem] p-8 text-white">
+                <h3 class="text-xl font-bold mb-3" data-i18n="contact_quick_title">Quick Links</h3>
+                <p class="text-blue-100 text-sm mb-4" data-i18n="contact_quick_subtitle">Looking for tools? Jump straight to what you need.</p>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="/images-tools.html" class="inline-flex items-center gap-2 text-white hover:text-blue-200 transition"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z"/></svg> <span data-i18n="nav_images">Image Tools</span></a></li>
+                    <li><a href="/video-tools.html" class="inline-flex items-center gap-2 text-white hover:text-blue-200 transition"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z"/></svg> <span data-i18n="nav_videos">Video Tools</span></a></li>
+                    <li><a href="/pdf-file-tools.html" class="inline-flex items-center gap-2 text-white hover:text-blue-200 transition"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg> <span data-i18n="nav_pdf">PDF & Files</span></a></li>
+                    <li><a href="/about.html" class="inline-flex items-center gap-2 text-white hover:text-blue-200 transition"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"/></svg> <span data-i18n="nav_about">About Us</span></a></li>
+                </ul>
+            </div>
+        </div>
     </div>
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        <!-- HERO -->
-        <section class="text-center mb-12">
-            <div class="inline-flex items-center gap-2 bg-blue-100 text-blue-700 text-sm font-semibold px-4 py-1.5 rounded-full mb-6">
-                <i class="fa fa-envelope"></i> Get in Touch
+    <!-- Common Questions -->
+    <section class="bg-white rounded-[2.5rem] p-8 sm:p-12 shadow-sm mb-12">
+        <h2 class="text-3xl font-bold text-slate-900 mb-8 text-center flex items-center justify-center gap-3">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z"/></svg>
+            <span data-i18n="contact_faq_title">Common Questions</span>
+        </h2>
+        <div class="max-w-3xl mx-auto space-y-6">
+            <div class="border-b border-slate-200 pb-5">
+                <h3 class="text-lg font-semibold text-slate-900 mb-2" data-i18n="contact_faq_q1">Do I need to create an account to use the tools?</h3>
+                <p class="text-slate-600 leading-relaxed" data-i18n="contact_faq_a1">No. All tools on Squoosh.online are available without registration. You can start compressing images, converting videos, or optimizing PDFs immediately without providing any personal information.</p>
             </div>
-            <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 leading-tight mb-6">Contact Us</h1>
-            <p class="text-lg sm:text-xl text-slate-500 max-w-3xl mx-auto leading-relaxed">Have a question, suggestion, or partnership inquiry? We would love to hear from you. Fill out the form below and our team will get back to you as soon as possible.</p>
-        </section>
-
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-            <!-- CONTACT FORM -->
-            <div class="lg:col-span-2 bg-white rounded-[2.5rem] p-8 sm:p-10 shadow-sm">
-                <h2 class="text-2xl font-bold text-slate-900 mb-6">Send Us a Message</h2>
-                <form action="https://formspree.io/f/xojpqnyd" method="POST" class="space-y-6">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div>
-                            <label for="name" class="block text-sm font-semibold text-slate-700 mb-2">Full Name <span class="text-red-500">*</span></label>
-                            <input type="text" id="name" name="name" required placeholder="Your full name" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition text-sm">
-                        </div>
-                        <div>
-                            <label for="email" class="block text-sm font-semibold text-slate-700 mb-2">Email Address <span class="text-red-500">*</span></label>
-                            <input type="email" id="email" name="email" required placeholder="you@example.com" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition text-sm">
-                        </div>
-                    </div>
-                    <div>
-                        <label for="subject" class="block text-sm font-semibold text-slate-700 mb-2">Subject <span class="text-red-500">*</span></label>
-                        <select id="subject" name="subject" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition text-sm bg-white">
-                            <option value="" disabled selected>Select a subject</option>
-                            <option value="general">General Inquiry</option>
-                            <option value="feedback">Feedback &amp; Suggestions</option>
-                            <option value="bug">Bug Report</option>
-                            <option value="partnership">Partnership &amp; Business</option>
-                            <option value="advertising">Advertising</option>
-                            <option value="privacy">Privacy Concern</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="message" class="block text-sm font-semibold text-slate-700 mb-2">Message <span class="text-red-500">*</span></label>
-                        <textarea id="message" name="message" required rows="6" placeholder="Tell us how we can help..." class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition text-sm resize-vertical"></textarea>
-                    </div>
-                    <button type="submit" class="inline-flex items-center gap-2 bg-blue-600 text-white font-semibold px-8 py-3.5 rounded-xl hover:bg-blue-700 transition shadow-sm">
-                        <i class="fa fa-paper-plane"></i> Send Message
-                    </button>
-                </form>
+            <div class="border-b border-slate-200 pb-5">
+                <h3 class="text-lg font-semibold text-slate-900 mb-2" data-i18n="contact_faq_q2">Are my files uploaded to your servers?</h3>
+                <p class="text-slate-600 leading-relaxed" data-i18n="contact_faq_a2">For our native browser-based tools, absolutely not. All processing happens locally on your device using WebAssembly technology. Your files never leave your computer. When we link to third-party tools, those services have their own processing methods and privacy policies, which we encourage you to review.</p>
             </div>
-
-            <!-- SIDEBAR -->
-            <div class="space-y-6">
-                <div class="bg-white rounded-[2rem] p-8 shadow-sm">
-                    <h3 class="text-xl font-bold text-slate-900 mb-4"><i class="fa fa-envelope-o text-blue-600 mr-2"></i>Other Ways to Reach Us</h3>
-                    <div class="space-y-4">
-                        <div>
-                            <p class="text-sm font-semibold text-slate-800 mb-1">Email</p>
-                            <a class="text-blue-600 hover:text-blue-700 transition text-sm"><span class="__cf_email__" data-cfemail="ccafa3a2b8adafb88cbfbdb9a3a3bfa4e2a3a2a0a5a2a9">[support@squoosh.online]</span></a>
-                        </div>
-                        <div>
-                            <p class="text-sm font-semibold text-slate-800 mb-1">Response Time</p>
-                            <p class="text-sm text-slate-600">We aim to respond within <strong>48 business hours</strong>. Complex inquiries may take slightly longer.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-gradient-to-br from-blue-600 to-blue-700 rounded-[2rem] p-8 text-white">
-                    <h3 class="text-xl font-bold mb-3">Quick Links</h3>
-                    <p class="text-blue-100 text-sm mb-4">Looking for tools? Jump straight to what you need.</p>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="/images-tools.html" class="inline-flex items-center gap-2 text-white hover:text-blue-200 transition"><i class="fa fa-image"></i> Image Tools</a></li>
-                        <li><a href="/video-tools.html" class="inline-flex items-center gap-2 text-white hover:text-blue-200 transition"><i class="fa fa-video-camera"></i> Video Tools</a></li>
-                        <li><a href="/pdf-file-tools.html" class="inline-flex items-center gap-2 text-white hover:text-blue-200 transition"><i class="fa fa-file-pdf-o"></i> PDF &amp; File Tools</a></li>
-                        <li><a href="/about.html" class="inline-flex items-center gap-2 text-white hover:text-blue-200 transition"><i class="fa fa-info-circle"></i> About Us</a></li>
-                    </ul>
-                </div>
+            <div class="border-b border-slate-200 pb-5">
+                <h3 class="text-lg font-semibold text-slate-900 mb-2" data-i18n="contact_faq_q3">Is Squoosh.online really free?</h3>
+                <p class="text-slate-600 leading-relaxed" data-i18n="contact_faq_a3">Yes, completely free. We do not offer premium tiers, paid subscriptions, or hidden charges. Our platform is supported by advertising, which allows us to keep all tools and features accessible to everyone at no cost.</p>
+            </div>
+            <div class="border-b border-slate-200 pb-5">
+                <h3 class="text-lg font-semibold text-slate-900 mb-2" data-i18n="contact_faq_q4">Can I suggest a new tool or feature?</h3>
+                <p class="text-slate-600 leading-relaxed" data-i18n="contact_faq_a4">Absolutely! We love hearing from our community. Use the contact form above or send an email with your suggestion. We review every piece of feedback and prioritize features based on community demand.</p>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold text-slate-900 mb-2" data-i18n="contact_faq_q5">What browsers are supported?</h3>
+                <p class="text-slate-600 leading-relaxed" data-i18n="contact_faq_a5">Squoosh.online works on all modern browsers including Google Chrome, Mozilla Firefox, Microsoft Edge, Apple Safari, and their mobile versions. We recommend keeping your browser updated to the latest version for the best experience and full WebAssembly support.</p>
             </div>
         </div>
+    </section>
+</main>
 
-        <!-- COMMON QUESTIONS -->
-        <section class="bg-white rounded-[2.5rem] p-8 sm:p-12 shadow-sm mb-12">
-            <h2 class="text-3xl font-bold text-slate-900 mb-8 text-center"><i class="fa fa-question-circle text-blue-600 mr-3"></i>Common Questions</h2>
-            <div class="max-w-3xl mx-auto space-y-6">
-                <div class="border-b border-slate-200 pb-5">
-                    <h3 class="text-lg font-semibold text-slate-900 mb-2">Do I need to create an account to use the tools?</h3>
-                    <p class="text-slate-600 leading-relaxed">No. All tools on Squoosh.online are available without registration. You can start compressing images, converting videos, or optimizing PDFs immediately without providing any personal information.</p>
-                </div>
-                <div class="border-b border-slate-200 pb-5">
-                    <h3 class="text-lg font-semibold text-slate-900 mb-2">Are my files uploaded to your servers?</h3>
-                    <p class="text-slate-600 leading-relaxed">For our native browser-based tools, absolutely not. All processing happens locally on your device using WebAssembly technology. Your files never leave your computer. When we link to third-party tools, those services have their own processing methods and privacy policies, which we encourage you to review.</p>
-                </div>
-                <div class="border-b border-slate-200 pb-5">
-                    <h3 class="text-lg font-semibold text-slate-900 mb-2">Is Squoosh.online really free?</h3>
-                    <p class="text-slate-600 leading-relaxed">Yes, completely free. We do not offer premium tiers, paid subscriptions, or hidden charges. Our platform is supported by advertising, which allows us to keep all tools and features accessible to everyone at no cost.</p>
-                </div>
-                <div class="border-b border-slate-200 pb-5">
-                    <h3 class="text-lg font-semibold text-slate-900 mb-2">Can I suggest a new tool or feature?</h3>
-                    <p class="text-slate-600 leading-relaxed">Absolutely! We love hearing from our community. Use the contact form above or send an email to <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="60030f0e14010314201311150f0f13084e0f0e0c090e05">[email&#160;protected]</a> with your suggestion. We review every piece of feedback and prioritize features based on community demand.</p>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold text-slate-900 mb-2">What browsers are supported?</h3>
-                    <p class="text-slate-600 leading-relaxed">Squoosh.online works on all modern browsers including Google Chrome, Mozilla Firefox, Microsoft Edge, Apple Safari, and their mobile versions. We recommend keeping your browser updated to the latest version for the best experience and full WebAssembly support.</p>
-                </div>
+<!-- Footer -->
+<footer class="bg-slate-900 text-slate-400 mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-10">
+            <div>
+                <h4 class="text-white font-semibold text-sm mb-4" data-i18n="footer_tools">Tools</h4>
+                <ul class="space-y-2.5">
+                    <li><a href="/images-tools.html" class="hover:text-white text-sm transition-colors" data-i18n="nav_images">Image Tools</a></li>
+                    <li><a href="/video-tools.html" class="hover:text-white text-sm transition-colors" data-i18n="nav_videos">Video Tools</a></li>
+                    <li><a href="/pdf-file-tools.html" class="hover:text-white text-sm transition-colors" data-i18n="nav_pdf">PDF & Files</a></li>
+                </ul>
             </div>
-        </section>
-    </main>
-
-    <!-- AD CONTAINER -->
-
-
-    <!-- FOOTER -->
-    <footer class="bg-slate-900 text-slate-400 mt-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-                <div>
-                    <a href="/" class="text-xl font-bold text-white tracking-tight">Squoosh<span class="text-blue-400">.online</span></a>
-                    <p class="mt-4 text-sm leading-relaxed">Free, privacy-first online tools to compress, convert, and optimize your images, videos, PDFs, and more. All processing happens in your browser &mdash; your files never leave your device.</p>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-4">Tools</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="/images-tools.html" class="hover:text-white transition">Image Tools</a></li>
-                        <li><a href="/video-tools.html" class="hover:text-white transition">Video Tools</a></li>
-                        <li><a href="/pdf-file-tools.html" class="hover:text-white transition">PDF &amp; File Tools</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-4">Company</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="/about.html" class="hover:text-white transition">About</a></li>
-                        <li><a href="/contact.html" class="hover:text-white transition">Contact</a></li>
-                        <li><a href="/privacy-policy.html" class="hover:text-white transition">Privacy Policy</a></li>
-                        <li><a href="/terms-of-service.html" class="hover:text-white transition">Terms of Service</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-4">Guides</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="/guides/how-to-compress-images.html" class="hover:text-white transition">Image Compression Guide</a></li>
-                        <li><a href="/guides/video-optimization-guide.html" class="hover:text-white transition">Video Optimization Guide</a></li>
-                        <li><a href="/guides/secure-pdf-guide.html" class="hover:text-white transition">PDF Size Reduction Guide</a></li>
-                    </ul>
-                </div>
+            <div>
+                <h4 class="text-white font-semibold text-sm mb-4" data-i18n="footer_native">Native Tools</h4>
+                <ul class="space-y-2.5">
+                    <li><a href="https://imagestitchtools.squoosh.online" class="hover:text-white text-sm transition-colors">Image Stitch</a></li>
+                    <li><a href="https://image.squoosh.online/" class="hover:text-white text-sm transition-colors">Squoosh Pro</a></li>
+                    <li><a href="https://video.squoosh.online" class="hover:text-white text-sm transition-colors">Video Optimize</a></li>
+                    <li><a href="https://zipcompress.squoosh.online" class="hover:text-white text-sm transition-colors">Smart Zip</a></li>
+                </ul>
             </div>
-            <div class="border-t border-slate-800 mt-12 pt-8 text-center text-sm">
-                <p>&copy; 2026 Squoosh.online. All rights reserved.</p>
+            <div>
+                <h4 class="text-white font-semibold text-sm mb-4" data-i18n="footer_guides">Guides</h4>
+                <ul class="space-y-2.5">
+                    <li><a href="/guides/how-to-compress-images.html" class="hover:text-white text-sm transition-colors" data-i18n="guide_image_title">Image Optimization</a></li>
+                    <li><a href="/guides/video-optimization-guide.html" class="hover:text-white text-sm transition-colors" data-i18n="guide_video_title">Video Compression</a></li>
+                    <li><a href="/guides/secure-pdf-guide.html" class="hover:text-white text-sm transition-colors" data-i18n="guide_pdf_title">PDF Optimization</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold text-sm mb-4" data-i18n="footer_company">Company</h4>
+                <ul class="space-y-2.5">
+                    <li><a href="/about.html" class="hover:text-white text-sm transition-colors" data-i18n="nav_about">About Us</a></li>
+                    <li><a href="/contact.html" class="hover:text-white text-sm transition-colors" data-i18n="nav_contact">Contact</a></li>
+                    <li><a href="/privacy-policy.html" class="hover:text-white text-sm transition-colors" data-i18n="footer_privacy">Privacy Policy</a></li>
+                    <li><a href="/terms-of-service.html" class="hover:text-white text-sm transition-colors" data-i18n="footer_terms">Terms of Service</a></li>
+                </ul>
             </div>
         </div>
-    </footer>
+        <div class="border-t border-slate-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <div class="w-6 h-6 bg-blue-600 rounded-md flex items-center justify-center">
+                    <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+                </div>
+                <span class="text-sm font-semibold text-white">Squoosh<span class="text-blue-400">.online</span></span>
+            </div>
+            <p class="text-slate-500 text-sm text-center" data-i18n="footer_copyright">© 2026 Squoosh.online. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+document.getElementById('hamburger-btn').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('open');
+});
+</script>
+</body>
 </html>

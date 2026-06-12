@@ -1,374 +1,377 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="https://squoosh.online/favicon.ico">
-<title>Video Compression &amp; Optimization Tools | Squoosh.online</title>
-<meta name="description" content="Optimize videos for web and social media. Compare H.264, H.265, VP9, AV1 codecs and get platform-specific settings for TikTok, YouTube, Instagram.">
-<link rel="canonical" href="https://squoosh.online/video-tools">
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>body{font-family:'Plus Jakarta Sans',sans-serif}</style>
-<!-- Ahrefs -->
-<script src="https://analytics.ahrefs.com/analytics.js" data-key="IppWvd+WbRZ2E6MjAYaR4A" async></script>
-<!-- Clarity -->
-<script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","u7c2rqswer");</script>
-<!-- Firebase -->
-<script type="module">
-import{initializeApp}from"https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
-import{getAnalytics}from"https://www.gstatic.com/firebasejs/11.6.0/firebase-analytics.js";
-const firebaseConfig={apiKey:"AIzaSyC4KOwz5YZRciu-ZAC5CKER912DqTJ2Ezs",authDomain:"squoosh-online.firebaseapp.com",projectId:"squoosh-online",storageBucket:"squoosh-online.firebasestorage.app",messagingSenderId:"6015692976",appId:"1:6015692976:web:71f7bf5abaa2dacf5b4b75",measurementId:"G-8NE32ENS6R"};
-const app=initializeApp(firebaseConfig);const analytics=getAnalytics(app);
-</script>
-<!-- JSON-LD Breadcrumb -->
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://squoosh.online/"},{"@type":"ListItem","position":2,"name":"Video Tools","item":"https://squoosh.online/video-tools"}]}
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://squoosh.online/favicon.ico">
+    <title data-i18n="video_title">Video Compression &amp; Optimization Tools | Squoosh.online</title>
+    <meta name="description" data-i18n="video_desc" content="Optimize videos for web and social media. Compare H.264, H.265, VP9, AV1 codecs and get platform-specific settings for TikTok, YouTube, Instagram.">
+    <link rel="canonical" href="https://squoosh.online/video-tools">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config={theme:{extend:{fontFamily:{sans:['"Plus Jakarta Sans"','system-ui','sans-serif']},borderRadius:{'2xl':'1rem','3xl':'1.5rem','4xl':'2rem'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="/assets/i18n.js"></script>
+    <script src="https://analytics.ahrefs.com/analytics.js" data-key="IppWvd+WbRZ2E6MjAYaR4A" async></script>
+    <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","u7c2rqswer");</script>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-analytics.js";
+        const app = initializeApp({ apiKey: "AIzaSyC4KOwz5YZRciu-ZAC5CKER912DqTJ2Ezs", authDomain: "squoosh-online.firebaseapp.com", projectId: "squoosh-online", storageBucket: "squoosh-online.firebasestorage.app", messagingSenderId: "6015692976", appId: "1:6015692976:web:71f7bf5abaa2dacf5b4b75", measurementId: "G-8NE32ENS6R" });
+        getAnalytics(app);
+    </script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://squoosh.online/"},{"@type":"ListItem","position":2,"name":"Video Tools","item":"https://squoosh.online/video-tools"}]}</script>
+    <style>
+        #mobile-menu { transition: max-height 0.3s ease, opacity 0.3s ease; max-height: 0; opacity: 0; overflow: hidden; }
+        #mobile-menu.open { max-height: 500px; opacity: 1; }
+    </style>
 </head>
-<body class="bg-slate-50 text-slate-700 antialiased">
+<body class="bg-slate-50 font-sans text-slate-700 antialiased">
+
 <!-- Navigation -->
-<nav class="bg-white/80 backdrop-blur-lg border-b border-slate-200 sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center h-16">
-      <a href="/" class="text-xl font-800 text-blue-600 tracking-tight">Squoosh<span class="text-slate-400">.online</span></a>
-      <div class="hidden md:flex items-center space-x-8">
-        <a href="/" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">Home</a>
-        <a href="/images-tools.html" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">Image Tools</a>
-        <a href="/video-tools.html" class="text-sm font-semibold text-blue-600">Video Tools</a>
-        <a href="/pdf-file-tools.html" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">PDF &amp; Files</a>
-        <a href="/about.html" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">About</a>
-        <a href="/contact.html" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">Contact</a>
-      </div>
-      <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100">
-        <i class="fa fa-bars text-xl"></i>
-      </button>
+<nav class="sticky top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg border-b border-slate-200/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <a href="/" class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+                </div>
+                <span class="text-lg font-bold text-slate-900">Squoosh<span class="text-blue-600">.online</span></span>
+            </a>
+            <div class="hidden md:flex items-center gap-1">
+                <a href="/" class="px-3 py-1.5 text-sm font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-100 rounded-lg transition-colors" data-i18n="nav_home">Home</a>
+                <a href="/images-tools.html" class="px-3 py-1.5 text-sm font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-100 rounded-lg transition-colors" data-i18n="nav_images">Image Tools</a>
+                <a href="/video-tools.html" class="px-3 py-1.5 text-sm font-semibold text-blue-600 bg-blue-50 rounded-lg" data-i18n="nav_videos">Video Tools</a>
+                <a href="/pdf-file-tools.html" class="px-3 py-1.5 text-sm font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-100 rounded-lg transition-colors" data-i18n="nav_pdf">PDF & Files</a>
+                <a href="/about.html" class="px-3 py-1.5 text-sm font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-100 rounded-lg transition-colors" data-i18n="nav_about">About</a>
+                <a href="/contact.html" class="px-3 py-1.5 text-sm font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-100 rounded-lg transition-colors" data-i18n="nav_contact">Contact</a>
+                <div id="lang-switcher" class="ml-2"></div>
+            </div>
+            <button id="hamburger-btn" class="md:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100" aria-label="Toggle menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="md:hidden">
+            <div class="py-3 space-y-1 border-t border-slate-200">
+                <a href="/" class="block px-3 py-2 text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg" data-i18n="nav_home">Home</a>
+                <a href="/images-tools.html" class="block px-3 py-2 text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg" data-i18n="nav_images">Image Tools</a>
+                <a href="/video-tools.html" class="block px-3 py-2 text-sm font-semibold text-blue-600 bg-blue-50 rounded-lg" data-i18n="nav_videos">Video Tools</a>
+                <a href="/pdf-file-tools.html" class="block px-3 py-2 text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg" data-i18n="nav_pdf">PDF & Files</a>
+                <a href="/about.html" class="block px-3 py-2 text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg" data-i18n="nav_about">About</a>
+                <a href="/contact.html" class="block px-3 py-2 text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg" data-i18n="nav_contact">Contact</a>
+                <div id="lang-switcher-mobile" class="px-3 py-2"></div>
+            </div>
+        </div>
     </div>
-    <div id="mobile-menu" class="hidden md:hidden pb-4 space-y-2">
-      <a href="/" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100">Home</a>
-      <a href="/images-tools.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100">Image Tools</a>
-      <a href="/video-tools.html" class="block px-3 py-2 rounded-lg text-sm font-semibold text-blue-600 bg-blue-50">Video Tools</a>
-      <a href="/pdf-file-tools.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100">PDF &amp; Files</a>
-      <a href="/about.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100">About</a>
-      <a href="/contact.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100">Contact</a>
-    </div>
-  </div>
 </nav>
+
 <!-- Breadcrumbs -->
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-  <nav aria-label="Breadcrumb" class="text-sm text-slate-500">
-    <ol class="flex items-center space-x-2">
-      <li><a href="/" class="hover:text-blue-600 transition">Home</a></li>
-      <li><span class="mx-1">/</span></li>
-      <li class="text-slate-800 font-semibold">Video Tools</li>
-    </ol>
-  </nav>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+    <nav aria-label="Breadcrumb" class="text-sm text-slate-400">
+        <ol class="flex items-center gap-1.5">
+            <li><a href="/" class="hover:text-blue-600 transition" data-i18n="bc_home">Home</a></li>
+            <li><svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg></li>
+            <li class="text-slate-600 font-medium" data-i18n="bc_video">Video Tools</li>
+        </ol>
+    </nav>
 </div>
 
 <!-- Hero -->
-<header class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-12">
-  <div class="bg-gradient-to-br from-red-600 to-rose-700 rounded-[2.5rem] p-8 md:p-14 text-white">
-    <h1 class="text-3xl md:text-5xl font-800 tracking-tight mb-4">Video Optimization Hub</h1>
-    <p class="text-lg md:text-xl text-red-100 max-w-3xl leading-relaxed">Video is the fastest-growing content type on the web, but unoptimized clips can consume hundreds of megabytes and stall page loads for seconds. Proper compression, codec selection, and platform-aware encoding can shrink video files by 50-90% while preserving visual clarity. Whether you are embedding product demos, publishing social media reels, or streaming long-form content, this hub provides the tools and knowledge to deliver crisp video at a fraction of the bandwidth.</p>
-  </div>
+<header class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-12">
+    <div class="bg-gradient-to-br from-red-600 to-rose-700 rounded-[2.5rem] p-8 md:p-14 text-white">
+        <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-4" data-i18n="video_hero_title">Video Optimization Hub</h1>
+        <p class="text-lg md:text-xl text-red-100 max-w-3xl leading-relaxed" data-i18n="video_hero_subtitle">Video is the fastest-growing content type on the web, but unoptimized clips can consume hundreds of megabytes and stall page loads for seconds. Proper compression, codec selection, and platform-aware encoding can shrink video files by 50-90% while preserving visual clarity. Whether you are embedding product demos, publishing social media reels, or streaming long-form content, this hub provides the tools and knowledge to deliver crisp video at a fraction of the bandwidth.</p>
+    </div>
 </header>
+
 <!-- Native Tool -->
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-  <h2 class="text-2xl md:text-3xl font-700 text-slate-800 mb-2">Our Video Tool</h2>
-  <p class="text-slate-500 mb-8 max-w-2xl">Built by Squoosh.online for fast, private video optimization.</p>
-  <a href="https://video.squoosh.online/" class="group block bg-white rounded-[2rem] p-8 shadow-sm border border-slate-100 hover:shadow-lg hover:border-red-200 transition-all duration-300 max-w-2xl">
-    <div class="flex items-center gap-4 mb-4">
-      <div class="w-12 h-12 rounded-2xl bg-red-50 flex items-center justify-center text-red-600"><i class="fa fa-film text-xl"></i></div>
-      <h3 class="text-xl font-700 text-slate-800 group-hover:text-red-600 transition">Squoosh Video Optimize</h3>
-    </div>
-    <p class="text-slate-600 leading-relaxed">Our browser-based video compressor lets you reduce file sizes without uploading to any server. Squoosh Video Optimize uses WebAssembly-powered encoding to transcode videos directly on your device, supporting popular input formats like MP4, MOV, and WebM. You can adjust resolution, bitrate, and codec settings while previewing the output in real time. Because everything runs locally, your footage stays completely private, making it especially suitable for confidential business presentations, client work, or personal videos you would rather not send to a third-party cloud service.</p>
-  </a>
+    <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-2">Our Video Tool</h2>
+    <p class="text-slate-500 mb-8 max-w-2xl">Built by Squoosh.online for fast, private video optimization.</p>
+    <a href="https://video.squoosh.online/" class="group block bg-white rounded-[2rem] p-8 shadow-sm border border-slate-200 hover:shadow-lg hover:border-red-200 transition-all duration-300 max-w-2xl">
+        <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 rounded-2xl bg-red-50 flex items-center justify-center text-red-600">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z"/></svg>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 group-hover:text-red-600 transition">Squoosh Video Optimize</h3>
+        </div>
+        <p class="text-slate-600 leading-relaxed">Our browser-based video compressor lets you reduce file sizes without uploading to any server. Squoosh Video Optimize uses WebAssembly-powered encoding to transcode videos directly on your device, supporting popular input formats like MP4, MOV, and WebM. You can adjust resolution, bitrate, and codec settings while previewing the output in real time. Because everything runs locally, your footage stays completely private, making it especially suitable for confidential business presentations, client work, or personal videos you would rather not send to a third-party cloud service.</p>
+    </a>
 </section>
+
 <!-- Cloud Editors -->
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-  <h2 class="text-2xl md:text-3xl font-700 text-slate-800 mb-2">Cloud Video Editors</h2>
-  <p class="text-slate-500 mb-8 max-w-2xl">Recommended third-party platforms for advanced video editing and conversion.</p>
-  <div class="grid md:grid-cols-2 gap-6">
-    <a href="https://clideo.com/" rel="nofollow" target="_blank" class="group bg-white rounded-[2rem] p-8 shadow-sm border border-slate-100 hover:shadow-lg hover:border-purple-200 transition-all duration-300">
-      <div class="flex items-center gap-4 mb-4">
-        <div class="w-12 h-12 rounded-2xl bg-purple-50 flex items-center justify-center text-purple-600"><i class="fa fa-cloud text-xl"></i></div>
-        <h3 class="text-xl font-700 text-slate-800 group-hover:text-purple-600 transition">Clideo <i class="fa fa-external-link text-xs text-slate-400"></i></h3>
-      </div>
-      <p class="text-slate-600 leading-relaxed">Clideo is a full-featured cloud video editor that handles merging, trimming, resizing, adding subtitles, and format conversion through an intuitive drag-and-drop interface. It processes files on remote servers, which means you can work with large videos even on low-powered devices like tablets or Chromebooks. Clideo also offers preset export profiles optimized for Instagram Stories, TikTok, YouTube Shorts, and other social platforms, so you never have to guess the correct dimensions or aspect ratio.</p>
-    </a>
-    <a href="https://ezgif.com/" rel="nofollow" target="_blank" class="group bg-white rounded-[2rem] p-8 shadow-sm border border-slate-100 hover:shadow-lg hover:border-emerald-200 transition-all duration-300">
-      <div class="flex items-center gap-4 mb-4">
-        <div class="w-12 h-12 rounded-2xl bg-emerald-50 flex items-center justify-center text-emerald-600"><i class="fa fa-magic text-xl"></i></div>
-        <h3 class="text-xl font-700 text-slate-800 group-hover:text-emerald-600 transition">EZGif <i class="fa fa-external-link text-xs text-slate-400"></i></h3>
-      </div>
-      <p class="text-slate-600 leading-relaxed">EZGif started as an animated GIF maker and has evolved into a versatile video toolkit. It excels at converting video to GIF (and vice versa), trimming clips, adjusting playback speed, cropping, rotating, and adding text overlays. The interface is straightforward and no-frills, which makes it fast to use for quick edits. EZGif is particularly useful when you need to extract a short GIF or WebP animation from a longer video for embedding in emails, documentation, or chat platforms that do not support inline video.</p>
-    </a>
-  </div>
+    <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-2">Cloud Video Editors</h2>
+    <p class="text-slate-500 mb-8 max-w-2xl">Recommended third-party platforms for advanced video editing and conversion.</p>
+    <div class="grid md:grid-cols-2 gap-6">
+        <a href="https://clideo.com/" rel="nofollow" target="_blank" class="group bg-white rounded-[2rem] p-8 shadow-sm border border-slate-200 hover:shadow-lg hover:border-purple-200 transition-all duration-300">
+            <div class="flex items-center gap-4 mb-4">
+                <div class="w-12 h-12 rounded-2xl bg-purple-50 flex items-center justify-center text-purple-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z"/></svg>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 group-hover:text-purple-600 transition">Clideo <svg class="w-4 h-4 text-slate-400 inline" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg></h3>
+            </div>
+            <p class="text-slate-600 leading-relaxed">Clideo is a full-featured cloud video editor that handles merging, trimming, resizing, adding subtitles, and format conversion through an intuitive drag-and-drop interface. It processes files on remote servers, which means you can work with large videos even on low-powered devices like tablets or Chromebooks. Clideo also offers preset export profiles optimized for Instagram Stories, TikTok, YouTube Shorts, and other social platforms, so you never have to guess the correct dimensions or aspect ratio.</p>
+        </a>
+        <a href="https://ezgif.com/" rel="nofollow" target="_blank" class="group bg-white rounded-[2rem] p-8 shadow-sm border border-slate-200 hover:shadow-lg hover:border-emerald-200 transition-all duration-300">
+            <div class="flex items-center gap-4 mb-4">
+                <div class="w-12 h-12 rounded-2xl bg-emerald-50 flex items-center justify-center text-emerald-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"/></svg>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 group-hover:text-emerald-600 transition">EZGif <svg class="w-4 h-4 text-slate-400 inline" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg></h3>
+            </div>
+            <p class="text-slate-600 leading-relaxed">EZGif started as an animated GIF maker and has evolved into a versatile video toolkit. It excels at converting video to GIF (and vice versa), trimming clips, adjusting playback speed, cropping, rotating, and adding text overlays. The interface is straightforward and no-frills, which makes it fast to use for quick edits. EZGif is particularly useful when you need to extract a short GIF or WebP animation from a longer video for embedding in emails, documentation, or chat platforms that do not support inline video.</p>
+        </a>
+    </div>
 </section>
+
 <!-- Understanding Video Codecs -->
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-  <div class="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-sm border border-slate-100">
-    <h2 class="text-2xl md:text-3xl font-700 text-slate-800 mb-3">Understanding Video Codecs</h2>
-    <p class="text-slate-500 mb-8 max-w-3xl">A codec (coder-decoder) determines how video frames are compressed and decompressed. The codec you choose has the single biggest impact on both file size and playback compatibility.</p>
+    <div class="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-sm border border-slate-200">
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-3">Understanding Video Codecs</h2>
+        <p class="text-slate-500 mb-8 max-w-3xl">A codec (coder-decoder) determines how video frames are compressed and decompressed. The codec you choose has the single biggest impact on both file size and playback compatibility.</p>
 
-    <div class="space-y-6 mb-10">
-      <div class="border-l-4 border-blue-400 pl-6">
-        <h3 class="text-lg font-700 text-slate-800 mb-1">H.264 (AVC)</h3>
-        <p class="text-slate-600 leading-relaxed">H.264 has been the dominant web video codec for over a decade. It offers a strong balance of compression efficiency, encoding speed, and near-universal hardware decoding support on phones, tablets, laptops, smart TVs, and game consoles. Virtually every browser and media player can handle H.264 without plugins. The downside is that its compression is less efficient than newer codecs, meaning files are 30-50% larger than what H.265 or AV1 can achieve at the same visual quality. For maximum compatibility with the widest possible audience, H.264 remains the safest default.</p>
-      </div>
-      <div class="border-l-4 border-green-400 pl-6">
-        <h3 class="text-lg font-700 text-slate-800 mb-1">H.265 / HEVC</h3>
-        <p class="text-slate-600 leading-relaxed">H.265 delivers roughly 50% better compression than H.264 at the same perceptual quality, making it attractive for 4K and HDR content where file sizes would otherwise be prohibitive. Apple devices have strong HEVC support, and most modern Android phones include hardware decoders. However, web browser support is inconsistent: Safari supports it natively, but Chrome and Firefox do not due to licensing costs. This makes HEVC best suited for native mobile apps, Apple ecosystem content, and downloadable video files rather than web-embedded players.</p>
-      </div>
-      <div class="border-l-4 border-yellow-400 pl-6">
-        <h3 class="text-lg font-700 text-slate-800 mb-1">VP9</h3>
-        <p class="text-slate-600 leading-relaxed">Developed by Google as a royalty-free alternative to HEVC, VP9 achieves comparable compression efficiency (roughly 30-50% better than H.264). It is the default codec for YouTube at resolutions of 1080p and above, and it has excellent support in Chrome, Firefox, Edge, and Android devices. Safari added VP9 support via WebM in recent versions. VP9 encoding is slower than H.264 but faster than AV1, positioning it as a practical middle ground for projects that need better compression without the encoding time penalty of next-generation codecs.</p>
-      </div>
-      <div class="border-l-4 border-purple-400 pl-6">
-        <h3 class="text-lg font-700 text-slate-800 mb-1">AV1</h3>
-        <p class="text-slate-600 leading-relaxed">AV1 is the newest royalty-free codec, developed by the Alliance for Open Media (whose members include Google, Apple, Microsoft, Netflix, and Meta). It offers approximately 30% better compression than VP9 and up to 50% better than H.264, making it the most bandwidth-efficient option available today. The trade-off is encoding speed: AV1 encoding can be 5-10 times slower than H.264, though hardware encoders in newer GPUs and chips are closing this gap rapidly. Browser support covers Chrome, Firefox, Edge, and Safari 17+. AV1 is the future-proof choice for platforms that can afford the encoding compute.</p>
-      </div>
-    </div>
+        <div class="space-y-6 mb-10">
+            <div class="border-l-4 border-blue-400 pl-6">
+                <h3 class="text-lg font-bold text-slate-900 mb-1">H.264 (AVC)</h3>
+                <p class="text-slate-600 leading-relaxed">H.264 has been the dominant web video codec for over a decade. It offers a strong balance of compression efficiency, encoding speed, and near-universal hardware decoding support on phones, tablets, laptops, smart TVs, and game consoles. Virtually every browser and media player can handle H.264 without plugins. The downside is that its compression is less efficient than newer codecs, meaning files are 30-50% larger than what H.265 or AV1 can achieve at the same visual quality. For maximum compatibility with the widest possible audience, H.264 remains the safest default.</p>
+            </div>
+            <div class="border-l-4 border-green-400 pl-6">
+                <h3 class="text-lg font-bold text-slate-900 mb-1">H.265 / HEVC</h3>
+                <p class="text-slate-600 leading-relaxed">H.265 delivers roughly 50% better compression than H.264 at the same perceptual quality, making it attractive for 4K and HDR content where file sizes would otherwise be prohibitive. Apple devices have strong HEVC support, and most modern Android phones include hardware decoders. However, web browser support is inconsistent: Safari supports it natively, but Chrome and Firefox do not due to licensing costs. This makes HEVC best suited for native mobile apps, Apple ecosystem content, and downloadable video files rather than web-embedded players.</p>
+            </div>
+            <div class="border-l-4 border-yellow-400 pl-6">
+                <h3 class="text-lg font-bold text-slate-900 mb-1">VP9</h3>
+                <p class="text-slate-600 leading-relaxed">Developed by Google as a royalty-free alternative to HEVC, VP9 achieves comparable compression efficiency (roughly 30-50% better than H.264). It is the default codec for YouTube at resolutions of 1080p and above, and it has excellent support in Chrome, Firefox, Edge, and Android devices. Safari added VP9 support via WebM in recent versions. VP9 encoding is slower than H.264 but faster than AV1, positioning it as a practical middle ground for projects that need better compression without the encoding time penalty of next-generation codecs.</p>
+            </div>
+            <div class="border-l-4 border-purple-400 pl-6">
+                <h3 class="text-lg font-bold text-slate-900 mb-1">AV1</h3>
+                <p class="text-slate-600 leading-relaxed">AV1 is the newest royalty-free codec, developed by the Alliance for Open Media (whose members include Google, Apple, Microsoft, Netflix, and Meta). It offers approximately 30% better compression than VP9 and up to 50% better than H.264, making it the most bandwidth-efficient option available today. The trade-off is encoding speed: AV1 encoding can be 5-10 times slower than H.264, though hardware encoders in newer GPUs and chips are closing this gap rapidly. Browser support covers Chrome, Firefox, Edge, and Safari 17+. AV1 is the future-proof choice for platforms that can afford the encoding compute.</p>
+            </div>
+        </div>
 
-    <h3 class="text-xl font-700 text-slate-800 mb-4">Codec Comparison</h3>
-    <div class="overflow-x-auto">
-      <table class="w-full text-sm text-left border-collapse">
-        <thead>
-          <tr class="bg-slate-50">
-            <th class="px-4 py-3 font-600 text-slate-700 rounded-tl-xl">Codec</th>
-            <th class="px-4 py-3 font-600 text-slate-700">Compression vs H.264</th>
-            <th class="px-4 py-3 font-600 text-slate-700">Encoding Speed</th>
-            <th class="px-4 py-3 font-600 text-slate-700">Royalty-Free</th>
-            <th class="px-4 py-3 font-600 text-slate-700 rounded-tr-xl">Browser Support</th>
-          </tr>
-        </thead>
-        <tbody class="divide-y divide-slate-100">
-          <tr><td class="px-4 py-3 font-600">H.264</td><td class="px-4 py-3">Baseline</td><td class="px-4 py-3">Very fast</td><td class="px-4 py-3">No (licensed)</td><td class="px-4 py-3">Universal</td></tr>
-          <tr class="bg-slate-50/50"><td class="px-4 py-3 font-600">H.265</td><td class="px-4 py-3">~50% smaller</td><td class="px-4 py-3">Fast</td><td class="px-4 py-3">No (licensed)</td><td class="px-4 py-3">Safari, some HW</td></tr>
-          <tr><td class="px-4 py-3 font-600">VP9</td><td class="px-4 py-3">~35% smaller</td><td class="px-4 py-3">Moderate</td><td class="px-4 py-3">Yes</td><td class="px-4 py-3">Chrome, Firefox, Edge, Safari</td></tr>
-          <tr class="bg-slate-50/50"><td class="px-4 py-3 font-600">AV1</td><td class="px-4 py-3">~50% smaller</td><td class="px-4 py-3">Slow (improving)</td><td class="px-4 py-3">Yes</td><td class="px-4 py-3">Chrome, Firefox, Edge, Safari 17+</td></tr>
-        </tbody>
-      </table>
+        <h3 class="text-xl font-bold text-slate-900 mb-4">Codec Comparison</h3>
+        <div class="overflow-x-auto">
+            <table class="w-full text-sm text-left border-collapse">
+                <thead>
+                    <tr class="bg-slate-50">
+                        <th class="px-4 py-3 font-semibold text-slate-700 rounded-tl-xl">Codec</th>
+                        <th class="px-4 py-3 font-semibold text-slate-700">Compression vs H.264</th>
+                        <th class="px-4 py-3 font-semibold text-slate-700">Encoding Speed</th>
+                        <th class="px-4 py-3 font-semibold text-slate-700">Royalty-Free</th>
+                        <th class="px-4 py-3 font-semibold text-slate-700 rounded-tr-xl">Browser Support</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100">
+                    <tr><td class="px-4 py-3 font-semibold">H.264</td><td class="px-4 py-3">Baseline</td><td class="px-4 py-3">Very fast</td><td class="px-4 py-3">No (licensed)</td><td class="px-4 py-3">Universal</td></tr>
+                    <tr class="bg-slate-50/50"><td class="px-4 py-3 font-semibold">H.265</td><td class="px-4 py-3">~50% smaller</td><td class="px-4 py-3">Fast</td><td class="px-4 py-3">No (licensed)</td><td class="px-4 py-3">Safari, some HW</td></tr>
+                    <tr><td class="px-4 py-3 font-semibold">VP9</td><td class="px-4 py-3">~35% smaller</td><td class="px-4 py-3">Moderate</td><td class="px-4 py-3">Yes</td><td class="px-4 py-3">Chrome, Firefox, Edge, Safari</td></tr>
+                    <tr class="bg-slate-50/50"><td class="px-4 py-3 font-semibold">AV1</td><td class="px-4 py-3">~50% smaller</td><td class="px-4 py-3">Slow (improving)</td><td class="px-4 py-3">Yes</td><td class="px-4 py-3">Chrome, Firefox, Edge, Safari 17+</td></tr>
+                </tbody>
+            </table>
+        </div>
     </div>
-  </div>
 </section>
+
 <!-- Video Container Formats -->
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-  <div class="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-sm border border-slate-100">
-    <h2 class="text-2xl md:text-3xl font-700 text-slate-800 mb-3">Video Container Formats</h2>
-    <p class="text-slate-500 mb-8 max-w-3xl">A container format is the file wrapper that holds video, audio, subtitles, and metadata streams together. The container determines which codecs are supported and how the data is organized for playback and streaming.</p>
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="bg-slate-50 rounded-[2rem] p-6">
-        <h3 class="text-lg font-700 text-slate-800 mb-2">MP4 (.mp4)</h3>
-        <p class="text-slate-600 text-sm leading-relaxed">The most universally supported container on the web. MP4 can hold H.264, H.265, and AV1 video streams alongside AAC audio. It supports streaming via progressive download and is the required format for most social media uploads. When in doubt, MP4 with H.264 video and AAC audio is the safest combination for cross-platform delivery.</p>
-      </div>
-      <div class="bg-slate-50 rounded-[2rem] p-6">
-        <h3 class="text-lg font-700 text-slate-800 mb-2">WebM (.webm)</h3>
-        <p class="text-slate-600 text-sm leading-relaxed">Google's open container format designed specifically for the web. WebM pairs with VP8, VP9, or AV1 video and Vorbis or Opus audio. It is well supported in Chrome, Firefox, and Edge and is the default for VP9/AV1 web delivery. WebM files are often used as a secondary source in HTML5 video elements alongside an MP4 fallback.</p>
-      </div>
-      <div class="bg-slate-50 rounded-[2rem] p-6">
-        <h3 class="text-lg font-700 text-slate-800 mb-2">MOV (.mov)</h3>
-        <p class="text-slate-600 text-sm leading-relaxed">Apple's QuickTime container is widely used in professional video production and on Apple devices. MOV supports a broad range of codecs including ProRes, which is a standard in editing workflows. While MOV plays natively on macOS and iOS, it has inconsistent support on Windows and Linux browsers. It is best used as a production intermediate and then re-muxed to MP4 for web distribution.</p>
-      </div>
-      <div class="bg-slate-50 rounded-[2rem] p-6">
-        <h3 class="text-lg font-700 text-slate-800 mb-2">AVI (.avi)</h3>
-        <p class="text-slate-600 text-sm leading-relaxed">An older Microsoft container that lacks modern features like native streaming support and variable frame rates. AVI files tend to be much larger because they often use less efficient codecs or uncompressed streams. There is virtually no reason to use AVI for web delivery today. If you receive AVI files from legacy systems or screen recorders, convert them to MP4 before publishing online.</p>
-      </div>
+    <div class="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-sm border border-slate-200">
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-3">Video Container Formats</h2>
+        <p class="text-slate-500 mb-8 max-w-3xl">A container format is the file wrapper that holds video, audio, subtitles, and metadata streams together. The container determines which codecs are supported and how the data is organized for playback and streaming.</p>
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-slate-50 rounded-[2rem] p-6">
+                <h3 class="text-lg font-bold text-slate-900 mb-2">MP4 (.mp4)</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">The most universally supported container on the web. MP4 can hold H.264, H.265, and AV1 video streams alongside AAC audio. It supports streaming via progressive download and is the required format for most social media uploads. When in doubt, MP4 with H.264 video and AAC audio is the safest combination for cross-platform delivery.</p>
+            </div>
+            <div class="bg-slate-50 rounded-[2rem] p-6">
+                <h3 class="text-lg font-bold text-slate-900 mb-2">WebM (.webm)</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Google's open container format designed specifically for the web. WebM pairs with VP8, VP9, or AV1 video and Vorbis or Opus audio. It is well supported in Chrome, Firefox, and Edge and is the default for VP9/AV1 web delivery. WebM files are often used as a secondary source in HTML5 video elements alongside an MP4 fallback.</p>
+            </div>
+            <div class="bg-slate-50 rounded-[2rem] p-6">
+                <h3 class="text-lg font-bold text-slate-900 mb-2">MOV (.mov)</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Apple's QuickTime container is widely used in professional video production and on Apple devices. MOV supports a broad range of codecs including ProRes, which is a standard in editing workflows. While MOV plays natively on macOS and iOS, it has inconsistent support on Windows and Linux browsers. It is best used as a production intermediate and then re-muxed to MP4 for web distribution.</p>
+            </div>
+            <div class="bg-slate-50 rounded-[2rem] p-6">
+                <h3 class="text-lg font-bold text-slate-900 mb-2">AVI (.avi)</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">An older Microsoft container that lacks modern features like native streaming support and variable frame rates. AVI files tend to be much larger because they often use less efficient codecs or uncompressed streams. There is virtually no reason to use AVI for web delivery today. If you receive AVI files from legacy systems or screen recorders, convert them to MP4 before publishing online.</p>
+            </div>
+        </div>
     </div>
-  </div>
-</section>
-<!-- Recommended Settings by Platform -->
-<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-  <div class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-[2.5rem] p-8 md:p-12 text-white">
-    <h2 class="text-2xl md:text-3xl font-700 mb-3">Recommended Settings by Platform</h2>
-    <p class="text-slate-300 mb-8 max-w-3xl">Each social media platform re-encodes your uploads, but starting with the right settings prevents double compression artifacts and ensures the best possible output quality. These recommendations reflect each platform's published guidelines and tested best practices.</p>
-    <div class="overflow-x-auto">
-      <table class="w-full text-sm text-left border-collapse">
-        <thead>
-          <tr class="border-b border-slate-700">
-            <th class="px-4 py-3 font-600 text-slate-300">Platform</th>
-            <th class="px-4 py-3 font-600 text-slate-300">Resolution</th>
-            <th class="px-4 py-3 font-600 text-slate-300">Aspect Ratio</th>
-            <th class="px-4 py-3 font-600 text-slate-300">Frame Rate</th>
-            <th class="px-4 py-3 font-600 text-slate-300">Video Bitrate</th>
-            <th class="px-4 py-3 font-600 text-slate-300">Codec</th>
-            <th class="px-4 py-3 font-600 text-slate-300">Max Length</th>
-          </tr>
-        </thead>
-        <tbody class="divide-y divide-slate-700/50 text-slate-300">
-          <tr>
-            <td class="px-4 py-3 font-600 text-white">TikTok</td>
-            <td class="px-4 py-3">1080 x 1920</td>
-            <td class="px-4 py-3">9:16</td>
-            <td class="px-4 py-3">30 fps</td>
-            <td class="px-4 py-3">6-10 Mbps</td>
-            <td class="px-4 py-3">H.264</td>
-            <td class="px-4 py-3">10 min</td>
-          </tr>
-          <tr>
-            <td class="px-4 py-3 font-600 text-white">Instagram Reels</td>
-            <td class="px-4 py-3">1080 x 1920</td>
-            <td class="px-4 py-3">9:16</td>
-            <td class="px-4 py-3">30 fps</td>
-            <td class="px-4 py-3">6-8 Mbps</td>
-            <td class="px-4 py-3">H.264</td>
-            <td class="px-4 py-3">90 sec</td>
-          </tr>
-          <tr>
-            <td class="px-4 py-3 font-600 text-white">YouTube</td>
-            <td class="px-4 py-3">1920 x 1080 (or 4K)</td>
-            <td class="px-4 py-3">16:9</td>
-            <td class="px-4 py-3">24-60 fps</td>
-            <td class="px-4 py-3">8-12 Mbps (1080p)</td>
-            <td class="px-4 py-3">H.264 / VP9</td>
-            <td class="px-4 py-3">12 hrs</td>
-          </tr>
-          <tr>
-            <td class="px-4 py-3 font-600 text-white">Twitter / X</td>
-            <td class="px-4 py-3">1280 x 720</td>
-            <td class="px-4 py-3">16:9 or 1:1</td>
-            <td class="px-4 py-3">30-60 fps</td>
-            <td class="px-4 py-3">5-8 Mbps</td>
-            <td class="px-4 py-3">H.264</td>
-            <td class="px-4 py-3">2 min 20 sec</td>
-          </tr>
-          <tr>
-            <td class="px-4 py-3 font-600 text-white">Facebook</td>
-            <td class="px-4 py-3">1280 x 720 (min)</td>
-            <td class="px-4 py-3">16:9 or 9:16</td>
-            <td class="px-4 py-3">30 fps</td>
-            <td class="px-4 py-3">6-8 Mbps</td>
-            <td class="px-4 py-3">H.264</td>
-            <td class="px-4 py-3">240 min</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="text-slate-400 text-xs mt-4">All platforms accept MP4 container with AAC audio (128-256 kbps stereo). Upload the highest quality source file possible; the platform will re-encode for delivery.</p>
-  </div>
-</section>
-<!-- Video Compression Tips -->
-<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-  <div class="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-sm border border-slate-100">
-    <h2 class="text-2xl md:text-3xl font-700 text-slate-800 mb-3">Video Compression Tips</h2>
-    <p class="text-slate-500 mb-8 max-w-3xl">Practical strategies to reduce video file sizes while keeping your content looking sharp across devices.</p>
-    <div class="grid md:grid-cols-2 gap-8">
-      <div>
-        <div class="flex items-start gap-3 mb-6">
-          <span class="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 text-red-700 flex items-center justify-center text-sm font-700">1</span>
-          <div>
-            <h3 class="font-700 text-slate-800 mb-1">Use Two-Pass Encoding</h3>
-            <p class="text-slate-600 text-sm leading-relaxed">Two-pass encoding analyzes the entire video on the first pass to build a complexity map, then allocates bits more intelligently on the second pass. High-motion scenes get more bitrate while static frames use less, resulting in better overall quality at the same file size. Most professional tools including FFmpeg support two-pass mode, and the extra encoding time is almost always worth the quality improvement.</p>
-          </div>
-        </div>
-        <div class="flex items-start gap-3 mb-6">
-          <span class="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 text-red-700 flex items-center justify-center text-sm font-700">2</span>
-          <div>
-            <h3 class="font-700 text-slate-800 mb-1">Lower Resolution Strategically</h3>
-            <p class="text-slate-600 text-sm leading-relaxed">Not every video needs to be 4K. For talking-head content, tutorials, and screencasts, 1080p or even 720p is often indistinguishable on mobile screens. Reducing resolution from 4K to 1080p cuts the pixel count by 75%, which translates to dramatically smaller files. Reserve 4K for content where fine detail matters, such as landscape videography, product close-ups, or cinematic footage.</p>
-          </div>
-        </div>
-        <div class="flex items-start gap-3 mb-6">
-          <span class="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 text-red-700 flex items-center justify-center text-sm font-700">3</span>
-          <div>
-            <h3 class="font-700 text-slate-800 mb-1">Optimize Audio Separately</h3>
-            <p class="text-slate-600 text-sm leading-relaxed">Audio can represent 10-20% of total file size, especially in long-form content. Use AAC at 128 kbps stereo for most web video, which is transparent quality for speech and music. If the video has no meaningful audio (background music only or silent demos), consider mono audio at 96 kbps or even stripping the audio track entirely to save space.</p>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="flex items-start gap-3 mb-6">
-          <span class="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 text-red-700 flex items-center justify-center text-sm font-700">4</span>
-          <div>
-            <h3 class="font-700 text-slate-800 mb-1">Trim Dead Air and Pauses</h3>
-            <p class="text-slate-600 text-sm leading-relaxed">Every second of video adds to the file size. Cutting out long pauses, false starts, and unnecessary intros can shave 15-30% off the total duration and proportionally reduce file size. This also improves viewer retention, as audiences are more likely to watch a concise, well-paced video to completion.</p>
-          </div>
-        </div>
-        <div class="flex items-start gap-3 mb-6">
-          <span class="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 text-red-700 flex items-center justify-center text-sm font-700">5</span>
-          <div>
-            <h3 class="font-700 text-slate-800 mb-1">Use Constant Rate Factor (CRF)</h3>
-            <p class="text-slate-600 text-sm leading-relaxed">CRF mode lets the encoder automatically adjust bitrate to maintain a consistent visual quality throughout the video. Lower CRF values mean higher quality and larger files. For H.264, a CRF of 23 is the default and a good starting point; values between 18 and 28 cover most use cases. CRF 18 is visually lossless for most content, while CRF 28 provides aggressive compression suitable for previews and drafts.</p>
-          </div>
-        </div>
-        <div class="flex items-start gap-3 mb-6">
-          <span class="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 text-red-700 flex items-center justify-center text-sm font-700">6</span>
-          <div>
-            <h3 class="font-700 text-slate-800 mb-1">Enable Fast Start for Web</h3>
-            <p class="text-slate-600 text-sm leading-relaxed">MP4 files store metadata (the moov atom) at the end of the file by default. This forces the browser to download the entire file before playback can begin. Moving the moov atom to the front with the -movflags +faststart flag in FFmpeg enables progressive playback, letting visitors start watching within seconds even on slower connections. This is a zero-cost optimization that every web video should have.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Guide Link & Cross-links -->
-<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-  <div class="grid md:grid-cols-3 gap-6">
-    <div class="md:col-span-2">
-      <div class="bg-red-50 rounded-[2rem] p-8 border border-red-100">
-        <h2 class="text-xl font-700 text-slate-800 mb-3"><i class="fa fa-book text-red-600 mr-2"></i>Video Optimization Guide</h2>
-        <p class="text-slate-600 mb-4">Dive deeper into advanced encoding techniques, FFmpeg command recipes, adaptive bitrate streaming with HLS and DASH, and real-world benchmarks comparing codecs across different content types.</p>
-        <a href="/guides/video-optimization-guide.html" class="inline-flex items-center gap-2 bg-red-600 text-white px-6 py-3 rounded-xl font-600 hover:bg-red-700 transition">Read the Full Guide <i class="fa fa-arrow-right"></i></a>
-      </div>
-    </div>
-    <div class="space-y-6">
-      <a href="/images-tools.html" class="block bg-white rounded-[2rem] p-6 shadow-sm border border-slate-100 hover:shadow-lg hover:border-blue-200 transition-all duration-300">
-        <div class="flex items-center gap-3 mb-2">
-          <div class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600"><i class="fa fa-picture-o"></i></div>
-          <h3 class="font-700 text-slate-800">Image Tools</h3>
-        </div>
-        <p class="text-slate-500 text-sm">Compress and convert images to modern formats.</p>
-      </a>
-      <a href="/pdf-file-tools.html" class="block bg-white rounded-[2rem] p-6 shadow-sm border border-slate-100 hover:shadow-lg hover:border-blue-200 transition-all duration-300">
-        <div class="flex items-center gap-3 mb-2">
-          <div class="w-10 h-10 rounded-xl bg-amber-50 flex items-center justify-center text-amber-600"><i class="fa fa-file-pdf-o"></i></div>
-          <h3 class="font-700 text-slate-800">PDF &amp; File Tools</h3>
-        </div>
-        <p class="text-slate-500 text-sm">Manage PDFs, create archives, and secure documents.</p>
-      </a>
-    </div>
-  </div>
 </section>
 
-<!-- Ad Container -->
+<!-- Recommended Settings by Platform -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+    <div class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-[2.5rem] p-8 md:p-12 text-white">
+        <h2 class="text-2xl md:text-3xl font-bold mb-3">Recommended Settings by Platform</h2>
+        <p class="text-slate-300 mb-8 max-w-3xl">Each social media platform re-encodes your uploads, but starting with the right settings prevents double compression artifacts and ensures the best possible output quality. These recommendations reflect each platform's published guidelines and tested best practices.</p>
+        <div class="overflow-x-auto">
+            <table class="w-full text-sm text-left border-collapse">
+                <thead>
+                    <tr class="border-b border-slate-700">
+                        <th class="px-4 py-3 font-semibold text-slate-300">Platform</th>
+                        <th class="px-4 py-3 font-semibold text-slate-300">Resolution</th>
+                        <th class="px-4 py-3 font-semibold text-slate-300">Aspect Ratio</th>
+                        <th class="px-4 py-3 font-semibold text-slate-300">Frame Rate</th>
+                        <th class="px-4 py-3 font-semibold text-slate-300">Video Bitrate</th>
+                        <th class="px-4 py-3 font-semibold text-slate-300">Codec</th>
+                        <th class="px-4 py-3 font-semibold text-slate-300">Max Length</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-700/50 text-slate-300">
+                    <tr>
+                        <td class="px-4 py-3 font-semibold text-white">TikTok</td>
+                        <td class="px-4 py-3">1080 x 1920</td>
+                        <td class="px-4 py-3">9:16</td>
+                        <td class="px-4 py-3">30 fps</td>
+                        <td class="px-4 py-3">6-10 Mbps</td>
+                        <td class="px-4 py-3">H.264</td>
+                        <td class="px-4 py-3">10 min</td>
+                    </tr>
+                    <tr>
+                        <td class="px-4 py-3 font-semibold text-white">Instagram Reels</td>
+                        <td class="px-4 py-3">1080 x 1920</td>
+                        <td class="px-4 py-3">9:16</td>
+                        <td class="px-4 py-3">30 fps</td>
+                        <td class="px-4 py-3">6-8 Mbps</td>
+                        <td class="px-4 py-3">H.264</td>
+                        <td class="px-4 py-3">90 sec</td>
+                    </tr>
+                    <tr>
+                        <td class="px-4 py-3 font-semibold text-white">YouTube</td>
+                        <td class="px-4 py-3">1920 x 1080 (or 4K)</td>
+                        <td class="px-4 py-3">16:9</td>
+                        <td class="px-4 py-3">24-60 fps</td>
+                        <td class="px-4 py-3">8-12 Mbps (1080p)</td>
+                        <td class="px-4 py-3">H.264 / VP9</td>
+                        <td class="px-4 py-3">12 hrs</td>
+                    </tr>
+                    <tr>
+                        <td class="px-4 py-3 font-semibold text-white">Twitter / X</td>
+                        <td class="px-4 py-3">1280 x 720</td>
+                        <td class="px-4 py-3">16:9 or 1:1</td>
+                        <td class="px-4 py-3">30-60 fps</td>
+                        <td class="px-4 py-3">5-8 Mbps</td>
+                        <td class="px-4 py-3">H.264</td>
+                        <td class="px-4 py-3">2 min 20 sec</td>
+                    </tr>
+                    <tr>
+                        <td class="px-4 py-3 font-semibold text-white">Facebook</td>
+                        <td class="px-4 py-3">1280 x 720 (min)</td>
+                        <td class="px-4 py-3">16:9 or 9:16</td>
+                        <td class="px-4 py-3">30 fps</td>
+                        <td class="px-4 py-3">6-8 Mbps</td>
+                        <td class="px-4 py-3">H.264</td>
+                        <td class="px-4 py-3">240 min</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="text-slate-400 text-xs mt-4">All platforms accept MP4 container with AAC audio (128-256 kbps stereo). Upload the highest quality source file possible; the platform will re-encode for delivery.</p>
+    </div>
+</section>
+
+<!-- Video Compression Tips -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+    <div class="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-sm border border-slate-200">
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-3">Video Compression Tips</h2>
+        <p class="text-slate-500 mb-8 max-w-3xl">Practical strategies to reduce video file sizes while keeping your content looking sharp across devices.</p>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div>
+                <div class="flex items-start gap-3 mb-6">
+                    <span class="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 text-red-700 flex items-center justify-center text-sm font-bold">1</span>
+                    <div>
+                        <h3 class="font-bold text-slate-900 mb-1">Use Two-Pass Encoding</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Two-pass encoding analyzes the entire video on the first pass to build a complexity map, then allocates bits more intelligently on the second pass. High-motion scenes get more bitrate while static frames use less, resulting in better overall quality at the same file size. Most professional tools including FFmpeg support two-pass mode, and the extra encoding time is almost always worth the quality improvement.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-3 mb-6">
+                    <span class="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 text-red-700 flex items-center justify-center text-sm font-bold">2</span>
+                    <div>
+                        <h3 class="font-bold text-slate-900 mb-1">Lower Resolution Strategically</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Not every video needs to be 4K. For talking-head content, tutorials, and screencasts, 1080p or even 720p is often indistinguishable on mobile screens. Reducing resolution from 4K to 1080p cuts the pixel count by 75%, which translates to dramatically smaller files. Reserve 4K for content where fine detail matters, such as landscape videography, product close-ups, or cinematic footage.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-3 mb-6">
+                    <span class="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 text-red-700 flex items-center justify-center text-sm font-bold">3</span>
+                    <div>
+                        <h3 class="font-bold text-slate-900 mb-1">Optimize Audio Separately</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Audio can represent 10-20% of total file size, especially in long-form content. Use AAC at 128 kbps stereo for most web video, which is transparent quality for speech and music. If the video has no meaningful audio (background music only or silent demos), consider mono audio at 96 kbps or even stripping the audio track entirely to save space.</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="flex items-start gap-3 mb-6">
+                    <span class="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 text-red-700 flex items-center justify-center text-sm font-bold">4</span>
+                    <div>
+                        <h3 class="font-bold text-slate-900 mb-1">Trim Dead Air and Pauses</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Every second of video adds to the file size. Cutting out long pauses, false starts, and unnecessary intros can shave 15-30% off the total duration and proportionally reduce file size. This also improves viewer retention, as audiences are more likely to watch a concise, well-paced video to completion.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-3 mb-6">
+                    <span class="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 text-red-700 flex items-center justify-center text-sm font-bold">5</span>
+                    <div>
+                        <h3 class="font-bold text-slate-900 mb-1">Use Constant Rate Factor (CRF)</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">CRF mode lets the encoder automatically adjust bitrate to maintain a consistent visual quality throughout the video. Lower CRF values mean higher quality and larger files. For H.264, a CRF of 23 is the default and a good starting point; values between 18 and 28 cover most use cases. CRF 18 is visually lossless for most content, while CRF 28 provides aggressive compression suitable for previews and drafts.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-3 mb-6">
+                    <span class="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 text-red-700 flex items-center justify-center text-sm font-bold">6</span>
+                    <div>
+                        <h3 class="font-bold text-slate-900 mb-1">Enable Fast Start for Web</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">MP4 files store metadata (the moov atom) at the end of the file by default. This forces the browser to download the entire file before playback can begin. Moving the moov atom to the front with the -movflags +faststart flag in FFmpeg enables progressive playback, letting visitors start watching within seconds even on slower connections. This is a zero-cost optimization that every web video should have.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Guide Link & Cross-links -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+    <div class="grid md:grid-cols-3 gap-6">
+        <div class="md:col-span-2">
+            <div class="bg-red-50 rounded-[2rem] p-8 border border-red-100">
+                <h2 class="text-xl font-bold text-slate-900 mb-3"><svg class="w-6 h-6 text-red-600 inline mr-2" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg>Video Optimization Guide</h2>
+                <p class="text-slate-600 mb-4">Dive deeper into advanced encoding techniques, FFmpeg command recipes, adaptive bitrate streaming with HLS and DASH, and real-world benchmarks comparing codecs across different content types.</p>
+                <a href="/guides/video-optimization-guide.html" class="inline-flex items-center gap-2 bg-red-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-red-700 transition">Read the Full Guide <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></a>
+            </div>
+        </div>
+        <div class="space-y-6">
+            <a href="/images-tools.html" class="block bg-white rounded-[2rem] p-6 shadow-sm border border-slate-200 hover:shadow-lg hover:border-blue-200 transition-all duration-300">
+                <div class="flex items-center gap-3 mb-2">
+                    <div class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z"/></svg></div>
+                    <h3 class="font-bold text-slate-900">Image Tools</h3>
+                </div>
+                <p class="text-slate-500 text-sm">Compress and convert images to modern formats.</p>
+            </a>
+            <a href="/pdf-file-tools.html" class="block bg-white rounded-[2rem] p-6 shadow-sm border border-slate-200 hover:shadow-lg hover:border-blue-200 transition-all duration-300">
+                <div class="flex items-center gap-3 mb-2">
+                    <div class="w-10 h-10 rounded-xl bg-amber-50 flex items-center justify-center text-amber-600"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg></div>
+                    <h3 class="font-bold text-slate-900">PDF &amp; File Tools</h3>
+                </div>
+                <p class="text-slate-500 text-sm">Manage PDFs, create archives, and secure documents.</p>
+            </a>
+        </div>
+    </div>
+</section>
 
 <!-- Footer -->
 <footer class="bg-slate-900 text-slate-400 mt-8">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-8 mb-8">
-      <div>
-        <h4 class="text-white font-700 mb-4">Tools</h4>
-        <ul class="space-y-2 text-sm">
-          <li><a href="/images-tools.html" class="hover:text-white transition">Image Tools</a></li>
-          <li><a href="/video-tools.html" class="hover:text-white transition">Video Tools</a></li>
-          <li><a href="/pdf-file-tools.html" class="hover:text-white transition">PDF &amp; Files</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="text-white font-700 mb-4">Company</h4>
-        <ul class="space-y-2 text-sm">
-          <li><a href="/about.html" class="hover:text-white transition">About Us</a></li>
-          <li><a href="/contact.html" class="hover:text-white transition">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="text-white font-700 mb-4">Legal</h4>
-        <ul class="space-y-2 text-sm">
-          <li><a href="/privacy-policy.html" class="hover:text-white transition">Privacy Policy</a></li>
-          <li><a href="/terms-of-service.html" class="hover:text-white transition">Terms of Service</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="text-white font-700 mb-4">Squoosh.online</h4>
-        <p class="text-sm leading-relaxed">Free browser-based tools for image, video, and document optimization. No uploads required.</p>
-      </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-10">
+            <div><h4 class="text-white font-semibold text-sm mb-4" data-i18n="footer_tools">Tools</h4><ul class="space-y-2.5"><li><a href="/images-tools.html" class="hover:text-white text-sm transition-colors" data-i18n="nav_images">Image Tools</a></li><li><a href="/video-tools.html" class="hover:text-white text-sm transition-colors" data-i18n="nav_videos">Video Tools</a></li><li><a href="/pdf-file-tools.html" class="hover:text-white text-sm transition-colors" data-i18n="nav_pdf">PDF & Files</a></li></ul></div>
+            <div><h4 class="text-white font-semibold text-sm mb-4" data-i18n="footer_native">Native Tools</h4><ul class="space-y-2.5"><li><a href="https://imagestitchtools.squoosh.online" class="hover:text-white text-sm transition-colors">Image Stitch</a></li><li><a href="https://image.squoosh.online/" class="hover:text-white text-sm transition-colors">Squoosh Pro</a></li><li><a href="https://video.squoosh.online" class="hover:text-white text-sm transition-colors">Video Optimize</a></li><li><a href="https://zipcompress.squoosh.online" class="hover:text-white text-sm transition-colors">Smart Zip</a></li></ul></div>
+            <div><h4 class="text-white font-semibold text-sm mb-4" data-i18n="footer_guides">Guides</h4><ul class="space-y-2.5"><li><a href="/guides/how-to-compress-images.html" class="hover:text-white text-sm transition-colors" data-i18n="guide_image_title">Image Optimization</a></li><li><a href="/guides/video-optimization-guide.html" class="hover:text-white text-sm transition-colors" data-i18n="guide_video_title">Video Compression</a></li><li><a href="/guides/secure-pdf-guide.html" class="hover:text-white text-sm transition-colors" data-i18n="guide_pdf_title">PDF Optimization</a></li></ul></div>
+            <div><h4 class="text-white font-semibold text-sm mb-4" data-i18n="footer_company">Company</h4><ul class="space-y-2.5"><li><a href="/about.html" class="hover:text-white text-sm transition-colors" data-i18n="nav_about">About Us</a></li><li><a href="/contact.html" class="hover:text-white text-sm transition-colors" data-i18n="nav_contact">Contact</a></li><li><a href="/privacy-policy.html" class="hover:text-white text-sm transition-colors" data-i18n="footer_privacy">Privacy Policy</a></li><li><a href="/terms-of-service.html" class="hover:text-white text-sm transition-colors" data-i18n="footer_terms">Terms of Service</a></li></ul></div>
+        </div>
+        <div class="border-t border-slate-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2"><div class="w-6 h-6 bg-blue-600 rounded-md flex items-center justify-center"><svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg></div><span class="text-sm font-semibold text-white">Squoosh<span class="text-blue-400">.online</span></span></div>
+            <p class="text-slate-500 text-sm text-center" data-i18n="footer_copyright">© 2026 Squoosh.online. All rights reserved.</p>
+        </div>
     </div>
-    <div class="border-t border-slate-800 pt-6 text-center text-sm">&copy; 2026 Squoosh.online. All rights reserved.</div>
-  </div>
 </footer>
+
+<script>document.getElementById('hamburger-btn').addEventListener('click', function() { document.getElementById('mobile-menu').classList.toggle('open'); });</script>
 </body>
 </html>

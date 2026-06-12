@@ -1,48 +1,81 @@
 # robots.txt for squoosh.online
-# Last updated: 2026-03-26
+# Last updated: 2026-06-12
 
-# Default rules for all crawlers
+# ── Default rules for all crawlers ──
 User-agent: *
 Allow: /
+Disallow: /assets/
 Disallow: /cdn-cgi/
 Disallow: /api/
-Disallow: /_next/
-Disallow: /tmp/
 Disallow: /.well-known/
 
-# Google Search and AdSense
+# Crawl-delay for polite crawling (seconds)
+Crawl-delay: 5
+
+# ── Google crawlers ──
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Googlebot-Image
 Allow: /
+Crawl-delay: 1
 
 User-agent: Googlebot-Video
 Allow: /
+Crawl-delay: 1
 
-# Google AdSense
+User-agent: Googlebot-News
+Allow: /
+Crawl-delay: 1
+
+# Google AdSense crawlers
 User-agent: Mediapartners-Google
 Allow: /
+Crawl-delay: 1
 
 User-agent: AdsBot-Google
 Allow: /
+Crawl-delay: 1
 
 User-agent: AdsBot-Google-Mobile
 Allow: /
+Crawl-delay: 1
 
-# Bing
+# ── Bing ──
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 2
 
-# Baidu
+# ── Baidu ──
 User-agent: Baiduspider
 Allow: /
+Crawl-delay: 3
 
-# Yandex
+# ── Yandex ──
 User-agent: YandexBot
 Allow: /
+Crawl-delay: 3
 
-# Block AI training scrapers
+# ── DuckDuckGo ──
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 5
+
+# ── Other legitimate search engines ──
+User-agent: Slurp
+Allow: /
+Crawl-delay: 5
+
+User-agent: FacebookExternalHit
+Allow: /
+Crawl-delay: 5
+
+User-agent: Twitterbot
+Allow: /
+Crawl-delay: 5
+
+# ── Block AI training / LLM scrapers ──
 User-agent: GPTBot
 Disallow: /
 
@@ -58,11 +91,44 @@ Disallow: /
 User-agent: Claude-Web
 Disallow: /
 
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Omgilibot
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
 User-agent: Bytespider
 Disallow: /
 
 User-agent: PetalBot
 Disallow: /
 
-# Sitemap location
+User-agent: Diffbot
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: YouBot
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
+User-agent: img2dataset
+Disallow: /
+
+# ── Sitemap ──
 Sitemap: https://squoosh.online/sitemap.xml
